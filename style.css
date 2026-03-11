@@ -21582,3 +21582,79 @@ has-background-danger.is-hoverable:active {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* Couleurs personnalisées */
+:root {
+    --main-red: #9e0b0b; /* Rouge bordeaux de la capture */
+    --bg-cream: #fdfaf7;
+}
+
+body {
+    background-color: var(--bg-cream);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--main-red) !important;
+    padding: 0.5rem 0;
+}
+
+.navbar-item {
+    color: white !important;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+/* Typographie */
+.custom-name {
+    font-size: 4.5rem !important;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Boutons */
+.button.is-danger {
+    background-color: var(--main-red) !important;
+}
+
+.has-shadow {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+.hero.is-fullheight-with-navbar {
+    background-color: #fdfaf7;
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 380px !important;    
+    height: 380px !important;   
+    border-radius: 50% !important; 
+    object-fit: cover;          
+    border: 15px solid #f2e8e0; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.custom-name {
+    font-family: 'Georgia', serif; 
+    font-size: 4rem !important;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.portfolio-label::before {
+    content: "— ";
+    color: #e0e0e0;
+}
