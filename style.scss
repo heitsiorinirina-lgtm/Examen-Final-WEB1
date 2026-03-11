@@ -1,0 +1,75 @@
+// Color variables
+$color-red: #b91c1c;
+$color-red-dark: #991b1b;
+$color-red-hover: #7f1d1d;
+
+$color-bg-warm: #f9f6f1;
+$color-bg-white: #ffffff;
+
+$color-text-dark: #1a1a1a;
+$color-text-muted: #78716c;
+$color-text-light: #a8a29e;
+
+$color-border: #e5e0d8;
+$color-border-light: #f0ece4;
+
+@use "bulma/sass" with (
+  // Core brand colors
+  $primary: $color-red-dark,
+  $link: $color-red,
+
+  // Global background + text
+  $background: $color-bg-warm,
+  $text: $color-text-dark,
+
+  // Typography
+  $family-primary: "DM Sans",
+  $title-family: "Playfair Display"
+);
+
+#search-bar {
+  background-color: transparent;
+  border: none;
+}
+
+#search-bar:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#search-bar::placeholder {
+  color: white;
+}
+
+.navbar-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  background-color: $color-bg-warm;
+  color: $color-text-dark;
+}
+
+.blog-hero {
+  background-color: $color-bg-warm;
+}
+
+.blog-card {
+  border-radius: 1.25rem;
+  border: 1px solid $color-border-light;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+.blog-card__meta {
+  color: $color-text-muted;
+}
+
+.blog-tag {
+  background-color: $color-border-light;
+  color: $color-text-dark;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
