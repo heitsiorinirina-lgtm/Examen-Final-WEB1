@@ -21580,6 +21580,7 @@ has-background-danger.is-hoverable:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
 html,
@@ -21588,8 +21589,12 @@ body {
   color: #1a1a1a;
 }
 
-.blog-hero {
+.hero-blog {
   background-color: #f9f6f1;
+}
+
+section#blog-posts {
+  background-color: white;
 }
 
 .blog-card {
@@ -21602,9 +21607,8 @@ body {
   color: #78716c;
 }
 
-.blog-tag {
-  background-color: #f0ece4;
-  color: #1a1a1a;
+#blog-sidebar .box {
+  background-color: whitesmoke;
 }
 
 /*# sourceMappingURL=style.css.map */
