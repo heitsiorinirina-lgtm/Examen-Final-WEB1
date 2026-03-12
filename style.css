@@ -21681,7 +21681,6 @@ body {
     color: #e0e0e0;
 }
 
-
 .about-container {
     display: flex;
     gap: 60px;
@@ -21716,6 +21715,10 @@ body {
     font-size: 3.5rem;
     line-height: 1.1;
     color: #1a1a1a;
+}
+
+.hero-subtitle-container {
+    max-width: 480px;
 }
 
 .about-content {
@@ -21879,7 +21882,7 @@ body {
 
 /*footer */
 .footer-container {
-    background-color: red; 
+    background-color: hsla(0deg, 70%, 35%, 1); 
     padding: 6rem 1.5rem;      
     color: #ffffff;
 }
@@ -21913,6 +21916,7 @@ body {
     background-color: #ffffff !important;
     color: #bc0000 !important;
 }
+
 
 @media screen and (max-width: 768px) {
     .footer-title {
