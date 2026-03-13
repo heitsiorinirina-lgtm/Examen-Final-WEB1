@@ -21607,34 +21607,61 @@ section#blog-posts {
   color: #78716c;
 }
 
-#blog-sidebar .box {
-  background-color: whitesmoke;
+.blog-tag {
+  background-color: #f0ece4;
+  color: #1a1a1a;
 }
 
-.blog-card-thumbnail {
-  border-radius: 0.5rem;
+/*# sourceMappingURL=style.css.map */
+
+:root {
+    --main-red: #9e0b0b; /
+    --bg-cream: #fdfaf7;
+}
+
+body {
+    background-color: var(--bg-cream);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+    background-color: var(--main-red) !important;
+    padding: 0.5rem 0;
 }
 
 .date {
   color: #1a1a1a;
 }
 
-.section-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #9b9b9b;
+.custom-name {
+    font-size: 4.5rem !important;
+    font-weight: 700;
+    line-height: 1;
 }
-.section-header::before, .section-header::after {
-  content: "";
-  flex: 1;
-  max-width: 3.5rem;
-  height: 2px;
-  background-color: #b22222;
+
+.button.is-danger {
+    background-color: var(--main-red) !important;
+}
+
+.has-shadow {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+.hero.is-fullheight-with-navbar {
+    background-color: #fdfaf7;
+    display: flex;
+    align-items: center;
+}
+
+.profile-img {
+    width: 380px !important;    
+    height: 380px !important;   
+    border-radius: 50% !important; 
+    object-fit: cover;          
+    border: 15px solid #f2e8e0; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    
 }
 
 .section-label {
@@ -21654,4 +21681,245 @@ section#blog-posts {
   background-color: #b22222;
 }
 
-/*# sourceMappingURL=style.css.map */
+.about-container {
+    display: flex;
+    gap: 60px;
+    padding: 80px 10%;
+    background-color: white; 
+}
+
+.about-title {
+    flex: 1;
+}
+
+.about-title span {
+    color: var(--main-red);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.about-title span::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--main-red);
+    margin-bottom: 10px;
+}
+
+.about-title h2 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.hero-subtitle-container {
+    max-width: 480px;
+}
+
+.about-content {
+    flex: 2;
+}
+
+.about-content p {
+    color: #444;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.stat-item {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 2rem;
+    color: var(--main-red);
+    margin-bottom: 5px;
+}
+
+
+.courses-section {
+    background-color: whitesmoke;
+    padding: 80px 10%;
+    text-align: center;
+}
+
+.section-tag {
+    color: var(--main-red);
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.courses-main-title {
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+
+.course-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    text-align: left;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.tag-dev { background-color: var(--main-red); }
+.tag-trans { background-color: #2d2d2d; }
+.tag-research { background-color: #666; }
+
+.course-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #888;
+    font-size: 0.85rem;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.view-all {
+    display: inline-block;
+    color: var(--main-red);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--main-red);
+    padding-bottom: 5px;
+}
+
+/* Section 3 page_home
+-------------------------------------------------- */
+/* Importation d'une police Serif pour le titre (proche du design) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+body {
+    background-color: #ffffff;
+    font-family: 'BlinkMacSystemFont', -apple-system, "Segoe UI", "Roboto", sans-serif;
+}
+
+.serif-font {
+    font-family: 'Playfair+Display', serif;
+    letter-spacing: -1px;
+}
+
+.tracking-widest {
+    letter-spacing: 0.15em;
+}
+
+.red-dash {
+    color: #d92323;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.experience-item {
+    border-left: 1px solid #e5e5e5;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    height: 100%;
+}
+
+.columns .column:nth-child(odd) .experience-item {
+    border-left: 1px solid #d92323;
+}
+
+.no-border {
+    border-left: 1px solid transparent !important;
+}
+
+@media screen and (max-width: 768px) {
+    .experience-item {
+        padding-left: 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/*footer */
+.footer-container {
+    background-color: hsla(0deg, 70%, 35%, 1); 
+    padding: 6rem 1.5rem;      
+    color: #ffffff;
+}
+
+.footer-title {
+    color: #ffffff !important;
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-subtitle {
+    color: #f5f5f5;
+    font-size: 1rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-btn {
+    border-width: 1px !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1px;
+    background-color: transparent !important;
+    font-weight: 600;
+}
+
+.footer-btn:hover {
+    background-color: #ffffff !important;
+    color: #bc0000 !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .footer-title {
+        font-size: 1.8rem;
+    }
+}
