@@ -13,8 +13,8 @@
 
 <body>
     <header>
-        <nav class="navbar is-primary" aria-label="main navigation" role="navigation">
-            <div class="navbar-brand"><img src="assets/logo.png" alt="Toky Ramarozaka" width="200px"></div>
+        <nav class="navbar is-fixed-top is-primary" aria-label="main navigation" role="navigation">
+            <div class="navbar-brand"><img src="assets/logo.png" alt="Toky Ramarozaka" width="300px"></div>
             <div class="navbar-menu">
                 <div class="navbar-center">
                     <a href="index.html" class="navbar-item has-text-weight-bold">HOME</a>
@@ -33,11 +33,11 @@
     <main>
         <section class="section hero-blog">
             <div class="container has-text-centered">
-                <p class="is-uppercase has-text-weight-semibold has-text-danger">
+                <p class="is-uppercase has-text-weight-semibold has-text-grey section-header">
                     Writing
                 </p>
                 <h1 class="title is-1">
-                    The blog
+                    The <i class="has-text-danger">blog</i>
                 </h1>
                 <p class="subtitle is-5">
                     Thoughts on teaching, software engineering, languages, and
@@ -46,7 +46,36 @@
             </div>
         </section>
         <section class="section" id="blog-posts">
-
+            <div class="container">
+                <div class="columns is-variable is-6">
+                    <div class="column is-two-thirds">
+                        <div id="blog-posts-list"></div>
+                    </div>
+                    <aside class="column">
+                        <div class="box mb-5">
+                            <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-2"
+                                id="newsletter">
+                                Newsletter</p>
+                            <p class="blog-card-meta mb-3">
+                                Get new articles straight to your inbox. No spam, ever.
+                            </p>
+                            <form>
+                                <div class="field has-addons">
+                                    <div class="control is-expanded">
+                                        <input class="input" type="email" placeholder="your@email.com" required />
+                                    </div>
+                                    <div class="control">
+                                        <button class="button is-primary" type="submit">
+                                            Subscribe
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="blog-sidebar"></div>
+                    </aside>
+                </div>
+            </div>
         </section>
     </main>
 </body>

@@ -64,12 +64,58 @@ section#blog-posts {
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
-.blog-card__meta {
+.blog-card-meta {
   color: $color-text-muted;
 }
 
 #blog-sidebar .box {
   background-color: whitesmoke;
+}
+
+.blog-card-thumbnail {
+  border-radius: 0.5rem;
+}
+
+.date {
+  color: $color-text-dark;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9b9b9b;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    max-width: 3.5rem;
+    height: 2px;
+    background-color: #b22222;
+  }
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; // space between text and lines
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9b9b9b;
+
+  &::before {
+    content: "";
+    flex: 1;
+    max-width: 3.5rem; // line length; tweak as needed
+    height: 2px;
+    background-color: #b22222;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");

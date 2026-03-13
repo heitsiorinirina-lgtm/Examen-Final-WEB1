@@ -2,20 +2,7 @@ const data = window.data;
 const postsSection = document.getElementById("blog-posts");
 const POSTS_PER_PAGE = 4;
 let currentPage = 1;
-
-// -------------------------
-// Templates (global scope)
-// -------------------------
-
-const PAGE_LAYOUT_TEMPLATE = `
-  <div class="container">
-    <div class="columns is-variable is-6">
-      <div class="column is-two-thirds" id="blog-posts-list"></div>
-      <aside class="column" id="blog-sidebar"></aside>
-    </div>
-  </div>
-`;
-
+const newsletter = document.getElementById("newsletter");
 function formatDate(date) {
   return date.toLocaleDateString("en-US", {
     year: "numeric",
@@ -25,7 +12,12 @@ function formatDate(date) {
 }
 
 function tagsTemplate(tags) {
-  return tags.map((tag) => `<span class="tag blog-tag">${tag}</span>`).join("");
+  return tags
+    .map(
+      (tag) =>
+        `<span class="tag is-info is-rounded has-text-white">${tag}</span>`,
+    )
+    .join("");
 }
 
 function postCardTemplate(post) {
@@ -34,17 +26,17 @@ function postCardTemplate(post) {
       <div class="columns is-vcentered">
         <div class="column is-one-quarter">
           <figure class="image is-4by3">
-            <img src="${post.thumbnail}" alt="${post.title}">
+            <img src="${post.thumbnail}" alt="${post.title}" class="blog-card-thumbnail">
           </figure>
         </div>
-        <div class="column">
-          <h2 class="has-text-primary is-size-5 mb-2">
+        <div class="column pb-2">
+          <h2 class="has-text-primary is-size-5">
             ${post.title}
           </h2>
-          <p class="blog-card__meta">
+          <p class="blog-card-meta date has-text-weight-semibold">
             ${formatDate(post.creationDate)}
           </p>
-          <p class="blog-card__meta mb-3">
+          <p class="blog-card-meta is-size-7 pb-5 mb-3">
             ${post.description}
           </p>
           <div class="tags">
@@ -59,7 +51,7 @@ function postCardTemplate(post) {
 function archivesTemplate(archives) {
   return `
     <div class="box is-column mb-5">
-      <p class="has-text-weight-semibold mb-2">Archives</p>
+      <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-2">Archives</p>
       <ul>
         ${archives
           .map(
@@ -75,37 +67,10 @@ function archivesTemplate(archives) {
   `;
 }
 
-const NEWSLETTER_TEMPLATE = `
-  <div class="box mb-5">
-    <p class="has-text-weight-semibold mb-2">Newsletter</p>
-    <p class="blog-card__meta mb-3">
-      Get new articles straight to your inbox. No spam, ever.
-    </p>
-    <form>
-      <div class="field has-addons">
-        <div class="control is-expanded">
-          <input
-            class="input"
-            type="email"
-            name="newsletter-email"
-            placeholder="your@email.com"
-            required
-          />
-        </div>
-        <div class="control">
-          <button class="button is-primary" type="submit">
-            Subscribe
-          </button>
-        </div>
-      </div>
-    </form>
-  </div>
-`;
-
 function youtubeTemplate(videos) {
   return `
     <div class="box">
-      <p class="has-text-weight-semibold mb-3">On YouTube</p>
+      <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-3">On YouTube</p>
       ${videos
         .map(
           (video) => `
@@ -117,10 +82,9 @@ function youtubeTemplate(videos) {
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
-                  referrerpolicy="strict-origin-when-cross-origin"
                 ></iframe>
               </div>
-              <p class="blog-card__meta mt-2">${video.title}</p>
+              <p class="blog-card-meta mt-2">${video.title}</p>
             </div>
           `,
         )
@@ -130,8 +94,11 @@ function youtubeTemplate(videos) {
 }
 
 function getPageCount() {
-  if (!data?.posts) return 0;
-  return Math.ceil(data.posts.length / POSTS_PER_PAGE);
+  if (!data.posts) return 0;
+  const total = data.posts.length;
+  if (total <= POSTS_PER_PAGE) return total > 0 ? 1 : 0;
+  // Merge any remaining posts into the last full page
+  return Math.floor(total / POSTS_PER_PAGE);
 }
 
 function createPaginationTemplate(current, total) {
@@ -141,13 +108,12 @@ function createPaginationTemplate(current, total) {
 
   return `
     <nav class="pagination is-centered" role="navigation" aria-label="pagination">
-      <a class="pagination-previous" data-page="${current - 1}" ${
-        current === 1 ? "disabled" : ""
-      }>Previous</a>
-      <a class="pagination-next" data-page="${current + 1}" ${
-        current === total ? "disabled" : ""
-      }>Next</a>
       <ul class="pagination-list">
+        <li>
+          <a class="pagination-link" data-page="${current - 1}" ${
+            current === 1 ? "disabled" : ""
+          }>← Prev</a>
+        </li>
         ${pages
           .map(
             (page) => `
@@ -161,18 +127,24 @@ function createPaginationTemplate(current, total) {
             `,
           )
           .join("")}
+        <li>
+          <a class="pagination-link" data-page="${current + 1}" ${
+            current === total ? "disabled" : ""
+          }>Next →</a>
+        </li>
       </ul>
     </nav>
   `;
 }
 
 function renderPosts(page) {
-  if (!postsSection || !data?.posts) return;
+  if (!postsSection || !data.posts) return;
 
   const totalPages = getPageCount();
+  if (totalPages === 0) return;
   currentPage = Math.min(Math.max(page, 1), totalPages);
 
-  postsSection.innerHTML = PAGE_LAYOUT_TEMPLATE;
+  postsSection.innerHTML = document.getElementById("blog-posts").innerHTML;
 
   const listElement = document.getElementById("blog-posts-list");
   const sidebarElement = document.getElementById("blog-sidebar");
@@ -180,14 +152,19 @@ function renderPosts(page) {
   if (!listElement || !sidebarElement) return;
 
   const start = (currentPage - 1) * POSTS_PER_PAGE;
-  const visiblePosts = data.posts.slice(start, start + POSTS_PER_PAGE);
+  const isLastPage = currentPage === totalPages;
+  const visiblePosts = isLastPage
+    ? data.posts.slice(start) // last page gets all remaining posts
+    : data.posts.slice(start, start + POSTS_PER_PAGE);
 
   listElement.innerHTML =
     visiblePosts.map(postCardTemplate).join("") +
     createPaginationTemplate(currentPage, totalPages);
 
   sidebarElement.innerHTML =
-    archivesTemplate(data.archives) + NEWSLETTER_TEMPLATE + youtubeTemplate(data.youtubeVideos);
+    archivesTemplate(data.archives) +
+    newsletter.innerHTML +
+    youtubeTemplate(data.youtubeVideos);
 }
 
 postsSection?.addEventListener("click", (event) => {
