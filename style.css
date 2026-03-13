@@ -7180,7 +7180,7 @@ button.dropdown-item.is-selected {
   --bulma-navbar-item-img-max-height: 1.75rem;
   --bulma-navbar-burger-color: var(--bulma-link);
   --bulma-navbar-tab-hover-background-color: transparent;
-  --bulma-navbar-tab-hover-border-bottom-color: var(--bulma-link);
+  --bulma-navbar-tab-hover-border-bottom-color: white;
   --bulma-navbar-tab-active-color: var(--bulma-link);
   --bulma-navbar-tab-active-background-color: transparent;
   --bulma-navbar-tab-active-border-bottom-color: var(--bulma-link);
@@ -21591,7 +21591,6 @@ body {
 
 .hero-blog {
   background-color: #f9f6f1;
-  padding: 4rem;
 }
 
 section#blog-posts {
