@@ -29,6 +29,10 @@ $color-border-light: #f0ece4;
   border: none;
 }
 
+#logo {
+  max-height: 4rem;
+}
+
 #search-bar:focus {
   outline: none;
   box-shadow: none;
@@ -53,6 +57,7 @@ body {
 
 .hero-blog {
   background-color: $color-bg-warm;
+  height: 35vh;
 }
 
 section#blog-posts {
@@ -73,8 +78,39 @@ section#blog-posts {
   background-color: whitesmoke;
 }
 
+// Prevent sidebar content from overflowing at tablet widths (e.g. 1024px)
+section#blog-posts .columns > .column {
+  min-width: 0;
+}
+
+#blog-sidebar {
+  min-width: 0;
+
+  .box {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; // 16:9
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .blog-card-thumbnail {
   border-radius: 0.5rem;
+  width: 100%;
 }
 
 .date {
@@ -116,6 +152,102 @@ section#blog-posts {
     max-width: 3.5rem; // line length; tweak as needed
     height: 2px;
     background-color: #b22222;
+  }
+}
+
+/* Let the blog layout stretch on wide screens */
+section#blog-posts .container {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Optional: add some side padding so it doesn’t touch the edges */
+@media screen and (min-width: 1400px) {
+  section#blog-posts {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* NAVBAR: clearly larger, scales with width */
+.navbar-item {
+  font-size: clamp(1.1rem, 1.2vw, 1.5rem);
+}
+
+/* HERO */
+.hero-blog .title {
+  font-size: clamp(2.4rem, 3vw, 3.4rem);
+}
+
+.hero-blog .subtitle {
+  font-size: clamp(1.2rem, 1.6vw, 1.8rem);
+}
+
+/* BLOG CARDS */
+.blog-card h2 {
+  font-size: clamp(1.4rem, 1.6vw, 2rem);
+}
+
+.blog-card .blog-card-meta,
+.blog-card p {
+  font-size: clamp(0.8rem, 0.5vw, 1rem);
+}
+
+/* SIDEBAR (archives, newsletter, YouTube) */
+#blog-sidebar .section-label,
+#blog-sidebar .blog-card-meta,
+#blog-sidebar a {
+  font-size: clamp(0.95rem, 1.05vw, 1.2rem);
+}
+
+/* Slightly reduce overall text size on laptop / small-desktop widths (~1024px) */
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Make pagination controls larger on very wide / 4K screens */
+@media screen and (min-width: 1920px) {
+  .pagination-link {
+    font-size: 1.1rem;
+    padding-inline: 1.1em;
+    padding-block: 0.7em;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  #search-bar {
+    margin-top: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 9999px;
+    padding: 0.4rem 0.9rem;
+  }
+
+  .navbar-center {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .navbar-end a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #search-bar {
+    width: 100%;
+  }
+}
+
+.has-underline {
+  &::after {
+    content: "";
+    width:;
+    display: block;
+    height: 2px;
+    background-color: $color-red;
+    margin-top: 1px;
   }
 }
 

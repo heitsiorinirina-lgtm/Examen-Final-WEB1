@@ -1,8 +1,11 @@
 const data = window.data;
 const postsSection = document.getElementById("blog-posts");
-const POSTS_PER_PAGE = 4;
+const POSTS_PER_PAGE = 5;
 let currentPage = 1;
+let currentArchiveFilter = null;
 const newsletter = document.getElementById("newsletter");
+const archives = document.getElementById("archives");
+const youtubeSection = document.getElementById("videos");
 function formatDate(date) {
   return date.toLocaleDateString("en-US", {
     year: "numeric",
@@ -23,22 +26,24 @@ function tagsTemplate(tags) {
 function postCardTemplate(post) {
   return `
     <article class="box blog-card mb-5">
-      <div class="columns is-vcentered">
-        <div class="column is-one-quarter">
-          <figure class="image is-4by3">
+      <div class="columns">
+        <div class="column is-one-quarter pr-0">
+          <figure class="image is-1by1">
             <img src="${post.thumbnail}" alt="${post.title}" class="blog-card-thumbnail">
           </figure>
         </div>
-        <div class="column pb-2">
-          <h2 class="has-text-primary is-size-5">
-            ${post.title}
-          </h2>
-          <p class="blog-card-meta date has-text-weight-semibold">
-            ${formatDate(post.creationDate)}
-          </p>
-          <p class="blog-card-meta is-size-7 pb-5 mb-3">
-            ${post.description}
-          </p>
+        <div class="column is-flex is-flex-direction-column is-justify-content-space-between">
+          <div>
+            <h2 class="has-text-primary is-size-5-mobile is-size-4-tablet is-size-4-desktop">
+              ${post.title}
+            </h2>
+            <p class="blog-card-meta date has-text-weight-semibold is-size-6-mobile is-size-6-tablet is-size-6-desktop">
+              ${formatDate(post.creationDate)}
+            </p>
+            <p class="blog-card-meta pb-5 mb-3 is-size-6-mobile is-size-6-tablet is-size-6-desktop">
+              ${post.description}
+            </p>
+          </div>
           <div class="tags">
             ${tagsTemplate(post.tags)}
           </div>
@@ -51,13 +56,13 @@ function postCardTemplate(post) {
 function archivesTemplate(archives) {
   return `
     <div class="box is-column mb-5">
-      <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-2">Archives</p>
+      <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-2 is-size-6-mobile is-size-6-tablet is-size-6-desktop">Archives</p>
       <ul>
         ${archives
           .map(
             (archive) => `
               <li>
-                <a href="#">${archive.label} (${archive.count})</a>
+                <a href="#" data-archive="${archive.slug}" class="is-size-6-mobile is-size-6-tablet is-size-6-desktop">${archive.label} (${archive.count})</a>
               </li>
             `,
           )
@@ -70,7 +75,7 @@ function archivesTemplate(archives) {
 function youtubeTemplate(videos) {
   return `
     <div class="box">
-      <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-3">On YouTube</p>
+      <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-3 is-size-6-mobile is-size-6-tablet is-size-6-desktop">On YouTube</p>
       ${videos
         .map(
           (video) => `
@@ -84,21 +89,21 @@ function youtubeTemplate(videos) {
                   allowfullscreen
                 ></iframe>
               </div>
-              <p class="blog-card-meta mt-2">${video.title}</p>
+              <p class="blog-card-meta mt-2 is-size-6-mobile is-size-6-tablet is-size-6-desktop">${video.title}</p>
             </div>
           `,
         )
         .join("")}
+      <a href="#" class="has-text-primary has-text-weight-bold has-underline mt-4">VIEW ALL VIDEOS →</a>
     </div>
   `;
 }
 
 function getPageCount() {
-  if (!data.posts) return 0;
   const total = data.posts.length;
   if (total <= POSTS_PER_PAGE) return total > 0 ? 1 : 0;
   // Merge any remaining posts into the last full page
-  return Math.floor(total / POSTS_PER_PAGE);
+  return Math.ceil(total / POSTS_PER_PAGE);
 }
 
 function createPaginationTemplate(current, total) {
@@ -138,19 +143,10 @@ function createPaginationTemplate(current, total) {
 }
 
 function renderPosts(page) {
-  if (!postsSection || !data.posts) return;
-
   const totalPages = getPageCount();
-  if (totalPages === 0) return;
-  currentPage = Math.min(Math.max(page, 1), totalPages);
-
-  postsSection.innerHTML = document.getElementById("blog-posts").innerHTML;
+  let currentPage = Math.min(Math.max(page, 1), totalPages);
 
   const listElement = document.getElementById("blog-posts-list");
-  const sidebarElement = document.getElementById("blog-sidebar");
-
-  if (!listElement || !sidebarElement) return;
-
   const start = (currentPage - 1) * POSTS_PER_PAGE;
   const isLastPage = currentPage === totalPages;
   const visiblePosts = isLastPage
@@ -160,24 +156,47 @@ function renderPosts(page) {
   listElement.innerHTML =
     visiblePosts.map(postCardTemplate).join("") +
     createPaginationTemplate(currentPage, totalPages);
-
-  sidebarElement.innerHTML =
-    archivesTemplate(data.archives) +
-    newsletter.innerHTML +
-    youtubeTemplate(data.youtubeVideos);
 }
+
+const sidebarElement = document.getElementById("blog-sidebar");
+archives.innerHTML = archivesTemplate(data.archives);
+youtubeSection.innerHTML = youtubeTemplate(data.youtubeVideos);
+sidebarElement.innerHTML =
+  archives.innerHTML + newsletter.innerHTML + youtubeSection.innerHTML;
 
 postsSection?.addEventListener("click", (event) => {
   const target = event.target;
   if (!(target instanceof HTMLElement)) return;
 
   const pageAttr = target.getAttribute("data-page");
-  if (!pageAttr) return;
-
-  const page = Number(pageAttr);
-  if (!Number.isNaN(page)) {
-    renderPosts(page);
+  if (pageAttr) {
+    const page = Number(pageAttr);
+    if (!Number.isNaN(page)) {
+      renderPosts(page);
+    }
+    return;
   }
 });
 
 renderPosts(1);
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(
+    document.querySelectorAll(".navbar-burger"),
+    0,
+  );
+
+  // Add a click event on each of them
+  $navbarBurgers.forEach((el) => {
+    el.addEventListener("click", () => {
+      // Get the target from the "data-target" attribute
+      const target = el.dataset.target;
+      const $target = document.getElementById(target);
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      el.classList.toggle("is-active");
+      $target.classList.toggle("is-active");
+    });
+  });
+});
