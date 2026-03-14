@@ -7180,7 +7180,7 @@ button.dropdown-item.is-selected {
   --bulma-navbar-item-img-max-height: 1.75rem;
   --bulma-navbar-burger-color: var(--bulma-link);
   --bulma-navbar-tab-hover-background-color: transparent;
-  --bulma-navbar-tab-hover-border-bottom-color: white;
+  --bulma-navbar-tab-hover-border-bottom-color: var(--bulma-link);
   --bulma-navbar-tab-active-color: var(--bulma-link);
   --bulma-navbar-tab-active-background-color: transparent;
   --bulma-navbar-tab-active-border-bottom-color: var(--bulma-link);
@@ -13148,7 +13148,7 @@ label.panel-block:hover {
 }
 
 .footer {
-  --bulma-footer-background-color: var(--bulma-scheme-main-bis);
+  --bulma-footer-background-color: #991b1b;
   --bulma-footer-color: false;
   --bulma-footer-padding: 3rem 1.5rem 6rem;
   background-color: var(--bulma-footer-background-color);
@@ -21596,6 +21596,7 @@ body {
 .hero-blog {
   background-color: #f9f6f1;
   height: 35vh;
+  margin-top: 64px;
 }
 
 section#blog-posts {
@@ -21707,11 +21708,11 @@ section#blog-posts .container {
 
 /* HERO */
 .hero-blog .title {
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
 }
 
 .hero-blog .subtitle {
-  font-size: clamp(1.2rem, 1.6vw, 1.8rem);
+  font-size: clamp(1.2rem, 1.2vw, 1.8rem);
 }
 
 /* BLOG CARDS */
@@ -21743,6 +21744,12 @@ section#blog-posts .container {
     font-size: 1.1rem;
     padding-inline: 1.1em;
     padding-block: 0.7em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .is-fullwidth-mobile {
+    display: flex;
+    width: 100%;
   }
 }
 @media screen and (max-width: 1023px) {

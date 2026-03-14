@@ -18,10 +18,10 @@ $color-border-light: #f0ece4;
 
   $background: $color-bg-warm,
   $text: $color-text-dark,
+  $footer-background-color: $color-red-dark,
 
   $family-primary: "DM Sans",
-  $title-family: "Playfair Display",
-  $navbar-tab-hover-border-bottom-color: white
+  $title-family: "Playfair Display"
 );
 
 #search-bar {
@@ -58,6 +58,7 @@ body {
 .hero-blog {
   background-color: $color-bg-warm;
   height: 35vh;
+  margin-top: 64px; // compensate for fixed navbar
 }
 
 section#blog-posts {
@@ -176,11 +177,11 @@ section#blog-posts .container {
 
 /* HERO */
 .hero-blog .title {
-  font-size: clamp(2.4rem, 3vw, 3.4rem);
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
 }
 
 .hero-blog .subtitle {
-  font-size: clamp(1.2rem, 1.6vw, 1.8rem);
+  font-size: clamp(1.2rem, 1.2vw, 1.8rem);
 }
 
 /* BLOG CARDS */
@@ -213,6 +214,13 @@ section#blog-posts .container {
     font-size: 1.1rem;
     padding-inline: 1.1em;
     padding-block: 0.7em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .is-fullwidth-mobile {
+    display: flex;
+    width: 100%;
   }
 }
 
