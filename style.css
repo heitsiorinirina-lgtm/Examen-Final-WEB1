@@ -21923,3 +21923,185 @@ body {
         font-size: 1.8rem;
     }
 }
+
+/* testimoial */
+:root {
+    --primary-red: #a51c1c;
+    --dark-bg: #8b1414;
+    --light-bg: #fdfaf7;
+    --text-main: #333;
+    --text-light: #666;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-main);
+}
+
+/* Header */
+.main-header {
+    background-color: var(--dark-bg);
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; }
+.logo span { font-weight: normal; font-size: 0.8rem; opacity: 0.8; margin-left: 10px; }
+
+nav ul { display: flex; list-style: none; gap: 25px; }
+nav a { color: white; text-decoration: none; font-size: 0.8rem; letter-spacing: 1px; }
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--text-light);
+}
+
+.line { height: 1px; width: 40px; background-color: var(--text-light); }
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+.italic-red {
+    color: var(--primary-red);
+    font-style: italic;
+}
+
+.intro-text {
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Testimonial Cards */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card .rating { color: #f1c40f; margin-bottom: 15px; }
+.card .desc { font-style: italic; margin-bottom: 20px; line-height: 1.5; }
+.card .author { font-weight: bold; font-size: 0.9rem; }
+.card .role { font-size: 0.75rem; text-transform: uppercase; color: var(--primary-red); }
+
+
+
+
+/* Style des catégories */
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    padding: 0 50px;
+}
+
+.category-line {
+    height: 2px;
+    width: 30px;
+    background-color: var(--primary-red);
+}
+
+.category-title {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+/* Grille et Cartes */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 50px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px; /* Coins très arrondis */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #555; /* Couleur de secours */
+    object-fit: cover;
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.author-name {
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.author-role {
+    font-size: 0.7rem;
+    color: #888;
+    margin-top: 4px;
+}
+
+.card-body {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #444;
+    min-height: 80px;
+}
+
+.rating-stars {
+    color: var(--primary-red); /* Étoiles rouges selon l'image */
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
