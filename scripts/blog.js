@@ -94,7 +94,7 @@ function youtubeTemplate(videos) {
           `,
         )
         .join("")}
-      <a href="#" class="has-text-primary has-text-weight-bold has-underline mt-4">VIEW ALL VIDEOS →</a>
+      <span><a href="#" class="has-text-primary has-text-weight-bold has-underline mt-4">VIEW ALL VIDEOS →</a></span>
     </div>
   `;
 }

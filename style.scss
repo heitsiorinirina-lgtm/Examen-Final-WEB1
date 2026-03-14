@@ -240,14 +240,20 @@ section#blog-posts .container {
   }
 }
 
+span.has-underline {
+  display: inline-block;
+}
+
 .has-underline {
+  position: relative;
   &::after {
     content: "";
-    width:;
-    display: block;
+    position: absolute;
+    width: 100%;
     height: 2px;
+    bottom: 0;
+    left: 0;
     background-color: $color-red;
-    margin-top: 1px;
   }
 }
 
