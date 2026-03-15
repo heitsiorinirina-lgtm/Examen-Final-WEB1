@@ -1,32 +1,28 @@
-import { testimonials } from '../data/tokimahery.data.js';
+const container = document.getElementById('testimonials-container');
 
-const grid = document.getElementById('testimonial-grid');
+function displayFiveTestimonials() {
+    if (typeof data === 'undefined' || !data.testimonials) {
+        console.error("Variable 'data.testimonials' introuvable.");
+        return;
+    }
 
-function renderTestimonials() {
-    grid.innerHTML = '';
+    const limitedTestimonials = data.testimonials.slice(0, 5);
 
-    testimonials.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        
-        const stars = '★'.repeat(item.rating) + '☆'.repeat(5 - item.rating);
-
-        card.innerHTML = `
+    container.innerHTML = limitedTestimonials.map(item => `
+        <div class="card">
             <div class="card-header">
-                <img src="${item.thumbnail}" alt="${item.author}" class="avatar">
-                <div class="author-info">
-                    <span class="author-name">${item.author}</span>
-                    <span class="author-role">${item.role}</span>
+                <img src="assets/square-image.jpg" class="avatar" alt="avatar">
+                <div class="author-meta">
+                    <b>${item.author}</b>
+                    <span>${item.role}</span>
                 </div>
             </div>
-            <div class="card-body">
-                ${item.description}
+            <p class="description">${item.description}</p>
+            <div class="stars">
+                ${'★'.repeat(item.rating)}${'☆'.repeat(5 - item.rating)}
             </div>
-            <div class="rating-stars">${stars}</div>
-        `;
-        
-        grid.appendChild(card);
-    });
+        </div>
+    `).join('');
 }
 
-document.addEventListener('DOMContentLoaded', renderTestimonials);
+document.addEventListener('DOMContentLoaded', displayFiveTestimonials);
