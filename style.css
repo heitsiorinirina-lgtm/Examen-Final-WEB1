@@ -21607,8 +21607,6 @@ body {
   color: #1a1a1a;
 }
 
-/*# sourceMappingURL=style.css.map */
-
 :root {
     --main-red: #9e0b0b; /
     --bg-cream: #fdfaf7;
@@ -21620,24 +21618,24 @@ body {
 }
 
 .navbar {
-    background-color: var(--main-red) !important;
+    background-color: var(--main-red);
     padding: 0.5rem 0;
 }
 
 .navbar-item {
-    color: white !important;
+    color: white;
     font-size: 0.75rem;
     letter-spacing: 1px;
 }
 
 .custom-name {
-    font-size: 4.5rem !important;
+    font-size: 4.5rem;
     font-weight: 700;
     line-height: 1;
 }
 
 .button.is-danger {
-    background-color: var(--main-red) !important;
+    background-color: var(--main-red);
 }
 
 .has-shadow {
@@ -21652,9 +21650,9 @@ body {
 }
 
 .profile-img {
-    width: 380px !important;    
-    height: 380px !important;   
-    border-radius: 50% !important; 
+    width: 380px;    
+    height: 380px;   
+    border-radius: 50%; 
     object-fit: cover;          
     border: 15px solid #f2e8e0; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
@@ -21671,7 +21669,7 @@ body {
 
 .custom-name {
     font-family: 'Georgia', serif; 
-    font-size: 4rem !important;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 1.1;
 }
@@ -21833,9 +21831,7 @@ body {
     padding-bottom: 5px;
 }
 
-/* Section 3 page_home
--------------------------------------------------- */
-/* Importation d'une police Serif pour le titre (proche du design) */
+/* /* Section 3 page_home */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
 body {
@@ -22085,3 +22081,134 @@ h1.title {
     letter-spacing: 4px;
 }
 
+/* SECTION TESTIMONIALS - CODE COMPLET À JOUR */
+
+/* 1. GRILLE DE MISE EN PAGE */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+#testimonials-container .card {
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+}
+
+#collaborators-container .card, 
+#customers-container .card {
+    background: #ffffff;
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    min-height: 120px; 
+    padding: 25px 20px;
+    border-radius: 12px; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+.customer-card .stars {
+    color: #cc0000;
+    font-size: 0.85rem;
+    margin-bottom: 25px;
+    letter-spacing: 3px;
+}
+
+.collab-card .description, 
+.customer-card .description {
+    line-height: 1.9;    
+    color: #333;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.card-footer-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: auto;     
+    padding-top: 30px;
+    border-top: 1px solid #f8f8f8;
+}
+
+.card-footer-meta .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-meta b {
+    display: block;
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.author-meta span {
+    display: block;
+    font-size: 0.7rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+
+
+/* FOOTER - VERSION COMPACTE (AJUSTÉE) */
+
+.main-footer {
+    background-color: #cc0000; 
+    padding: 70px 20px;       
+    color: #ffffff;
+    width: 100%;
+}
+
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;        
+    font-weight: 700;
+    margin-bottom: 15px;      
+}
+
+.footer-subtitle {
+    font-size: 1rem;          
+    line-height: 1.5;
+    max-width: 650px;
+    margin: 0 auto 35px;     
+    opacity: 0.9;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-buttons .button {
+    height: auto;
+    padding: 14px 35px;       
+    border-radius: 50px;      
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 0.8rem;        
+    transition: all 0.3s ease;
+    border: 2px solid #ffffff;
+    background-color: #cc0000;
+    color: #ffffff ;
+}
+
+.footer-buttons .button:hover {
+    background-color: #ffffff;
+    color: #cc0000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
