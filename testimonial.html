@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - T. Ramarozaka</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar is-primary" aria-label="main navigation" role="navigation">
+            <div class="navbar-brand"><img src="assets/logo.png" alt="Toky Ramarozaka" width="200px"></div>
+            <div class="navbar-menu">
+                <div class="navbar-center">
+                    <a href="#about" class="navbar-item has-text-weight-bold">HOME</a>
+                    <a href="#services" class="navbar-item has-text-weight-bold">BLOG</a>
+                    <a href="#contact" class="navbar-item has-text-weight-bold">COURSES</a>
+                    <a href="#testimonials" class="navbar-item has-text-weight-bold">TESTIMONIALS</a>
+                    <a href="#research" class="navbar-item has-text-weight-bold">RESEARCH</a>
+                </div>
+            </div>
+            <div class="navbar-end">
+                <input type="search" id="search-bar" class="has-text-white" placeholder="Search anything...">
+                <a href="" class="navbar-item"><i class="fa-solid fa-basket-shopping is-size-4"></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="section has-text-centered" id="hero-section">
+            <div class="container">
+                <div class="social-proof-container mb-4">
+                    <span class="social-proof-line"></span>
+                    <p class="is-size-7 has-text-grey-light">SOCIAL PROOF</p>
+                    <span class="social-proof-line"></span>
+                </div>
+                <h1 class="title is-size-1 family-secondary">
+                    What people <br> <span class="has-text-danger is-italic">say</span>
+                </h1>
+                <p class="subtitle is-size-6 has-text-grey mx-auto mt-4" style="max-width: 600px;">
+                    Hundreds of students, collaborators, and clients have trusted Tokimahery's expertise. Here's what they have to say.
+                </p>
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="section-header">
+                <span class="label-line">STUDENTS</span>
+            </div>
+            <div id="testimonials-container" class="testimonial-grid">
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="section-header">
+                <span class="label-line">COLLABORATORS</span>
+            </div>
+            <div id="collaborators-container" class="testimonial-grid alternate-style">
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="section-header">
+                <span class="label-line">CUSTOMERS</span>
+            </div>
+            <div id="customers-container" class="testimonial-grid">
+            </div>
+        </section>
+
+    <script src="data/tokimahery.data.js"></script> 
+    <script src="testimonial.js"></script>
+
+    </main>
+</body>
+<footer class="main-footer">
+    <div class="container has-text-centered">
+        <h2 class="footer-title">Join them.</h2>
+        <p class="footer-subtitle">
+            Whether you want to learn, collaborate, or get something built — <br>
+            Tokimahery is ready to help you move forward.
+        </p>
+        <div class="footer-buttons">
+            <a href="#" class="button is-white-rounded">BOOK A COURSE</a>
+            <a href="#" class="button is-outline-rounded">COLLABORATE</a>
+        </div>
+    </div>
+</footer>
+</html>
