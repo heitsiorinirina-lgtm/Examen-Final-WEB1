@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/18e6813d54.js" crossorigin="anonymous"></script>
     <script src="data/tokimahery.data.js"></script>
+    <script src="scripts/navbar.js" defer></script>
     <script src="scripts/blog.js" defer></script>
+    <script src="scripts/templates.js"></script>
 </head>
 
 <body>
@@ -32,9 +34,9 @@
                         class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">BLOG</a>
                     <a href="courses.html"
                         class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">COURSES</a>
-                    <a href="#testimonials"
+                    <a href="testimonials.html"
                         class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">TESTIMONIALS</a>
-                    <a href="#research"
+                    <a href="research.html"
                         class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">RESEARCH</a>
                 </div>
                 <div class="navbar-end">
@@ -47,10 +49,10 @@
         </nav>
     </header>
     <main>
-        <section class="section is-flex is-align-items-center hero-blog">
-            <div class="container has-text-centered is-vcentered">
+        <section class="section is-flex is-align-items-center basic-hero">
+            <div class="container has-text-centered">
                 <p
-                    class="is-uppercase has-text-weight-semibold has-text-grey section-header is-size-6-mobile is-size-6-tablet is-size-6-desktop">
+                    class="is-uppercase has-text-weight-semibold has-text-grey section-header is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-6-widescreen is-size-5-fullhd">
                     Writing
                 </p>
                 <h1 class="title is-3-mobile is-2-tablet is-1-desktop is-1-widescreen p-5">
@@ -94,13 +96,14 @@
             </div>
         </section>
     </main>
-    <footer class="has-background-primary is-flex is-flex-direction-column is-align-items-center p-5">
+    <footer class="has-background-link is-flex is-flex-direction-column is-align-items-center p-5">
         <div class="container has-text-centered">
-            <p class="title has-text-white py-5 is-1">Want to go deeper?</p>
+            <p class="title has-text-white py-3 is-1">Want to go deeper?</p>
             <p class="has-text-white mt-5 mb-6 is-4">Explore the courses or get in touch for a consultation</p>
         </div>
         <div class="buttons">
-            <a href="courses.html" class="button is-white is-rounded is-fullwidth-mobile">BROWSE COURSES</a>
+            <a href="courses.html" class="button is-white has-text-primary is-rounded is-fullwidth-mobile">BROWSE
+                COURSES</a>
             <a href="" class="button is-outlined is-white is-rounded is-fullwidth-mobile">COLLABORATE</a>
         </div>
     </footer>
