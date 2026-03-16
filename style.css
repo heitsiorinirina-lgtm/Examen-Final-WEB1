@@ -84,19 +84,19 @@
   --bulma-white-h: 221deg;
   --bulma-white-s: 14%;
   --bulma-white-l: 100%;
-  --bulma-white-invert-l: 4%;
-  --bulma-white-invert: hsl(221, 14%, 4%);
+  --bulma-white-invert-l: 10.1960784314%;
+  --bulma-white-invert: #1a1a1a;
   --bulma-white-on-scheme-l: 35%;
   --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
   --bulma-black: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
   --bulma-black-base: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
-  --bulma-black-rgb: 8.772, 9.6764, 11.628;
-  --bulma-black-h: 221deg;
-  --bulma-black-s: 14%;
-  --bulma-black-l: 4%;
+  --bulma-black-rgb: 26, 26, 26;
+  --bulma-black-h: 0deg;
+  --bulma-black-s: 0%;
+  --bulma-black-l: 10%;
   --bulma-black-invert-l: 100%;
   --bulma-black-invert: hsl(221, 14%, 100%);
-  --bulma-black-on-scheme-l: 4%;
+  --bulma-black-on-scheme-l: 10.1960784314%;
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
   --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
   --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
@@ -869,9 +869,9 @@
   --bulma-grey-lighter: hsl(221, 14%, 86%);
   --bulma-white-ter: hsl(221, 14%, 96%);
   --bulma-white-bis: hsl(221, 14%, 98%);
-  --bulma-shadow-h: 221deg;
-  --bulma-shadow-s: 14%;
-  --bulma-shadow-l: 4%;
+  --bulma-shadow-h: 0deg;
+  --bulma-shadow-s: 0%;
+  --bulma-shadow-l: 10%;
   --bulma-size-1: 3rem;
   --bulma-size-2: 2.5rem;
   --bulma-size-3: 2rem;
@@ -985,19 +985,19 @@
     --bulma-white-h: 221deg;
     --bulma-white-s: 14%;
     --bulma-white-l: 100%;
-    --bulma-white-invert-l: 4%;
-    --bulma-white-invert: hsl(221, 14%, 4%);
+    --bulma-white-invert-l: 10.1960784314%;
+    --bulma-white-invert: #1a1a1a;
     --bulma-white-on-scheme-l: 35%;
     --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
     --bulma-black: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
     --bulma-black-base: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
-    --bulma-black-rgb: 8.772, 9.6764, 11.628;
-    --bulma-black-h: 221deg;
-    --bulma-black-s: 14%;
-    --bulma-black-l: 4%;
+    --bulma-black-rgb: 26, 26, 26;
+    --bulma-black-h: 0deg;
+    --bulma-black-s: 0%;
+    --bulma-black-l: 10%;
     --bulma-black-invert-l: 100%;
     --bulma-black-invert: hsl(221, 14%, 100%);
-    --bulma-black-on-scheme-l: 4%;
+    --bulma-black-on-scheme-l: 10.1960784314%;
     --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
     --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
     --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
@@ -1770,9 +1770,9 @@
     --bulma-grey-lighter: hsl(221, 14%, 86%);
     --bulma-white-ter: hsl(221, 14%, 96%);
     --bulma-white-bis: hsl(221, 14%, 98%);
-    --bulma-shadow-h: 221deg;
-    --bulma-shadow-s: 14%;
-    --bulma-shadow-l: 4%;
+    --bulma-shadow-h: 0deg;
+    --bulma-shadow-s: 0%;
+    --bulma-shadow-l: 10%;
     --bulma-size-1: 3rem;
     --bulma-size-2: 2.5rem;
     --bulma-size-3: 2rem;
@@ -1786,7 +1786,7 @@
   :root {
     --bulma-white-on-scheme-l: 100%;
     --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
-    --bulma-black-on-scheme-l: -51%;
+    --bulma-black-on-scheme-l: 55.1960784314%;
     --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
     --bulma-light-on-scheme-l: 96%;
     --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
@@ -1903,19 +1903,19 @@
   --bulma-white-h: 221deg;
   --bulma-white-s: 14%;
   --bulma-white-l: 100%;
-  --bulma-white-invert-l: 4%;
-  --bulma-white-invert: hsl(221, 14%, 4%);
+  --bulma-white-invert-l: 10.1960784314%;
+  --bulma-white-invert: #1a1a1a;
   --bulma-white-on-scheme-l: 35%;
   --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
   --bulma-black: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
   --bulma-black-base: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
-  --bulma-black-rgb: 8.772, 9.6764, 11.628;
-  --bulma-black-h: 221deg;
-  --bulma-black-s: 14%;
-  --bulma-black-l: 4%;
+  --bulma-black-rgb: 26, 26, 26;
+  --bulma-black-h: 0deg;
+  --bulma-black-s: 0%;
+  --bulma-black-l: 10%;
   --bulma-black-invert-l: 100%;
   --bulma-black-invert: hsl(221, 14%, 100%);
-  --bulma-black-on-scheme-l: 4%;
+  --bulma-black-on-scheme-l: 10.1960784314%;
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
   --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
   --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
@@ -2688,9 +2688,9 @@
   --bulma-grey-lighter: hsl(221, 14%, 86%);
   --bulma-white-ter: hsl(221, 14%, 96%);
   --bulma-white-bis: hsl(221, 14%, 98%);
-  --bulma-shadow-h: 221deg;
-  --bulma-shadow-s: 14%;
-  --bulma-shadow-l: 4%;
+  --bulma-shadow-h: 0deg;
+  --bulma-shadow-s: 0%;
+  --bulma-shadow-l: 10%;
   --bulma-size-1: 3rem;
   --bulma-size-2: 2.5rem;
   --bulma-size-3: 2rem;
@@ -2737,7 +2737,7 @@
 .theme-dark {
   --bulma-white-on-scheme-l: 100%;
   --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
-  --bulma-black-on-scheme-l: -51%;
+  --bulma-black-on-scheme-l: 55.1960784314%;
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
   --bulma-light-on-scheme-l: 96%;
   --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
@@ -3303,7 +3303,7 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   --bulma-box-background-color: var(--bulma-scheme-main);
   --bulma-box-color: var(--bulma-text);
   --bulma-box-radius: var(--bulma-radius-large);
-  --bulma-box-shadow: var(--bulma-shadow);
+  --bulma-box-shadow: none;
   --bulma-box-padding: 1.25rem;
   --bulma-box-link-hover-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.1), 0 0 0 1px var(--bulma-link);
   --bulma-box-link-active-shadow: inset 0 1px 2px hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.2), 0 0 0 1px var(--bulma-link);
@@ -21562,6 +21562,15 @@ has-background-danger.is-hoverable:active {
   pointer-events: all !important;
 }
 
+.box {
+  border: 1px solid #e5e0d8;
+  transition: box-shadow 0.2s;
+}
+
+.box:hover {
+  box-shadow: var(--bulma-shadow);
+}
+
 #search-bar {
   background-color: transparent;
   border: none;
@@ -21587,15 +21596,35 @@ has-background-danger.is-hoverable:active {
   flex-grow: 1;
 }
 
-html,
-body {
-  background-color: #f9f6f1;
-  color: #1a1a1a;
+.navbar-item {
+  position: relative;
 }
 
-.hero-blog {
+.navbar-item:hover {
+  background-color: transparent;
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: calc(100% - 2rem);
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: transform 0.25s ease;
+}
+
+.navbar-item:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.basic-hero {
   background-color: #f9f6f1;
-  height: 35vh;
+  height: fit-content;
   margin-top: 64px;
 }
 
@@ -21649,10 +21678,6 @@ section#blog-posts .columns > .column {
   width: 100%;
 }
 
-.date {
-  color: #1a1a1a;
-}
-
 .section-header {
   display: flex;
   align-items: center;
@@ -21660,13 +21685,12 @@ section#blog-posts .columns > .column {
   gap: 0.75rem;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: #9b9b9b;
 }
 .section-header::before, .section-header::after {
   content: "";
   flex: 1;
-  max-width: 3.5rem;
+  max-width: 3rem;
   height: 2px;
   background-color: #b22222;
 }
@@ -21682,7 +21706,7 @@ section#blog-posts .columns > .column {
 }
 .section-label::before {
   content: "";
-  flex: 1;
+  flex-grow: 1;
   max-width: 3.5rem;
   height: 2px;
   background-color: #b22222;
@@ -21707,11 +21731,11 @@ section#blog-posts .container {
 }
 
 /* HERO */
-.hero-blog .title {
+.basic-hero .title {
   font-size: clamp(2.4rem, 4vw, 3.4rem);
 }
 
-.hero-blog .subtitle {
+.basic-hero .subtitle {
   font-size: clamp(1.2rem, 1.2vw, 1.8rem);
 }
 
@@ -21772,14 +21796,10 @@ section#blog-posts .container {
     width: 100%;
   }
 }
-span.has-underline {
-  display: inline-block;
-}
-
 .has-underline {
   position: relative;
 }
-.has-underline::after {
+.has-underline:not(i):after {
   content: "";
   position: absolute;
   width: 100%;
@@ -21787,6 +21807,19 @@ span.has-underline {
   bottom: 0;
   left: 0;
   background-color: #b91c1c;
+}
+.has-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: min(-0.6vh, -4px);
+  left: 0;
+  background-color: #b91c1c;
+}
+
+.breadcrumb ul li:first-of-type {
+  margin-top: 3.5px;
 }
 
 /*# sourceMappingURL=style.css.map */

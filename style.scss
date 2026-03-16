@@ -15,14 +15,25 @@ $color-border-light: #f0ece4;
 @use "bulma/sass" with (
   $primary: $color-red-dark,
   $link: $color-red,
+  $black: $color-text-dark,
 
   $background: $color-bg-warm,
   $text: $color-text-dark,
   $footer-background-color: $color-red-dark,
+  $box-shadow: none,
 
   $family-primary: "DM Sans",
   $title-family: "Playfair Display"
 );
+
+.box {
+  border: 1px solid #e5e0d8;
+  transition: box-shadow 0.2s;
+}
+
+.box:hover {
+  box-shadow: var(--bulma-shadow);
+}
 
 #search-bar {
   background-color: transparent;
@@ -49,15 +60,35 @@ $color-border-light: #f0ece4;
   flex-grow: 1;
 }
 
-html,
-body {
-  background-color: $color-bg-warm;
-  color: $color-text-dark;
+.navbar-item {
+  position: relative;
 }
 
-.hero-blog {
+.navbar-item:hover {
+  background-color: transparent;
+}
+
+.navbar-item::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: calc(100% - 2rem);
+  height: 2px;
+  background-color: $color-bg-white;
+  border-radius: 2px;
+  transition: transform 0.25s ease;
+}
+
+.navbar-item:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.basic-hero {
   background-color: $color-bg-warm;
-  height: 35vh;
+  height: fit-content;
   margin-top: 64px; // compensate for fixed navbar
 }
 
@@ -114,10 +145,6 @@ section#blog-posts .columns > .column {
   width: 100%;
 }
 
-.date {
-  color: $color-text-dark;
-}
-
 .section-header {
   display: flex;
   align-items: center;
@@ -125,14 +152,13 @@ section#blog-posts .columns > .column {
   gap: 0.75rem;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: #9b9b9b;
 
   &::before,
   &::after {
     content: "";
     flex: 1;
-    max-width: 3.5rem;
+    max-width: 3rem;
     height: 2px;
     background-color: #b22222;
   }
@@ -149,8 +175,8 @@ section#blog-posts .columns > .column {
 
   &::before {
     content: "";
-    flex: 1;
-    max-width: 3.5rem; // line length; tweak as needed
+    flex-grow: 1;
+    max-width: 3.5rem;
     height: 2px;
     background-color: #b22222;
   }
@@ -176,11 +202,11 @@ section#blog-posts .container {
 }
 
 /* HERO */
-.hero-blog .title {
+.basic-hero .title {
   font-size: clamp(2.4rem, 4vw, 3.4rem);
 }
 
-.hero-blog .subtitle {
+.basic-hero .subtitle {
   font-size: clamp(1.2rem, 1.2vw, 1.8rem);
 }
 
@@ -248,13 +274,9 @@ section#blog-posts .container {
   }
 }
 
-span.has-underline {
-  display: inline-block;
-}
-
 .has-underline {
   position: relative;
-  &::after {
+  &:not(i):after {
     content: "";
     position: absolute;
     width: 100%;
@@ -263,6 +285,20 @@ span.has-underline {
     left: 0;
     background-color: $color-red;
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: min(-0.6vh, -4px);
+    left: 0;
+    background-color: $color-red;
+  }
+}
+
+.breadcrumb ul li:first-of-type {
+  margin-top: 3.5px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
