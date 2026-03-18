@@ -89,7 +89,6 @@ $color-border-light: #f0ece4;
 .basic-hero {
   background-color: $color-bg-warm;
   height: fit-content;
-  margin-top: 64px; // compensate for fixed navbar
 }
 
 section#blog-posts {
@@ -110,7 +109,6 @@ section#blog-posts {
   background-color: whitesmoke;
 }
 
-// Prevent sidebar content from overflowing at tablet widths (e.g. 1024px)
 section#blog-posts .columns > .column {
   min-width: 0;
 }
@@ -129,7 +127,7 @@ section#blog-posts .columns > .column {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%; // 16:9
+  padding-bottom: 56.25%;
   overflow: hidden;
 
   iframe {
@@ -167,7 +165,7 @@ section#blog-posts .columns > .column {
 .section-label {
   display: flex;
   align-items: center;
-  gap: 0.75rem; // space between text and lines
+  gap: 0.75rem;
   font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -182,13 +180,11 @@ section#blog-posts .columns > .column {
   }
 }
 
-/* Let the blog layout stretch on wide screens */
 section#blog-posts .container {
   max-width: 100%;
   width: 100%;
 }
 
-/* Optional: add some side padding so it doesn’t touch the edges */
 @media screen and (min-width: 1400px) {
   section#blog-posts {
     padding-left: 3rem;
@@ -196,57 +192,39 @@ section#blog-posts .container {
   }
 }
 
-/* NAVBAR: clearly larger, scales with width */
-.navbar-item {
-  font-size: clamp(1.1rem, 1.2vw, 1.5rem);
-}
-
-/* HERO */
-.basic-hero .title {
-  font-size: clamp(2.4rem, 4vw, 3.4rem);
-}
-
-.basic-hero .subtitle {
-  font-size: clamp(1.2rem, 1.2vw, 1.8rem);
-}
-
-/* BLOG CARDS */
-.blog-card h2 {
-  font-size: clamp(1.4rem, 1.6vw, 2rem);
-}
-
-.blog-card .blog-card-meta,
-.blog-card p {
-  font-size: clamp(0.8rem, 0.5vw, 1rem);
-}
-
-/* SIDEBAR (archives, newsletter, YouTube) */
-#blog-sidebar .section-label,
-#blog-sidebar .blog-card-meta,
-#blog-sidebar a {
-  font-size: clamp(0.95rem, 1.05vw, 1.2rem);
-}
-
-/* Slightly reduce overall text size on laptop / small-desktop widths (~1024px) */
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   html {
     font-size: 14px;
   }
 }
 
-/* Make pagination controls larger on very wide / 4K screens */
-@media screen and (min-width: 1920px) {
-  .pagination-link {
-    font-size: 1.1rem;
-    padding-inline: 1.1em;
-    padding-block: 0.7em;
-  }
-}
+@media screen and (min-width: 1024px) and (hover: hover) {
+  .navbar-item {
+    position: relative;
 
-@media screen and (max-width: 768px) {
-  .is-fullwidth-mobile {
-    display: flex;
-    width: 100%;
+    &:hover {
+      background-color: transparent;
+    }
+
+    &.navbar-center {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 4px;
+        left: 50%;
+        transform: translateX(-50%) scaleX(0);
+        transform-origin: center;
+        width: calc(100% - 2rem);
+        height: 2px;
+        background-color: $color-bg-white;
+        border-radius: 2px;
+        transition: transform 0.25s ease;
+      }
+
+      &:hover::after {
+        transform: translateX(-50%) scaleX(1);
+      }
+    }
   }
 }
 
@@ -270,6 +248,10 @@ section#blog-posts .container {
   }
 
   #search-bar {
+    width: 100%;
+  }
+
+  .is-fullwidth-mobile {
     width: 100%;
   }
 }
