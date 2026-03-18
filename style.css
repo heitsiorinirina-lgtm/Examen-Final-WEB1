@@ -21596,32 +21596,6 @@ has-background-danger.is-hoverable:active {
   flex-grow: 1;
 }
 
-.navbar-item {
-  position: relative;
-}
-
-.navbar-item:hover {
-  background-color: transparent;
-}
-
-.navbar-item::after {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: center;
-  width: calc(100% - 2rem);
-  height: 2px;
-  background-color: #ffffff;
-  border-radius: 2px;
-  transition: transform 0.25s ease;
-}
-
-.navbar-item:hover::after {
-  transform: translateX(-50%) scaleX(1);
-}
-
 .basic-hero {
   background-color: #f9f6f1;
   height: fit-content;
@@ -21734,7 +21708,7 @@ section#blog-posts .container {
   .navbar-item:hover {
     background-color: transparent;
   }
-  .navbar-item.navbar-center::after {
+  .navbar-center .navbar-item::after {
     content: "";
     position: absolute;
     bottom: 4px;
@@ -21747,7 +21721,7 @@ section#blog-posts .container {
     border-radius: 2px;
     transition: transform 0.25s ease;
   }
-  .navbar-item.navbar-center:hover::after {
+  .navbar-center .navbar-item:hover::after {
     transform: translateX(-50%) scaleX(1);
   }
 }
@@ -21770,7 +21744,7 @@ section#blog-posts .container {
   #search-bar {
     width: 100%;
   }
-  .is-fullwidth-mobile {
+  .is-fullwidth- {
     width: 100%;
   }
 }
