@@ -1,20 +1,13 @@
-// --- SÉLECTION DES CONTENEURS ---
 const containerStudents = document.getElementById('testimonials-container');
 const containerCollabs = document.getElementById('collaborators-container');
 const containerCustomers = document.getElementById('customers-container');
 
-/**
- * Fonction principale pour injecter les témoignages
- */
 function displayAllTestimonials() {
-    // Vérification de la présence des données
     if (typeof data === 'undefined' || !data.testimonials) {
         console.error("Les données 'data.testimonials' sont introuvables.");
         return;
     }
-
     // --- 1. SECTION STUDENTS (Index 0 à 4) ---
-    // Style : Avatar en haut, texte en bas
     const students = data.testimonials.slice(0, 5);
     if (containerStudents) {
         containerStudents.innerHTML = students.map(item => `
@@ -51,7 +44,6 @@ function displayAllTestimonials() {
     }
 
     // --- 3. SECTION CUSTOMERS (Index 10 à 14) ---
-    // Style : Étoiles en haut, Texte, Auteur en bas
     const customers = data.testimonials.slice(10, 15);
     if (containerCustomers) {
         containerCustomers.innerHTML = customers.map(item => `
@@ -70,5 +62,4 @@ function displayAllTestimonials() {
     }
 }
 
-// Lancement au chargement du DOM
 document.addEventListener('DOMContentLoaded', displayAllTestimonials);
