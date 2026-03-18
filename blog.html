@@ -15,43 +15,52 @@
 
 <body>
     <header>
-        <nav class="navbar is-primary is-fixed-top" aria-label="main navigation" role="navigation">
-            <div class="navbar-brand">
+        <nav class="navbar is-primary is-fixed-top" aria-label="main navigation" role="navigation" id="navbar">
+            <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center">
                 <img src="assets/logo.png" alt="Toky Ramarozaka" id="logo">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="main-navbar">
-                    <span aria-hidden="true" class="has-background-white"></span>
-                    <span aria-hidden="true" class="has-background-white"></span>
-                    <span aria-hidden="true" class="has-background-white"></span>
-                    <span aria-hidden="true" class="has-background-white"></span>
-                </a>
+                <span class="is-flex is-justify-content-end is-invisible-desktop">
+                    <a href="#" class="navbar-item is-invisible-desktop"><i
+                            class="fa-solid fa-basket-shopping is-size-4"></i></a> <a role="button"
+                        class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                    </a>
+                </span>
             </div>
             <div class="navbar-menu" id="main-navbar">
                 <div class="navbar-center">
-                    <a href="index.html" class="navbar-item has-text-weight-bold">HOME</a>
-                    <a href="blog.html" class="navbar-item has-text-weight-bold">BLOG</a>
-                    <a href="courses.html" class="navbar-item has-text-weight-bold">COURSES</a>
-                    <a href="testimonials.html" class="navbar-item has-text-weight-bold">TESTIMONIALS</a>
-                    <a href="research.html" class="navbar-item has-text-weight-bold">RESEARCH</a>
+                    <a href="index.html"
+                        class="navbar-item has-text-weight-bold is-size-5-fullhd is-size-6-desktop is-size-6-widescreen is-size-7-touch">HOME</a>
+                    <a href="blog.html"
+                        class="navbar-item has-text-weight-bold is-size-5-fullhd is-size-6-desktop is-size-6-widescreen is-size-7-touch">BLOG</a>
+                    <a href="courses.html"
+                        class="navbar-item has-text-weight-bold is-size-5-fullhd is-size-6-desktop is-size-6-widescreen is-size-7-touch">COURSES</a>
+                    <a href="testimonials.html"
+                        class="navbar-item has-text-weight-bold is-size-5-fullhd is-size-6-desktop is-size-6-widescreen is-size-7-touch">TESTIMONIALS</a>
+                    <a href="research.html"
+                        class="navbar-item has-text-weight-bold is-size-5-fullhd is-size-6-desktop is-size-6-widescreen is-size-7-touch">RESEARCH</a>
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <input type="input" id="search-bar" class="has-text-white is-full"
+                        <input type="text" id="search-bar" class="has-text-white is-size-5-fullhd"
                             placeholder="Search anything...">
+                        <a href="#" class="navbar-item is-invisible-touch"><i
+                                class="fa-solid fa-basket-shopping is-size-4"></i>
+                        </a>
                     </div>
-                    <a href="" class="navbar-item"><i class="fa-solid fa-basket-shopping is-size-4"></i></a>
                 </div>
-            </div>
         </nav>
     </header>
     <main>
-        <section class="section is-flex is-align-items-center basic-hero">
+        <section class="section is-flex is-align-items-center basic-hero" id="hero">
             <div class="container has-text-centered">
                 <p
                     class="is-uppercase has-text-weight-semibold has-text-grey section-header is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-6-widescreen is-size-5-fullhd">
                     Writing
                 </p>
-                <h1 class="title p-5">
+                <h1 class="title is-size-1-desktop is-size-1-fullhd is-size-1-widescreen is-size-2-touch p-5">
                     The <i class="has-text-primary">blog</i>
                 </h1>
                 <p class="subtitle has-text-grey is-5-mobile is-4-tablet is-3-desktop">
@@ -73,7 +82,7 @@
                                 <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-2 is-size-7-mobile is-size-7-tablet is-size-6-desktop"
                                     id="newsletter-text">
                                     Newsletter</p>
-                                <p class="blog-card-meta mb-3 is-size-7-mobile is-size-6-tablet is-size-6-desktop">
+                                <p class="blog-card-meta mb-3 is-size-6-touch is-size-6-desktop is-size-5-widescreen">
                                     Get new articles straight to your inbox. No spam, ever.
                                 </p>
                                 <form class="field">
@@ -98,9 +107,9 @@
             <p class="has-text-white mt-5 mb-6 is-4">Explore the courses or get in touch for a consultation</p>
         </div>
         <div class="buttons">
-            <a href="courses.html" class="button is-white has-text-primary is-rounded is-fullwidth-mobile">BROWSE
+            <a href="courses.html" class="button is-white has-text-primary is-rounded is-fullwidth-touch">BROWSE
                 COURSES</a>
-            <a href="" class="button is-outlined is-white is-rounded is-fullwidth-mobile">COLLABORATE</a>
+            <a href="" class="button is-outlined is-white is-rounded is-fullwidth-touch">COLLABORATE</a>
         </div>
     </footer>
 </body>

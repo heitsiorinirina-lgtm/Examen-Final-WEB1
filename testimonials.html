@@ -9,13 +9,13 @@
     <script src="https://kit.fontawesome.com/18e6813d54.js" crossorigin="anonymous"></script>
     <script src="data/tokimahery.data.js"></script>
     <script src="scripts/navbar.js" defer></script>
-    <script src="scripts/research.js" defer></script>
-    <script src="templates/research-templates.js"></script>
+    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/templates.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="navbar is-primary is-fixed-top" aria-label="main navigation" role="navigation" id="navbar">
+        <nav class="navbar is-primary is-fixed-top" aria-label="main navigation" role="navigation">
             <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center">
                 <img src="assets/logo.png" alt="Toky Ramarozaka" id="logo">
                 <span class="is-flex is-justify-content-end">
@@ -54,38 +54,58 @@
         </nav>
     </header>
     <main>
-        <section class="section is-flex is-align-items-center basic-hero" id="hero">
-            <div class="container has-text-centered">
-                <p
-                    class="is-uppercase has-text-weight-semibold has-text-grey section-header is-size-6-mobile is-size-6-tablet is-size-6-desktop">
-                    Academic work
-                </p>
-                <h1 class="title p-5">
-                    Research <i class="has-text-primary">papers</i>
+        <section class="section has-text-centered" id="hero-section">
+            <div class="container">
+                <div class="social-proof-container mb-4">
+                    <span class="social-proof-line"></span>
+                    <p class="is-size-7 has-text-grey-light">SOCIAL PROOF</p>
+                    <span class="social-proof-line"></span>
+                </div>
+                <h1 class="title is-size-1 family-secondary">
+                    What people <br> <span class="has-text-danger is-italic">say</span>
                 </h1>
-                <p class="subtitle has-text-grey is-size-6-mobile is-size-5-tablet is-size-5-desktop is-size-4-fullhd">
-                    My academic work focuses on multi-agent
-                    systems and normative <br> frameworks, exploring how autonomous agents
-                    coordinate through <br> norms and social structures in complex, distributed
-                    environments.
+                <p class="subtitle is-size-6 has-text-grey mx-auto mt-4" style="max-width: 600px;">
+                    Hundreds of students, collaborators, and clients have trusted Tokimahery's expertise. Here's what
+                    they have to say.
                 </p>
             </div>
         </section>
-        <section
-            class="section is-flex is-flex-direction-column is-align-items-center is-justify-content-center columns has-background-white pb-6"
-            id="research">
+
+        <section class="testimonial-section">
+            <div class="section-header">
+                <span class="label-line">STUDENTS</span>
+            </div>
+            <div id="testimonials-container" class="testimonial-grid">
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="section-header">
+                <span class="label-line">COLLABORATORS</span>
+            </div>
+            <div id="collaborators-container" class="testimonial-grid alternate-style">
+            </div>
+        </section>
+
+        <section class="testimonial-section">
+            <div class="section-header">
+                <span class="label-line">CUSTOMERS</span>
+            </div>
+            <div id="customers-container" class="testimonial-grid">
+            </div>
         </section>
     </main>
-    <footer class="has-background-link is-flex is-flex-direction-column is-align-items-center p-5">
+    <footer class="main-footer">
         <div class="container has-text-centered">
-            <p class="title has-text-white py-3 is-1">Interested in collaborating?</p>
-            <p class="has-text-white mt-5 mb-4 is-4">Open to co-authoring, peer review and academic consulting
-                <br> engagements
+            <h2 class="footer-title">Join them.</h2>
+            <p class="footer-subtitle">
+                Whether you want to learn, collaborate, or get something built — <br>
+                Tokimahery is ready to help you move forward.
             </p>
-        </div>
-        <div class="buttons">
-            <a href="courses.html" class="button is-white has-text-link is-rounded is-fullwidth-touch">GET IN
-                TOUCH</a>
+            <div class="footer-buttons">
+                <a href="#" class="button is-white-rounded">BOOK A COURSE</a>
+                <a href="#" class="button is-outline-rounded">COLLABORATE</a>
+            </div>
         </div>
     </footer>
 </body>
