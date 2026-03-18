@@ -15,34 +15,35 @@
 <body>
     <header>
         <nav class="navbar is-primary is-fixed-top" aria-label="main navigation" role="navigation">
-            <div class="navbar-brand">
+            <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center">
                 <img src="assets/logo.png" alt="Toky Ramarozaka" id="logo">
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-                    data-target="main-navbar">
-                    <span aria-hidden="true" class="has-background-white"></span>
-                    <span aria-hidden="true" class="has-background-white"></span>
-                    <span aria-hidden="true" class="has-background-white"></span>
-                    <span aria-hidden="true" class="has-background-white"></span>
-                </a>
+                <span class="is-flex is-justify-content-end">
+                    <a href="" class="navbar-item is-invisible-desktop"><i
+                            class="fa-solid fa-basket-shopping is-size-4"></i></a>
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="main-navbar">
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                        <span aria-hidden="true" class="has-background-white"></span>
+                    </a>
+                </span>
             </div>
             <div class="navbar-menu" id="main-navbar">
                 <div class="navbar-center">
-                    <a href="index.html"
-                        class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">HOME</a>
-                    <a href="blog.html"
-                        class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">BLOG</a>
-                    <a href="courses.html"
-                        class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">COURSES</a>
-                    <a href="#testimonials"
-                        class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">TESTIMONIALS</a>
-                    <a href="#research"
-                        class="navbar-item has-text-weight-bold is-size-7-mobile is-size-6-tablet is-size-6-desktop is-size-5-widescreen">RESEARCH</a>
+                    <a href="index.html" class="navbar-item has-text-weight-bold">HOME</a>
+                    <a href="blog.html" class="navbar-item has-text-weight-bold ">BLOG</a>
+                    <a href="courses.html" class="navbar-item has-text-weight-bold ">COURSES</a>
+                    <a href="#testimonials" class="navbar-item has-text-weight-bold ">TESTIMONIALS</a>
+                    <a href="#research" class="navbar-item has-text-weight-bold ">RESEARCH</a>
                 </div>
                 <div class="navbar-end">
                     <div class="navbar-item">
-                        <input type="input" id="search-bar" class="has-text-white" placeholder="Search anything...">
+                        <input type="text" id="search-bar" class="has-text-white is-size-5-fullhd"
+                            placeholder="Search anything...">
+                        <a href="" class="navbar-item is-invisible-touch"><i
+                                class="fa-solid fa-basket-shopping is-size-4"></i></a>
                     </div>
-                    <a href="" class="navbar-item"><i class="fa-solid fa-basket-shopping is-size-4"></i></a>
                 </div>
             </div>
         </nav>
