@@ -13,3 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  const basicHero = document.getElementById("hero");
+  basicHero.style.marginTop = getComputedStyle(navbar).height;
+});
