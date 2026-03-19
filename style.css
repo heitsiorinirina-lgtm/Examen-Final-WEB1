@@ -21803,7 +21803,6 @@ body {
     margin: 0;
 }
 
-/* --- 2. STRUCTURE GLOBALE (LE SECRET DE LA PHOTO 2) --- */
 .hero-body {
     padding: 3rem 1.5rem !important;
 }
@@ -21811,21 +21810,19 @@ body {
 .columns.is-vcentered {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important; /* Centre l'ensemble du bloc contenu+image */
-    gap: 100px; /* Espace entre le texte et l'image */
+    justify-content: center !important;
+    gap: 180px; 
     max-width: 1200px;
     margin: 0 auto !important;
 }
 
-/* Bloc qui contient tout le texte */
 .column.is-6-desktop {
     display: flex;
     flex-direction: column;
-    align-items: flex-start !important; /* Aligne TOUT à gauche */
+    align-items: flex-start !important;
     text-align: left !important;
 }
 
-/* --- 3. LE TITRE (SIGNATURE) --- */
 .custom-name {
     font-family: 'Playfair Display', serif !important;
     font-size: 5.5rem !important; 
@@ -21843,41 +21840,36 @@ body {
     display: block; 
 }
 
-/* --- 4. TEXTES ET LABELS --- */
-/* --- 1. LE LABEL AVEC LE TIRET ROUGE --- */
 .portfolio-label {
     display: flex !important;
-    align-items: center !important; /* Aligne le tiret verticalement au milieu du texte */
-    gap: 15px !important; /* Espace précis entre le tiret et le texte */
+    align-items: center !important; 
+    gap: 15px !important; 
     font-size: 0.7rem !important;
-    letter-spacing: 2.5px !important;
     text-transform: uppercase;
     font-weight: 700;
-    margin-bottom: 3rem !important;
-    color: #888 !important;
+    margin-bottom: 1.5rem !important;
+    color: #bf4d4d !important;
     text-align: left !important;
 }
 
 .portfolio-label::before {
-    content: ""; /* Obligatoire */
-    display: inline-block !important; /* AJOUTEZ CECI : permet au tiret d'exister physiquement */
+    content: ""; 
+    display: inline-block !important;
     width: 35px !important;
     height: 2px !important;
     background-color: var(--brand-red) !important;
 }
 
-/* --- 2. ALIGNEMENT DU BLOC DE GAUCHE --- */
-/* Pour éviter le "désordre", forcez tout le texte à s'aligner sur la même ligne imaginaire à gauche */
+
 .column.is-6 {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important; /* Bloque tout à gauche */
+    align-items: flex-start !important;
     text-align: left !important;
 }
 
-/* --- 3. LES BOUTONS --- */
 .buttons {
-    justify-content: flex-start !important; /* Empêche les boutons de se centrer */
+    justify-content: flex-start !important; 
     margin-top: 2rem !important;
 }
 
@@ -21891,42 +21883,39 @@ body {
 }
 
 .hero-subtutle-container {
-    max-width: 440px !important; /* Largeur limitée pour forcer le look Photo 2 */
-    line-height: 1.8 !important;
+    max-width: 440px !important; 
+    line-height: 1.6 !important;
     color: var(--text-gray) !important;
     font-size: 0.95rem !important;
-    margin-bottom: 2.5rem !important;
+    margin-bottom: 1.5rem !important;
 }
 
-/* --- 5. L'IMAGE CIRCULAIRE --- */
 .profile-container {
     position: relative;
     z-index: 10;
 }
 
 .profile-container img {
-    width: 420px !important;
-    height: 420px !important;
+    width: 450px !important;
+    height: 450px !important;
     object-fit: cover;
     border-radius: 50% !important;
-    border: 15px solid rgba(192, 0, 0, 0.03) !important;
+    border: 15px solid #f2e8e1 !important;
     box-shadow: 0 40px 80px rgba(0,0,0,0.08) !important;
 }
 
-/* Cercles décoratifs */
 .profile-container::after {
     content: "";
     position: absolute;
     top: -40px;
     right: -40px;
-    width: 440px;
-    height: 440px;
+    width: 410px;
+    height: 410px;
     border: 1px solid rgba(0,0,0,0.03);
     border-radius: 50%;
     z-index: -1;
 }
 
-/* --- 6. BOUTONS --- */
 .buttons-group {
     display: flex !important;
     gap: 15px !important;
@@ -21952,7 +21941,6 @@ body {
     padding: 0 2.2rem !important;
 }
 
-/* --- 7. BAS DE PAGE --- */
 .ask-collab {
     color: var(--brand-red) !important;
     font-size: 0.7rem !important;
@@ -21965,38 +21953,33 @@ body {
 
 .social-icons {
     display: flex !important;
-    gap: 20px;
-    margin-top: 3rem !important;
+    gap: 6px;
+    margin-top: 1rem !important;
 }
 
 .ask-collab {
-    /* display: table permet au trait de s'arrêter pile à la fin du texte */
     display: table !important; 
     color: var(--brand-red) !important;
     font-size: 0.75rem !important;
     font-weight: 800 !important;
     text-transform: uppercase;
-    text-decoration: none !important; /* Enlève le soulignement par défaut */
-    
-    /* Le soulignement rouge personnalisé */
+    text-decoration: none !important;
     border-bottom: 2px solid var(--brand-red) !important; 
-    padding-bottom: 4px !important; /* Espace entre le texte et le trait */
-    
+    padding-bottom: 4px !important;
     margin-top: 1.5rem !important;
     letter-spacing: 1.5px !important;
     transition: all 0.3s ease;
 }
 
 .ask-collab:hover {
-    padding-bottom: 7px !important; /* Effet visuel au survol */
+    padding-bottom: 7px !important;
     opacity: 0.8;
 }
 
-/* --- 3. FIX ALIGNEMENT GLOBAL (POUR LA COLONNE DE GAUCHE) --- */
 .column.is-6 {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important; /* Force tout le contenu à s'aligner à gauche */
+    align-items: flex-start !important;
     text-align: left !important;
 }
 /* /* Section 3 page_home */
