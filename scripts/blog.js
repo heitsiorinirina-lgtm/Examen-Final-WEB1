@@ -1,5 +1,6 @@
 const postsSection = document.getElementById("blog-posts");
 const POSTS_PER_PAGE = 5;
+let isInitialRender = true;
 let currentPage = 1;
 const newsletter = document.getElementById("newsletter");
 const archives = document.getElementById("archives");
@@ -10,15 +11,6 @@ function formatDate(date) {
     month: "long",
     day: "numeric",
   });
-}
-
-function tagsTemplate(tags) {
-  return tags
-    .map(
-      (tag) =>
-        `<span class="tag is-info is-rounded has-text-white">${tag}</span>`,
-    )
-    .join("");
 }
 
 function getPageCount() {
@@ -40,6 +32,16 @@ function renderPosts(page) {
   document.getElementById("blog-posts-list").innerHTML =
     visiblePosts.map(postCardTemplate).join("") +
     createPaginationTemplate(currentPage, totalPages);
+
+  if (!isInitialRender) {
+    const top =
+      document.getElementById("blog-posts-list").getBoundingClientRect().top +
+      window.scrollY -
+      64;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+
+  isInitialRender = false;
 }
 
 const sidebarElement = document.getElementById("blog-sidebar");

@@ -21696,11 +21696,6 @@ section#blog-posts .container {
     padding-right: 3rem;
   }
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-  html {
-    font-size: 14px;
-  }
-}
 @media screen and (min-width: 1024px) and (hover: hover) {
   .navbar-item {
     position: relative;
@@ -21744,7 +21739,7 @@ section#blog-posts .container {
   #search-bar {
     width: 100%;
   }
-  .is-fullwidth- {
+  .is-fullwidth-touch {
     width: 100%;
   }
 }
@@ -21772,6 +21767,10 @@ section#blog-posts .container {
 
 .breadcrumb ul li:first-of-type {
   margin-top: 3.5px;
+}
+
+.breadcrumb {
+  white-space: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
