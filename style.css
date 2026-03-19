@@ -21706,67 +21706,6 @@ body {
     margin-bottom: 5px;
 }
 
-
-.courses-section {
-    background-color: whitesmoke;
-    padding: 80px 10%;
-    text-align: center;
-}
-
-.section-tag {
-    color: var(--main-red);
-    letter-spacing: 3px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.courses-main-title {
-    font-size: 2.8rem;
-    margin-bottom: 50px;
-    line-height: 1.2;
-}
-
-.courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    margin-bottom: 50px;
-}
-
-
-.course-card {
-    background: white;
-    padding: 35px;
-    border-radius: 12px;
-    text-align: left;
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
-}
-
-.course-card:hover {
-    transform: translateY(-5px);
-}
-
-.tag {
-    display: inline-block;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    color: white;
-    margin-bottom: 20px;
-}
-
-.tag-dev { background-color: var(--main-red); }
-.tag-trans { background-color: #2d2d2d; }
-.tag-research { background-color: #666; }
-
-.course-card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 40px;
-    color: #1a1a1a;
-}
-
 .card-footer {
     display: flex;
     justify-content: space-between;
@@ -21982,97 +21921,401 @@ body {
     align-items: flex-start !important;
     text-align: left !important;
 }
-/* /* Section 3 page_home */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-body {
-    background-color: #ffffff;
-    font-family: 'BlinkMacSystemFont', -apple-system, "Segoe UI", "Roboto", sans-serif;
+/* Section 2 page_home */ 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap');
+
+.am-about-section {
+    margin: 0;
+    padding: 100px 8%;
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1a1a1a;
 }
 
-.serif-font {
-    font-family: 'Playfair+Display', serif;
-    letter-spacing: -1px;
+.am-container {
+    display: flex;            
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;                
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
-.tracking-widest {
-    letter-spacing: 0.15em;
+.am-header-col {
+    flex: 1;                   
+    min-width: 300px;
 }
 
-.red-dash {
-    color: #d92323;
-    margin-right: 5px;
-    font-weight: bold;
+.am-content-col {
+    flex: 2;                  
 }
 
-.experience-item {
-    border-left: 1px solid #e5e5e5;
-    padding-left: 2rem;
-    padding-bottom: 2rem;
-    height: 100%;
+.am-subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
-.columns .column:nth-child(odd) .experience-item {
-    border-left: 1px solid #d92323;
+.am-accent-line {
+    width: 35px;
+    height: 2px;
+    background-color: #bc2026; 
 }
 
-.no-border {
-    border-left: 1px solid transparent !important;
+.am-subtitle {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    font-weight: 700;
 }
 
-@media screen and (max-width: 768px) {
-    .experience-item {
-        padding-left: 1.5rem;
-        margin-bottom: 2rem;
+.am-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    line-height: 0.9;
+    margin: 0;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.am-title-italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+.am-text-block {
+    margin-bottom: 50px;
+}
+
+.am-description-p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.am-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+    margin: 40px 0;
+}
+
+.am-stats-grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 100px; 
+}
+
+.am-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.am-stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 700;
+    color: #bc2026;
+    line-height: 1;
+}
+
+.am-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #999;
+    margin-top: 12px;
+    font-weight: 700;
+}
+
+@media (max-width: 992px) {
+    .am-container {
+        flex-direction: column;
+        gap: 50px;
+    }
+    
+    .am-main-title {
+        font-size: 56px;
+    }
+    
+    .am-stats-grid {
+        gap: 40px;
+        flex-wrap: wrap;
     }
 }
 
-/*footer */
-.footer-container {
-    background-color: hsla(0deg, 70%, 35%, 1); 
-    padding: 6rem 1.5rem;      
-    color: #ffffff;
+/* Section 3 page_home */
+.lc-learning-section {
+    padding: 100px 5%;
+    background-color: #f9f7f5;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
 }
 
-.footer-title {
-    color: #ffffff !important;
-    font-size: 2.5rem;
+.lc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.lc-subtitle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.lc-line {
+    width: 25px;
+    height: 2px;
+    background-color: #bc2026;
+}
+
+.lc-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+    font-weight: bold;
+}
+
+.lc-main-title {
     font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    color: #1a1a1a;
 }
 
-.footer-subtitle {
-    color: #f5f5f5;
-    font-size: 1rem;
-    font-weight: 300;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.lc-italic {
+    font-style: italic;
+    font-weight: 400;
 }
 
-.footer-btn {
-    border-width: 1px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    font-size: 0.75rem;
+.lc-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.lc-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+.lc-card:hover {
+    transform: translateY(-10px);
+}
+
+.lc-tag {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.lc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+.lc-meta {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+/* --- Bouton --- */
+.lc-view-all {
+    color: #bc2026;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
     letter-spacing: 1px;
-    background-color: transparent;
-    font-weight: 600;
+    border-bottom: 2px solid #bc2026;
+    padding-bottom: 5px;
 }
 
-.footer-btn:hover {
+
+/* /* Section 4 page_home */
+.ex-experience-section {
+    padding: 100px 10%;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.ex-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.ex-subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ex-accent-line {
+    width: 30px;
+    height: 2px;
+    background-color: #bc2026;
+}
+
+.ex-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #999;
+    font-weight: bold;
+}
+
+.ex-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+}
+
+.ex-experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    column-gap: 80px;
+    row-gap: 60px;
+}
+
+.ex-item {
+    padding-left: 30px;
+    border-left: 1px solid #eee; 
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.ex-item.highlight {
+    border-left: 2px solid #bc2026;
+}
+
+.ex-year {
+    font-size: 13px;
+    font-weight: bold;
+    color: #bc2026;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.ex-role {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.ex-org {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #bbb;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.ex-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 450px;
+}
+
+
+/*footer */
+.cta-section {
+    background-color: #bc2026; 
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.cta-text {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9; 
+}
+
+.cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 45px;
+    border: 2px solid #ffffff; 
+    border-radius: 50px; 
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; 
+}
+
+.cta-button:hover {
     background-color: #ffffff;
-    color: #bc0000;
+    color: #bc2026; 
+    transform: translateY(-3px); 
 }
 
-
-@media screen and (max-width: 768px) {
-    .footer-title {
-        font-size: 1.8rem;
+@media (max-width: 600px) {
+    .cta-title {
+        font-size: 32px;
+    }
+    
+    .cta-button {
+        padding: 12px 35px;
+        width: 100%; 
     }
 }
 
 /* testimonial */
-
 :root {
     --brand-red: #b31b1b;
     --text-main: #1a1a1a;
@@ -22081,8 +22324,8 @@ body {
 }
 
 #hero-section {
-    background-color: #f0f0f0; /* Votre couleur personnalisée */
-    padding-top: 1.5rem;       /* Ajustez ici pour réduire l'impact sur l'emplacement */
+    background-color: #f0f0f0; 
+    padding-top: 1.5rem;       
     padding-bottom: 1.5rem;
 }
 .hero {
@@ -22311,7 +22554,7 @@ h1.title {
 }
 
 
-/* FOOTER - VERSION COMPACTE (AJUSTÉE) */
+/* FOOTER */
 
 .main-footer {
     background-color: #cc0000; 
