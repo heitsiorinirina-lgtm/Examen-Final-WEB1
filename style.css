@@ -21774,3 +21774,449 @@ section#blog-posts .container {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+/* page_home */
+
+/* Import de la police pour le style élégant */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap');
+
+.am-about-section {
+    padding: 100px 10%;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.am-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Titre à gauche */
+.am-header-col {
+    flex: 0 0 35%;
+}
+
+.am-subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.am-accent-line {
+    width: 30px;
+    height: 2px;
+    background-color: #bc2026;
+}
+
+.am-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #999;
+    font-weight: bold;
+}
+
+.am-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+    line-height: 0.85;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.am-title-italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Contenu à droite */
+.am-content-col {
+    flex: 0 0 55%;
+}
+
+.am-description-p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.am-separator {
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+    margin: 40px 0;
+}
+
+/* Statistiques */
+.am-stats-grid {
+    display: flex;
+    gap: 80px;
+}
+
+.am-stat-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.am-stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    font-weight: 700;
+    color: #bc2026;
+}
+
+.am-stat-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+
+/* section page_home */
+/* --- Couleurs et Polices --- */
+.lc-learning-section {
+    padding: 100px 5%;
+    background-color: #f9f7f5; /* Couleur crème très légère comme sur la photo */
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
+.lc-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header --- */
+.lc-subtitle-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.lc-line {
+    width: 25px;
+    height: 2px;
+    background-color: #bc2026;
+}
+
+.lc-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #888;
+    font-weight: bold;
+}
+
+.lc-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+}
+
+.lc-italic {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* --- Grille et Cartes --- */
+.lc-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.lc-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 20px; /* Bords très arrondis */
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: transform 0.3s ease;
+}
+
+.lc-card:hover {
+    transform: translateY(-10px);
+}
+
+.lc-tag {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.lc-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+    line-height: 1.3;
+}
+
+.lc-meta {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+/* --- Bouton --- */
+.lc-view-all {
+    color: #bc2026;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #bc2026;
+    padding-bottom: 5px;
+}
+
+/* dernière section page_home */
+.ex-experience-section {
+    padding: 100px 10%;
+    background-color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.ex-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.ex-subtitle-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ex-accent-line {
+    width: 30px;
+    height: 2px;
+    background-color: #bc2026;
+}
+
+.ex-subtitle {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #999;
+    font-weight: bold;
+}
+
+.ex-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    margin-bottom: 60px;
+    color: #1a1a1a;
+}
+
+/* Grille */
+.ex-experience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    column-gap: 80px;
+    row-gap: 60px;
+}
+
+/* Bloc d'expérience individuelle */
+.ex-item {
+    padding-left: 30px;
+    border-left: 1px solid #eee; /* Ligne grise par défaut */
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+/* Ligne rouge pour certains éléments (comme sur la photo) */
+.ex-item.highlight {
+    border-left: 2px solid #bc2026;
+}
+
+.ex-year {
+    font-size: 13px;
+    font-weight: bold;
+    color: #bc2026;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.ex-role {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.ex-org {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #bbb;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.ex-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 450px;
+}
+
+
+/* footer page_home */
+/* --- SECTION CALL TO ACTION --- */
+.cta-section {
+    background-color: #bc2026; /* Le rouge signature */
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Titre principal en Serif */
+.cta-title {
+    font-family: 'Playfair Display', serif; /* Cohérence avec les autres titres */
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+/* Texte de description */
+.cta-text {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9; /* Léger adoucissement du blanc */
+}
+
+/* Bouton "GET IN TOUCH" */
+.cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 45px;
+    border: 2px solid #ffffff; /* Bordure blanche fine */
+    border-radius: 50px; /* Forme pilule */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Animation fluide au survol */
+}
+
+/* Effet au survol (uniquement CSS) */
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #bc2026; /* Inversion des couleurs */
+    transform: translateY(-3px); /* Petit saut élégant */
+}
+
+
+/* testimonials 1 */
+/* --- 1. Reset et Polices --- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- 2. Section Social Proof (Photo 2) --- */
+.sp-social-section {
+    background-color: #fdfbf8; /* Fond beige très clair de l'image 17 */
+    padding: 120px 0;
+}
+
+/* Force le centrage total du texte */
+.sp-centrer-tout {
+    text-align: center !important;
+}
+
+/* Label avec lignes rouges */
+.sp-line {
+    width: 30px;
+    height: 2px;
+    background-color: #bc2026; /* Rouge signature */
+}
+
+.sp-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #999;
+}
+
+/* --- LE TITRE GÉANT (CORRECTION PHOTO 2) --- */
+.sp-main-title {
+    font-family: 'Playfair Display', serif; /* Votre police Serif */
+    font-size: 85px !important; /* Très grand comme sur la photo */
+    line-height: 0.85 !important; /* Interlignage très serré pour l'effet compact */
+    color: #1a1a1a;
+    margin: 0 auto 50px auto !important; /* Centre le titre lui-même */
+    font-weight: 700;
+}
+
+/* Accentuation rouge et italique de "say" */
+.sp-title-accent {
+    color: #bc2026;
+    font-style: italic;
+    font-weight: 400; /* Plus fin pour l'italique */
+    margin-top: -10px; /* Rapproche encore plus le mot */
+    display: inline-block;
+}
+
+/* --- LE PARAGRAPHE --- */
+.sp-description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    max-width: 600px; /* Limite la largeur pour un meilleur centrage */
+    margin: 0 auto; /* Centre le bloc de texte */
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .sp-main-title {
+        font-size: 55px !important;
+    }
+    
+    .sp-description {
+        font-size: 15px;
+    }
+}
