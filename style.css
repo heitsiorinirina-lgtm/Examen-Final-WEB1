@@ -21778,8 +21778,6 @@ section#blog-posts .container {
 
 
 /* page_home */
-
-/* Import de la police pour le style élégant */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap');
 
 .am-about-section {
@@ -21797,7 +21795,6 @@ section#blog-posts .container {
     margin: 0 auto;
 }
 
-/* Titre à gauche */
 .am-header-col {
     flex: 0 0 35%;
 }
@@ -21835,7 +21832,6 @@ section#blog-posts .container {
     font-weight: 400;
 }
 
-/* Contenu à droite */
 .am-content-col {
     flex: 0 0 55%;
 }
@@ -21854,7 +21850,6 @@ section#blog-posts .container {
     margin: 40px 0;
 }
 
-/* Statistiques */
 .am-stats-grid {
     display: flex;
     gap: 80px;
@@ -21883,10 +21878,9 @@ section#blog-posts .container {
 
 
 /* section page_home */
-/* --- Couleurs et Polices --- */
 .lc-learning-section {
     padding: 100px 5%;
-    background-color: #f9f7f5; /* Couleur crème très légère comme sur la photo */
+    background-color: #f9f7f5;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
 }
@@ -21896,7 +21890,6 @@ section#blog-posts .container {
     margin: 0 auto;
 }
 
-/* --- Header --- */
 .lc-subtitle-wrapper {
     display: flex;
     justify-content: center;
@@ -21931,7 +21924,6 @@ section#blog-posts .container {
     font-weight: 400;
 }
 
-/* --- Grille et Cartes --- */
 .lc-courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -21942,7 +21934,7 @@ section#blog-posts .container {
 .lc-card {
     background: #fff;
     padding: 40px 30px;
-    border-radius: 20px; /* Bords très arrondis */
+    border-radius: 20px;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -21983,7 +21975,6 @@ section#blog-posts .container {
     color: #bbb;
 }
 
-/* --- Bouton --- */
 .lc-view-all {
     color: #bc2026;
     text-decoration: none;
@@ -21994,7 +21985,6 @@ section#blog-posts .container {
     padding-bottom: 5px;
 }
 
-/* dernière section page_home */
 .ex-experience-section {
     padding: 100px 10%;
     background-color: #fff;
@@ -22006,7 +21996,6 @@ section#blog-posts .container {
     margin: 0 auto;
 }
 
-/* Header */
 .ex-subtitle-wrapper {
     display: flex;
     align-items: center;
@@ -22034,23 +22023,20 @@ section#blog-posts .container {
     color: #1a1a1a;
 }
 
-/* Grille */
 .ex-experience-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    grid-template-columns: 1fr 1fr; 
     column-gap: 80px;
     row-gap: 60px;
 }
 
-/* Bloc d'expérience individuelle */
 .ex-item {
     padding-left: 30px;
-    border-left: 1px solid #eee; /* Ligne grise par défaut */
+    border-left: 1px solid #eee;
     position: relative;
     transition: border-color 0.3s ease;
 }
 
-/* Ligne rouge pour certains éléments (comme sur la photo) */
 .ex-item.highlight {
     border-left: 2px solid #bc2026;
 }
@@ -22089,9 +22075,8 @@ section#blog-posts .container {
 
 
 /* footer page_home */
-/* --- SECTION CALL TO ACTION --- */
 .cta-section {
-    background-color: #bc2026; /* Le rouge signature */
+    background-color: #bc2026; 
     color: #ffffff;
     padding: 100px 20px;
     text-align: center;
@@ -22103,25 +22088,22 @@ section#blog-posts .container {
     margin: 0 auto;
 }
 
-/* Titre principal en Serif */
 .cta-title {
-    font-family: 'Playfair Display', serif; /* Cohérence avec les autres titres */
+    font-family: 'Playfair Display', serif; 
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
     letter-spacing: -0.5px;
 }
 
-/* Texte de description */
 .cta-text {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 40px;
-    opacity: 0.9; /* Léger adoucissement du blanc */
+    opacity: 0.9; 
 }
 
-/* Bouton "GET IN TOUCH" */
 .cta-button-wrapper {
     display: flex;
     justify-content: center;
@@ -22130,86 +22112,24 @@ section#blog-posts .container {
 .cta-button {
     display: inline-block;
     padding: 15px 45px;
-    border: 2px solid #ffffff; /* Bordure blanche fine */
-    border-radius: 50px; /* Forme pilule */
+    border: 2px solid #ffffff;
+    border-radius: 50px; 
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1px;
-    transition: all 0.3s ease; /* Animation fluide au survol */
+    transition: all 0.3s ease;
 }
 
-/* Effet au survol (uniquement CSS) */
 .cta-button:hover {
     background-color: #ffffff;
-    color: #bc2026; /* Inversion des couleurs */
-    transform: translateY(-3px); /* Petit saut élégant */
-}
-
-
-/* footer page_home */
-/* --- SECTION CALL TO ACTION --- */
-.cta-section {
-    background-color: #bc2026; /* Le rouge signature */
-    color: #ffffff;
-    padding: 100px 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.cta-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Titre principal en Serif */
-.cta-title {
-    font-family: 'Playfair Display', serif; /* Cohérence avec les autres titres */
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
-}
-
-/* Texte de description */
-.cta-text {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    opacity: 0.9; /* Léger adoucissement du blanc */
-}
-
-/* Bouton "GET IN TOUCH" */
-.cta-button-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 45px;
-    border: 2px solid #ffffff; /* Bordure blanche fine */
-    border-radius: 50px; /* Forme pilule */
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: all 0.3s ease; /* Animation fluide au survol */
-}
-
-/* Effet au survol (uniquement CSS) */
-.cta-button:hover {
-    background-color: #ffffff;
-    color: #bc2026; /* Inversion des couleurs */
-    transform: translateY(-3px); /* Petit saut élégant */
+    color: #bc2026; 
+    transform: translateY(-3px); 
 }
 
 
 /* testimonials 1 */
-/* --- 1. Reset et Polices --- */
 body {
     margin: 0;
     padding: 0;
