@@ -22148,6 +22148,66 @@ section#blog-posts .container {
 }
 
 
+/* footer page_home */
+/* --- SECTION CALL TO ACTION --- */
+.cta-section {
+    background-color: #bc2026; /* Le rouge signature */
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Titre principal en Serif */
+.cta-title {
+    font-family: 'Playfair Display', serif; /* Cohérence avec les autres titres */
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+/* Texte de description */
+.cta-text {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    opacity: 0.9; /* Léger adoucissement du blanc */
+}
+
+/* Bouton "GET IN TOUCH" */
+.cta-button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 45px;
+    border: 2px solid #ffffff; /* Bordure blanche fine */
+    border-radius: 50px; /* Forme pilule */
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; /* Animation fluide au survol */
+}
+
+/* Effet au survol (uniquement CSS) */
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #bc2026; /* Inversion des couleurs */
+    transform: translateY(-3px); /* Petit saut élégant */
+}
+
+
 /* testimonials 1 */
 /* --- 1. Reset et Polices --- */
 body {
@@ -22157,22 +22217,20 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* --- 2. Section Social Proof (Photo 2) --- */
 .sp-social-section {
-    background-color: #fdfbf8; /* Fond beige très clair de l'image 17 */
+    background-color: #fdfbf8; 
     padding: 120px 0;
 }
 
-/* Force le centrage total du texte */
+
 .sp-centrer-tout {
     text-align: center !important;
 }
 
-/* Label avec lignes rouges */
 .sp-line {
     width: 30px;
     height: 2px;
-    background-color: #bc2026; /* Rouge signature */
+    background-color: #bc2026; 
 }
 
 .sp-label {
@@ -22182,41 +22240,27 @@ body {
     color: #999;
 }
 
-/* --- LE TITRE GÉANT (CORRECTION PHOTO 2) --- */
 .sp-main-title {
-    font-family: 'Playfair Display', serif; /* Votre police Serif */
-    font-size: 85px !important; /* Très grand comme sur la photo */
-    line-height: 0.85 !important; /* Interlignage très serré pour l'effet compact */
+    font-family: 'Playfair Display', serif; 
+    font-size: 85px !important;
+    line-height: 0.85 !important;
     color: #1a1a1a;
-    margin: 0 auto 50px auto !important; /* Centre le titre lui-même */
+    margin: 0 auto 50px auto !important;
     font-weight: 700;
 }
 
-/* Accentuation rouge et italique de "say" */
 .sp-title-accent {
     color: #bc2026;
     font-style: italic;
-    font-weight: 400; /* Plus fin pour l'italique */
-    margin-top: -10px; /* Rapproche encore plus le mot */
+    font-weight: 400;
+    margin-top: -10px;
     display: inline-block;
 }
 
-/* --- LE PARAGRAPHE --- */
 .sp-description {
     font-size: 18px;
     line-height: 1.6;
     color: #666;
-    max-width: 600px; /* Limite la largeur pour un meilleur centrage */
-    margin: 0 auto; /* Centre le bloc de texte */
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
-    .sp-main-title {
-        font-size: 55px !important;
-    }
-    
-    .sp-description {
-        font-size: 15px;
-    }
+    max-width: 600px; 
+    margin: 0 auto;
 }

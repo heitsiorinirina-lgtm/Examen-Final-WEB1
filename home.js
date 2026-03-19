@@ -59,7 +59,6 @@ function renderCourses() {
 
 document.addEventListener('DOMContentLoaded', renderCourses);
 
-// Données issues de votre fichier JS (Photo 2)
 const experiences = [
     { 
         year: '2026 — Present', 
@@ -87,7 +86,7 @@ const experiences = [
         role: 'Teacher', 
         org: 'ESMIA (École Supérieure de Management et d’Informatique appliquée), Antananarivo', 
         desc: 'Taught over 14 different topics from first years to Master degree. Mentoring students from small projects to technical ones',
-        isHighlighted: true // On active la ligne rouge pour cet élément comme sur la photo
+        isHighlighted: true 
     }
 ];
 
