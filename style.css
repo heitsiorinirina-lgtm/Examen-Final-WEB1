@@ -100,13 +100,13 @@
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
   --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
   --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
-  --bulma-light-rgb: 243.372, 244.2764, 246.228;
-  --bulma-light-h: 221deg;
-  --bulma-light-s: 14%;
+  --bulma-light-rgb: 249, 246, 241;
+  --bulma-light-h: 38deg;
+  --bulma-light-s: 40%;
   --bulma-light-l: 96%;
   --bulma-light-invert-l: 21%;
   --bulma-light-invert: hsl(221, 14%, 21%);
-  --bulma-light-on-scheme-l: 36%;
+  --bulma-light-on-scheme-l: 31.0784313725%;
   --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
   --bulma-dark: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
   --bulma-dark-base: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
@@ -114,8 +114,8 @@
   --bulma-dark-h: 221deg;
   --bulma-dark-s: 14%;
   --bulma-dark-l: 21%;
-  --bulma-dark-invert-l: 96%;
-  --bulma-dark-invert: hsl(221, 14%, 96%);
+  --bulma-dark-invert-l: 96.0784313725%;
+  --bulma-dark-invert: #f9f6f1;
   --bulma-dark-on-scheme-l: 21%;
   --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
   --bulma-text: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-l), 1);
@@ -867,7 +867,7 @@
   --bulma-grey: hsl(221, 14%, 48%);
   --bulma-grey-light: hsl(221, 14%, 71%);
   --bulma-grey-lighter: hsl(221, 14%, 86%);
-  --bulma-white-ter: hsl(221, 14%, 96%);
+  --bulma-white-ter: #f9f6f1;
   --bulma-white-bis: hsl(221, 14%, 98%);
   --bulma-shadow-h: 0deg;
   --bulma-shadow-s: 0%;
@@ -1001,13 +1001,13 @@
     --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
     --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
     --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
-    --bulma-light-rgb: 243.372, 244.2764, 246.228;
-    --bulma-light-h: 221deg;
-    --bulma-light-s: 14%;
+    --bulma-light-rgb: 249, 246, 241;
+    --bulma-light-h: 38deg;
+    --bulma-light-s: 40%;
     --bulma-light-l: 96%;
     --bulma-light-invert-l: 21%;
     --bulma-light-invert: hsl(221, 14%, 21%);
-    --bulma-light-on-scheme-l: 36%;
+    --bulma-light-on-scheme-l: 31.0784313725%;
     --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
     --bulma-dark: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
     --bulma-dark-base: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
@@ -1015,8 +1015,8 @@
     --bulma-dark-h: 221deg;
     --bulma-dark-s: 14%;
     --bulma-dark-l: 21%;
-    --bulma-dark-invert-l: 96%;
-    --bulma-dark-invert: hsl(221, 14%, 96%);
+    --bulma-dark-invert-l: 96.0784313725%;
+    --bulma-dark-invert: #f9f6f1;
     --bulma-dark-on-scheme-l: 21%;
     --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
     --bulma-text: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-l), 1);
@@ -1768,7 +1768,7 @@
     --bulma-grey: hsl(221, 14%, 48%);
     --bulma-grey-light: hsl(221, 14%, 71%);
     --bulma-grey-lighter: hsl(221, 14%, 86%);
-    --bulma-white-ter: hsl(221, 14%, 96%);
+    --bulma-white-ter: #f9f6f1;
     --bulma-white-bis: hsl(221, 14%, 98%);
     --bulma-shadow-h: 0deg;
     --bulma-shadow-s: 0%;
@@ -1788,7 +1788,7 @@
     --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
     --bulma-black-on-scheme-l: 55.1960784314%;
     --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
-    --bulma-light-on-scheme-l: 96%;
+    --bulma-light-on-scheme-l: 96.0784313725%;
     --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
     --bulma-dark-on-scheme-l: 56%;
     --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
@@ -1919,13 +1919,13 @@
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
   --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
   --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
-  --bulma-light-rgb: 243.372, 244.2764, 246.228;
-  --bulma-light-h: 221deg;
-  --bulma-light-s: 14%;
+  --bulma-light-rgb: 249, 246, 241;
+  --bulma-light-h: 38deg;
+  --bulma-light-s: 40%;
   --bulma-light-l: 96%;
   --bulma-light-invert-l: 21%;
   --bulma-light-invert: hsl(221, 14%, 21%);
-  --bulma-light-on-scheme-l: 36%;
+  --bulma-light-on-scheme-l: 31.0784313725%;
   --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
   --bulma-dark: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
   --bulma-dark-base: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
@@ -1933,8 +1933,8 @@
   --bulma-dark-h: 221deg;
   --bulma-dark-s: 14%;
   --bulma-dark-l: 21%;
-  --bulma-dark-invert-l: 96%;
-  --bulma-dark-invert: hsl(221, 14%, 96%);
+  --bulma-dark-invert-l: 96.0784313725%;
+  --bulma-dark-invert: #f9f6f1;
   --bulma-dark-on-scheme-l: 21%;
   --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
   --bulma-text: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-l), 1);
@@ -2686,7 +2686,7 @@
   --bulma-grey: hsl(221, 14%, 48%);
   --bulma-grey-light: hsl(221, 14%, 71%);
   --bulma-grey-lighter: hsl(221, 14%, 86%);
-  --bulma-white-ter: hsl(221, 14%, 96%);
+  --bulma-white-ter: #f9f6f1;
   --bulma-white-bis: hsl(221, 14%, 98%);
   --bulma-shadow-h: 0deg;
   --bulma-shadow-s: 0%;
@@ -2739,7 +2739,7 @@
   --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
   --bulma-black-on-scheme-l: 55.1960784314%;
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
-  --bulma-light-on-scheme-l: 96%;
+  --bulma-light-on-scheme-l: 96.0784313725%;
   --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
   --bulma-dark-on-scheme-l: 56%;
   --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
@@ -19573,11 +19573,11 @@ has-background-danger.is-hoverable:active {
 }
 
 .has-text-white-ter {
-  color: hsl(221, 14%, 96%) !important;
+  color: #f9f6f1 !important;
 }
 
 .has-background-white-ter {
-  background-color: hsl(221, 14%, 96%) !important;
+  background-color: #f9f6f1 !important;
 }
 
 .has-text-white-bis {
@@ -21566,25 +21566,22 @@ has-background-danger.is-hoverable:active {
   border: 1px solid #e5e0d8;
   transition: box-shadow 0.2s;
 }
-
 .box:hover {
   box-shadow: var(--bulma-shadow);
-}
-
-#search-bar {
-  background-color: transparent;
-  border: none;
 }
 
 #logo {
   max-height: 4rem;
 }
 
+#search-bar {
+  background-color: transparent;
+  border: none;
+}
 #search-bar:focus {
   outline: none;
   box-shadow: none;
 }
-
 #search-bar::placeholder {
   color: white;
 }
@@ -21599,10 +21596,24 @@ has-background-danger.is-hoverable:active {
 .basic-hero {
   background-color: #f9f6f1;
   height: fit-content;
+  padding-block: 6rem;
 }
 
 section#blog-posts {
   background-color: white;
+}
+section#blog-posts .columns > .column {
+  min-width: 0;
+}
+section#blog-posts .container {
+  max-width: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  section#blog-posts {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .blog-card {
@@ -21615,18 +21626,16 @@ section#blog-posts {
   color: #78716c;
 }
 
-#blog-sidebar .box {
-  background-color: whitesmoke;
-}
-
-section#blog-posts .columns > .column {
-  min-width: 0;
+.blog-card-thumbnail {
+  border-radius: 0.5rem;
+  width: 100%;
 }
 
 #blog-sidebar {
   min-width: 0;
 }
 #blog-sidebar .box {
+  background-color: whitesmoke;
   max-width: 100%;
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -21646,9 +21655,10 @@ section#blog-posts .columns > .column {
   height: 100%;
 }
 
-.blog-card-thumbnail {
-  border-radius: 0.5rem;
-  width: 100%;
+.section-label::before, .section-header::before, .section-header::after {
+  content: "";
+  height: 2px;
+  background-color: #b22222;
 }
 
 .section-header {
@@ -21661,11 +21671,8 @@ section#blog-posts .columns > .column {
   color: #9b9b9b;
 }
 .section-header::before, .section-header::after {
-  content: "";
   flex: 1;
   max-width: 3rem;
-  height: 2px;
-  background-color: #b22222;
 }
 
 .section-label {
@@ -21678,24 +21685,62 @@ section#blog-posts .columns > .column {
   color: #9b9b9b;
 }
 .section-label::before {
-  content: "";
   flex-grow: 1;
   max-width: 3.5rem;
-  height: 2px;
-  background-color: #b22222;
 }
 
-section#blog-posts .container {
-  max-width: 100%;
+.dropdown,
+.dropdown-trigger {
   width: 100%;
 }
 
-@media screen and (min-width: 1400px) {
-  section#blog-posts {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
+.has-shadow {
+  box-shadow: var(--bulma-shadow);
 }
+
+.tags {
+  left: 20px;
+  top: 10px;
+}
+
+.course-level {
+  right: 0;
+  bottom: 0;
+}
+
+footer.card-footer button.is-white {
+  box-shadow: var(--bulma-shadow);
+}
+
+.has-underline {
+  position: relative;
+}
+.has-underline:not(i)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #b91c1c;
+}
+.has-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: min(-0.6vh, -4px);
+  left: 0;
+  background-color: #b91c1c;
+}
+
+.breadcrumb {
+  white-space: normal;
+}
+.breadcrumb ul li:first-of-type {
+  margin-top: 3.5px;
+}
+
 @media screen and (min-width: 1024px) and (hover: hover) {
   .navbar-item {
     position: relative;
@@ -21726,6 +21771,7 @@ section#blog-posts .container {
     border: 1px solid rgba(255, 255, 255, 0.7);
     border-radius: 9999px;
     padding: 0.4rem 0.9rem;
+    width: 100%;
   }
   .navbar-center {
     flex-direction: column;
@@ -21736,41 +21782,9 @@ section#blog-posts .container {
     align-items: center;
     flex-direction: column;
   }
-  #search-bar {
-    width: 100%;
-  }
   .is-fullwidth-touch {
     width: 100%;
   }
-}
-.has-underline {
-  position: relative;
-}
-.has-underline:not(i):after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #b91c1c;
-}
-.has-underline::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: min(-0.6vh, -4px);
-  left: 0;
-  background-color: #b91c1c;
-}
-
-.breadcrumb ul li:first-of-type {
-  margin-top: 3.5px;
-}
-
-.breadcrumb {
-  white-space: normal;
 }
 
 /*# sourceMappingURL=style.css.map */
