@@ -9,8 +9,8 @@
     <script src="https://kit.fontawesome.com/18e6813d54.js" crossorigin="anonymous"></script>
     <script src="data/tokimahery.data.js"></script>
     <script src="scripts/navbar.js" defer></script>
-    <script src="scripts/blog.js" defer></script>
-    <script src="templates/blog-templates.js"></script>
+    <script src="scripts/research.js" defer></script>
+    <script src="templates/research-templates.js"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
         <nav class="navbar is-primary is-fixed-top" aria-label="main navigation" role="navigation" id="navbar">
             <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center">
                 <img src="assets/logo.png" alt="Toky Ramarozaka" id="logo">
-                <span class="is-flex is-justify-content-end is-invisible-desktop">
+                <span class="is-flex is-justify-content-end">
                     <a href="#" class="navbar-item is-invisible-desktop"><i
                             class="fa-solid fa-basket-shopping is-size-4"></i></a> <a role="button"
                         class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
@@ -57,59 +57,35 @@
         <section class="section is-flex is-align-items-center basic-hero" id="hero">
             <div class="container has-text-centered">
                 <p
-                    class="is-uppercase has-text-weight-semibold has-text-grey section-header is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-6-widescreen is-size-5-fullhd">
-                    Writing
+                    class="is-uppercase has-text-weight-semibold has-text-grey section-header is-size-6-mobile is-size-6-tablet is-size-6-desktop">
+                    Academic work
                 </p>
-                <h1 class="title is-size-1-desktop is-size-1-fullhd is-size-1-widescreen is-size-2-touch p-5">
-                    The <i class="has-text-primary">blog</i>
+                <h1 class="title is-size-1-fullhd is-size-3-touch p-5">
+                    Research <i class="has-text-primary">papers</i>
                 </h1>
-                <p class="subtitle has-text-grey is-5-mobile is-4-tablet is-3-desktop">
-                    Thoughts on teaching, software engineering, languages, and <br>
-                    everything in between.
+                <p class="subtitle has-text-grey is-size-6-mobile is-size-5-tablet is-size-5-desktop is-size-4-fullhd">
+                    My academic work focuses on multi-agent
+                    systems and normative <br> frameworks, exploring how autonomous agents
+                    coordinate through <br> norms and social structures in complex, distributed
+                    environments.
                 </p>
             </div>
         </section>
-        <section class="section" id="blog-posts">
-            <div class="container">
-                <div class="columns">
-                    <div class="column is-two-thirds">
-                        <div id="blog-posts-list"></div>
-                    </div>
-                    <aside class="column" id="blog-sidebar">
-                        <div id="archives"></div>
-                        <div id="newsletter">
-                            <div class="box mb-5">
-                                <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-2 is-size-7-mobile is-size-7-tablet is-size-6-desktop"
-                                    id="newsletter-text">
-                                    Newsletter</p>
-                                <p class="blog-card-meta mb-3 is-size-6-touch is-size-6-desktop is-size-5-widescreen">
-                                    Get new articles straight to your inbox. No spam, ever.
-                                </p>
-                                <form class="field">
-                                    <div class="mb-4">
-                                        <input class="input" type="email" placeholder="your@email.com" required />
-                                    </div>
-                                    <button class="button is-primary is-fullwidth" type="submit">
-                                        Subscribe
-                                    </button>
-                                </form>
-                            </div>
-                        </div>
-                        <div id="videos"></div>
-                    </aside>
-                </div>
+        <section class="section has-background-white pb-6">
+            <div class="columns is-multiline is-flex is-justify-content-center" id="research">
             </div>
         </section>
     </main>
     <footer class="has-background-link is-flex is-flex-direction-column is-align-items-center p-5">
         <div class="container has-text-centered">
-            <p class="title has-text-white py-3 is-1">Want to go deeper?</p>
-            <p class="has-text-white mt-5 mb-6 is-4">Explore the courses or get in touch for a consultation</p>
+            <p class="title has-text-white py-3 is-1">Interested in collaborating?</p>
+            <p class="has-text-white mt-5 mb-4 is-4">Open to co-authoring, peer review and academic consulting
+                <br> engagements
+            </p>
         </div>
         <div class="buttons">
-            <a href="courses.html" class="button is-white has-text-primary is-rounded is-fullwidth-touch">BROWSE
-                COURSES</a>
-            <a href="" class="button is-outlined is-white is-rounded is-fullwidth-touch">COLLABORATE</a>
+            <a href="courses.html" class="button is-white has-text-link is-rounded is-fullwidth-touch">GET IN
+                TOUCH</a>
         </div>
     </footer>
 </body>
