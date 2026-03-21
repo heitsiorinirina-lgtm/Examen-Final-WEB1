@@ -21776,501 +21776,535 @@ section#blog-posts .container {
 /*# sourceMappingURL=style.css.map */
 
 
-
-/* page_home */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&display=swap');
-
-.am-about-section {
-    padding: 100px 10%;
-    background-color: #fff;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.am-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 80px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.am-header-col {
-    flex: 0 0 35%;
-}
-
-.am-subtitle-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-}
-
-.am-accent-line {
-    width: 30px;
-    height: 2px;
-    background-color: #bc2026;
-}
-
-.am-subtitle {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #999;
-    font-weight: bold;
-}
-
-.am-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 80px;
-    line-height: 0.85;
-    color: #1a1a1a;
-    margin: 0;
-}
-
-.am-title-italic {
-    font-style: italic;
-    font-weight: 400;
-}
-
-.am-content-col {
-    flex: 0 0 55%;
-}
-
-.am-description-p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: #555;
-    margin-bottom: 25px;
-}
-
-.am-separator {
-    width: 100%;
-    height: 1px;
-    background-color: #eee;
-    margin: 40px 0;
-}
-
-.am-stats-grid {
-    display: flex;
-    gap: 80px;
-}
-
-.am-stat-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.am-stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 45px;
-    font-weight: 700;
-    color: #bc2026;
-}
-
-.am-stat-label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #aaa;
-    margin-top: 8px;
-    font-weight: bold;
-}
-
-
-/* section page_home */
-.lc-learning-section {
-    padding: 100px 5%;
-    background-color: #f9f7f5;
-    font-family: 'Segoe UI', sans-serif;
-    text-align: center;
-}
-
-.lc-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.lc-subtitle-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.lc-line {
-    width: 25px;
-    height: 2px;
-    background-color: #bc2026;
-}
-
-.lc-subtitle {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #888;
-    font-weight: bold;
-}
-
-.lc-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    line-height: 1.1;
-    margin-bottom: 60px;
-    color: #1a1a1a;
-}
-
-.lc-italic {
-    font-style: italic;
-    font-weight: 400;
-}
-
-.lc-courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 50px;
-}
-
-.lc-card {
-    background: #fff;
-    padding: 40px 30px;
-    border-radius: 20px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-    transition: transform 0.3s ease;
-}
-
-.lc-card:hover {
-    transform: translateY(-10px);
-}
-
-.lc-tag {
-    display: inline-block;
-    padding: 6px 15px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px;
-    align-self: flex-start;
-}
-
-.lc-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    margin-bottom: 40px;
-    color: #1a1a1a;
-    line-height: 1.3;
-}
-
-.lc-meta {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #f0f0f0;
-    padding-top: 20px;
-    font-size: 13px;
-    color: #bbb;
-}
-
-.lc-view-all {
-    color: #bc2026;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 13px;
-    letter-spacing: 1px;
-    border-bottom: 2px solid #bc2026;
-    padding-bottom: 5px;
-}
-
-.ex-experience-section {
-    padding: 100px 10%;
-    background-color: #fff;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.ex-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.ex-subtitle-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.ex-accent-line {
-    width: 30px;
-    height: 2px;
-    background-color: #bc2026;
-}
-
-.ex-subtitle {
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #999;
-    font-weight: bold;
-}
-
-.ex-main-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 64px;
-    margin-bottom: 60px;
-    color: #1a1a1a;
-}
-
-.ex-experience-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr; 
-    column-gap: 80px;
-    row-gap: 60px;
-}
-
-.ex-item {
-    padding-left: 30px;
-    border-left: 1px solid #eee;
-    position: relative;
-    transition: border-color 0.3s ease;
-}
-
-.ex-item.highlight {
-    border-left: 2px solid #bc2026;
-}
-
-.ex-year {
-    font-size: 13px;
-    font-weight: bold;
-    color: #bc2026;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.ex-role {
-    font-size: 20px;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 5px;
-    display: block;
-}
-
-.ex-org {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #bbb;
-    margin-bottom: 15px;
-    display: block;
-}
-
-.ex-desc {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #666;
-    max-width: 450px;
-}
-
-
-/* footer page_home */
-.cta-section {
-    background-color: #bc2026; 
-    color: #ffffff;
-    padding: 100px 20px;
-    text-align: center;
-    width: 100%;
-}
-
-.cta-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.cta-title {
-    font-family: 'Playfair Display', serif; 
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
-}
-
-.cta-text {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 40px;
-    opacity: 0.9; 
-}
-
-.cta-button-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 15px 45px;
-    border: 2px solid #ffffff;
-    border-radius: 50px; 
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    background-color: #ffffff;
-    color: #bc2026; 
-    transform: translateY(-3px); 
-}
-
-
-/* testimonials 1 */
+/* section home_page */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;600&display=swap');
 
 :root {
-    --bg-color: #fcf9f6;
-    --accent-red: #c5281c;
-    --text-dark: #1a1a1a;
-    --text-muted: #666;
+    --primary-red: #c60d0d;
+    --bg-color: #f9f6f2; /* Teinte crème légère de l'image */
 }
 
 body {
     background-color: var(--bg-color);
+    font-family: 'Inter', sans-serif;
 }
 
-.testimonial-header {
-    padding: 100px 20px;
+/* Typographie */
+.main-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    color: #1a1a1a;
+    line-height: 1;
 }
 
-.social-proof-badge {
+.italic-red {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 4.5rem;
+    color: var(--primary-red);
+    line-height: 1;
+}
+
+.custom-red-text {
+    color: var(--primary-red) !important;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+}
+
+/* Ligne décorative avant "Portfolio & Services" */
+.line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-red);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+/* Boutons */
+.btn-red {
+    background-color: var(--primary-red);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Image et effets de cercles */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-pic img {
+    border: 8px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 350px !important;
+    height: 350px !important;
+    object-fit: cover;
+}
+
+.circle-background {
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 450px;
+    height: 450px;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Réseaux Sociaux */
+.social-icons a {
+    color: #b5b5b5;
+    margin-right: 20px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--primary-red);
+}
+
+/*section 2 home_page */
+/* --- POLICES ET BASES --- */
+/* Playfair Display pour l'élégance (About, chiffres rouges) et Inter pour le reste */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary-serif: 'Playfair Display', serif;
+  --primary-sans: 'Inter', sans-serif;
+  --accent-red: #be1e2d; /* La couleur rouge exacte de la photo */
+  --text-grey: #555555;
+  --light-grey: #999999;
+}
+
+body {
+  font-family: var(--primary-sans);
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* --- SECTION GAUCHE : TITRE --- */
+
+/* "Who I am" en haut à gauche */
+.who-i-am {
+  margin-bottom: 0.5rem;
+}
+
+.red-line {
+  display: inline-block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--accent-red);
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.is-uppercase.ls-widest {
+  letter-spacing: 0.2rem; /* Espacement large des lettres */
+  font-weight: 500;
+  color: var(--light-grey);
+}
+
+/* Grand Titre "About me" */
+.main-title {
+  font-family: var(--primary-serif);
+  font-size: 5rem; /* Très grand pour le look dramatique */
+  line-height: 0.9;
+  font-weight: 700;
+  margin-top: 1.5rem !important;
+}
+
+.italic-me {
+  font-style: italic;
+  font-weight: 400; /* Plus fin que le "About" */
+}
+
+/* --- SECTION DROITE : TEXTE & STATS --- */
+
+/* Paragraphes de description */
+.description-text p {
+  font-family: var(--primary-sans);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.7; /* Bon espacement des lignes */
+  color: var(--text-grey);
+  margin-bottom: 2rem;
+}
+
+/* La ligne horizontale et la section des stats */
+.stats-row {
+  margin-top: 4rem;
+  border-top: 1px solid #eeeeee; /* Ligne grise fine */
+  padding-top: 2.5rem;
+}
+
+/* Style des éléments de stat individuels */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Le chiffre rouge */
+.stat-number {
+  font-family: var(--primary-serif);
+  font-size: 3.5rem; /* Grand chiffre rouge */
+  font-weight: 700;
+  color: var(--accent-red);
+  line-height: 1;
+}
+
+/* Le label gris sous le chiffre */
+.stat-label {
+  font-family: var(--primary-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--light-grey);
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+
+/*section 3 home_page */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    --bg-light: #f9f7f5; /* Couleur de fond légèrement crème comme sur l'image */
+    --accent-red: #be1e2d;
+    --card-bg: #ffffff;
+}
+
+.courses-section {
+    background-color: var(--bg-light);
+    padding: 100px 0;
+}
+
+/* En-tête */
+.learning-badge {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.social-proof-badge .label {
-    font-size: 0.75rem;
-    letter-spacing: 2px;
-    color: var(--text-muted);
-    font-weight: 400;
-}
-
-.social-proof-badge .line {
-    width: 40px;
+.learning-badge .line {
+    width: 30px;
     height: 1px;
     background-color: var(--accent-red);
 }
 
-.main-title {
+.section-title {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem !important;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: #1a1a1a;
+}
+
+.italic-serif {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Cartes */
+.course-card {
+    background: var(--card-bg);
+    border-radius: 20px; /* Bordures très arrondies */
+    padding: 40px 30px;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02); /* Ombre très légère */
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.tag-category {
+    border-radius: 20px;
+    padding: 5px 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: fit-content;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Couleurs des badges basées sur l'image */
+.bg-development { background-color: var(--accent-red); }
+.bg-translation { background-color: #1a1a1a; }
+.bg-research { background-color: #555555; }
+
+.course-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 40px;
+}
+
+.course-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 15px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+/* Lien View All */
+.view-all-link {
+    color: var(--accent-red);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-red);
+    padding-bottom: 5px;
+}
+
+/* section 4 home_page */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --accent-red: #be1e2d;
+    --text-dark: #1a1a1a;
+    --text-grey: #666666;
+    --text-light: #999999;
+}
+
+.experience-section {
+    background-color: #ffffff;
+    padding: 80px 0;
+}
+
+/* En-tête */
+.red-line {
+    display: inline-block;
+    width: 35px;
+    height: 2px;
+    background-color: var(--accent-red);
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+.main-title-serif {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-top: 1rem !important;
+    color: var(--text-dark);
+}
+
+/* Grille et Séparation */
+.border-center > .column:nth-child(even) {
+    border-left: 1px solid #eeeeee;
+}
+
+/* Blocs d'expérience */
+.exp-item {
+    margin-bottom: 4rem;
+}
+
+.exp-year {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--accent-red);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.exp-role {
+    font-size: 1.4rem;
     font-weight: 700;
     color: var(--text-dark);
-    line-height: 1.1;
-    margin-bottom: 30px !important;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
 }
 
-.italic-red {
-    font-style: italic;
-    color: var(--accent-red);
+.exp-org {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-light);
+    letter-spacing: 0.5px;
+    margin-bottom: 1.2rem;
+    display: block;
 }
 
-.description {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem !important;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.exp-desc {
+    font-size: 1rem;
     line-height: 1.6;
+    color: var(--text-grey);
 }
 
-/*section 2 testimonial*/
+.ls-widest {
+    letter-spacing: 0.2rem;
+}
+
+/* footer home_page */
+/* --- 1. POLICES & VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 :root {
-    --accent-red: #c5281c;
-    --bg-light: #f9f9f9;
+    --accent-red: #be1e2d;
+    --text-dark: #1a1a1a;
+    --text-grey: #555555;
+    --text-light: #999999;
+    --bg-light: #f9f7f5;
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Inter', sans-serif;
 }
 
 body {
+    font-family: var(--font-sans);
+    color: var(--text-dark);
     background-color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Badge du haut */
-.students-badge {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.students-badge .line {
-    width: 30px;
+/* --- 2. STYLES RÉUTILISABLES --- */
+.ls-widest { letter-spacing: 0.2rem; }
+.italic-serif { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
+
+.red-line {
+    display: inline-block;
+    width: 35px;
     height: 2px;
     background-color: var(--accent-red);
-}
-.students-badge .label {
-    font-size: 0.8rem;
-    color: #999;
-    letter-spacing: 1px;
+    margin-right: 12px;
+    vertical-align: middle;
 }
 
-/* Style de la carte */
-.testimonial-card {
-    background: var(--bg-light);
-    border-radius: 12px;
-    padding: 25px;
+/* --- 3. SECTION ABOUT (DESIGN 1) --- */
+.main-title-serif {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    line-height: 0.9;
+    font-weight: 700;
+    margin-top: 1.5rem !important;
+}
+
+.description-text p {
+    font-size: 1.05rem;
+    color: var(--text-grey);
+    margin-bottom: 2rem;
+}
+
+.stats-row-border {
+    margin-top: 3rem;
+    border-top: 1px solid #eeeeee;
+    padding-top: 2rem;
+}
+
+.stat-number-red {
+    font-family: var(--font-serif);
+    font-size: 3.2rem;
+    color: var(--accent-red);
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* --- 4. SECTION COURSES (CARTES) --- */
+.courses-section {
+    background-color: var(--bg-light);
+    padding: 100px 0;
+}
+
+.course-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px 30px;
     height: 100%;
-    transition: transform 0.3s ease;
-    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
 
-.card-header-custom {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-}
-
-.author-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.author-name {
-    font-size: 0.9rem;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.role-text {
+.tag-category {
+    border-radius: 20px;
+    padding: 5px 15px;
     font-size: 0.75rem;
-    color: #aaa;
-    text-transform: capitalize;
-}
-
-.red-divider {
-    width: 30px;
-    height: 2px;
-    background-color: var(--accent-red);
-    margin: 15px 0;
-}
-
-.description-text {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
+    font-weight: 600;
+    color: white;
+    width: fit-content;
     margin-bottom: 20px;
-    min-height: 80px;
 }
 
-.stars-container {
+.bg-red { background-color: var(--accent-red); }
+.bg-black { background-color: #1a1a1a; }
+.bg-grey { background-color: #555555; }
+
+.view-all-link {
     color: var(--accent-red);
-    font-size: 0.8rem;
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent-red);
+    text-decoration: none;
 }
+
+/* --- 5. SECTION EXPERIENCE --- */
+.border-center > .column:nth-child(even) {
+    border-left: 1px solid #eeeeee;
+}
+
+.exp-item { margin-bottom: 3.5rem; }
+.exp-year { color: var(--accent-red); font-weight: 700; font-size: 0.85rem; }
+.exp-role { font-size: 1.4rem; font-weight: 700; margin: 5px 0; }
+.exp-org { font-size: 0.75rem; color: var(--text-light); text-transform: uppercase; font-weight: 600; }
+
+/* --- 6. FOOTER (READY TO COLLABORATE) --- */
+.cta-section {
+    background-color: var(--accent-red) !important;
+    padding: 120px 20px !important;
+}
+
+.cta-title {
+    font-family: var(--font-serif);
+    color: #ffffff !important;
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.cta-text {
+    color: #ffffff !important;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 20px auto 50px auto !important;
+}
+
+.cta-button {
+    background-color: #ffffff !important;
+    color: var(--accent-red) !important;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    padding: 18px 50px !important; /* Pour la forme pilule */
+    height: auto !important;
+    border: none !important;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #f8f8f8 !important;
+    transform: scale(1.03);
+}
+
+

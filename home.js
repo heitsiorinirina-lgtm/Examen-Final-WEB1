@@ -1,107 +1,139 @@
-const profileData = {
-    aboutMe_part1: `Je suis chercheuse en doctorat, je me passionne pour l'étude des systèmes complexes à travers la modélisation et la simulation multi-agents. Cependant, l'enseignement est mon Ikigai.`,
-    aboutMe_part2: `Ce n'est pas un simple accessoire à mon travail, c'est sa fondation et son énergie. La recherche affine ma réflexion, la classe lui donne un sens. Et en tant que développeuse, je transforme les idées en logiciels propres, fiables et conçus pour durer.`,
-    overview: [
-        { number: new Date().getFullYear() - 2017, label: 'Years experience' },
-        { number: '800+', label: 'Students taught' },
-        { number: '20+', label: 'Topics' }
-    ]
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Injection des textes de description
+    const contentDiv = document.getElementById('about-content');
+    
+    const p1 = document.createElement('p');
+    p1.textContent = data.aboutMe_part1;
+    
+    const p2 = document.createElement('p');
+    p2.textContent = data.aboutMe_part2;
+    
+    contentDiv.appendChild(p1);
+    contentDiv.appendChild(p2);
+
+    // 2. Injection des statistiques (le tableau 'overview' dans ton code)
+    const statsDiv = document.getElementById('stats-container');
+    
+    data.overview.forEach(item => {
+        const column = document.createElement('div');
+        column.className = 'column is-4';
+        
+        column.innerHTML = `
+            <div class="stat-item">
+                <span class="stat-number">${item.number}</span>
+                <span class="stat-label">${item.label}</span>
+            </div>
+        `;
+        statsDiv.appendChild(column);
+    });
+});
+
+
+const coursesData = [
+    {
+        category: "Development",
+        class: "bg-development",
+        title: "Web Development Fundamentals",
+        mode: "Online",
+        duration: "8 weeks"
+    },
+    {
+        category: "Translation",
+        class: "bg-translation",
+        title: "Technical Translation Masterclass",
+        mode: "Hybrid",
+        duration: "6 weeks"
+    },
+    {
+        category: "Research",
+        class: "bg-research",
+        title: "Academic Writing & Methodology",
+        mode: "Offline",
+        duration: "10 weeks"
+    }
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('courses-container');
+    
+    coursesData.forEach(course => {
+        const column = document.createElement('div');
+        column.className = 'column is-4';
+        
+        column.innerHTML = `
+            <div class="course-card">
+                <div>
+                    <div class="tag-category ${course.class}">${course.category}</div>
+                    <h3 class="course-title">${course.title}</h3>
+                </div>
+                <div class="course-footer">
+                    <span>${course.mode}</span>
+                    <span>${course.duration}</span>
+                </div>
+            </div>
+        `;
+        container.appendChild(column);
+    });
+});
+
+
+const experienceData = [
+    {
+        year: "2026 — PRESENT",
+        role: "Consultant",
+        org: "INDEPENDENT",
+        desc: "Advising, teaching, on a much more singular level for all societies, and developing scalable solutions."
+    },
+    {
+        year: "2021 — 2026",
+        role: "Study Coordinator | Back-end developer",
+        org: "HEI MADAGASCAR (HAUTE ÉCOLE D'INFORMATIQUE), ANTANANARIVO",
+        desc: "Responsible of studies, permanent teacher for 5 different topics, as well as some back-end development on the school management app."
+    },
+    {
+        year: "2024",
+        role: "PhD in Computer Science",
+        org: "UNIVERSITÉ DE FIANARANTSOA",
+        desc: "A self-founded PhD on modeling complex systems, between the university of Fianarantsoa, and CIRAD, Montpellier, titled: Accounting for norms in agent-based modeling."
+    },
+    {
+        year: "2017 — 2020",
+        role: "Teacher",
+        org: "ESMIA (ÉCOLE SUPÉRIEURE DE MANAGEMENT ET D'INFORMATIQUE APPLIQUÉE), ANTANANARIVO",
+        desc: "Taught over 14 different topics from first years to Master degree. Mentoring students from small projects to technical ones."
+    }
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.getElementById('experience-grid');
+    
+    experienceData.forEach(exp => {
+        const column = document.createElement('div');
+        column.className = 'column is-6'; // Deux colonnes par ligne
+        
+        column.innerHTML = `
+            <div class="exp-item">
+                <span class="exp-year">${exp.year}</span>
+                <h3 class="exp-role">${exp.role}</h3>
+                <span class="exp-org">${exp.org}</span>
+                <p class="exp-desc">${exp.desc}</p>
+            </div>
+        `;
+        grid.appendChild(column);
+    });
+});
+
+
+// On suppose que 'data' contient ces infos
+const dataFooter = {
+    footerTitle: "Ready to collaborate?",
+    footerSubtitle: "Whether you're looking for a course, a consultation, or a translation — let's talk."
 };
 
-function renderAboutSection() {
-    const textTarget = document.getElementById('am-text-content');
-    const statsTarget = document.getElementById('am-stats-content');
+document.addEventListener('DOMContentLoaded', () => {
+    const title = document.querySelector('.cta-title');
+    const desc = document.getElementById('footer-description');
 
-    if (textTarget && statsTarget) {
-        textTarget.innerHTML = '';
-        statsTarget.innerHTML = '';
-
-        textTarget.innerHTML = `
-            <p class="am-description-p">${profileData.aboutMe_part1}</p>
-            <p class="am-description-p">${profileData.aboutMe_part2}</p>
-        `;
-
-        profileData.overview.forEach(item => {
-            const div = document.createElement('div');
-            div.className = 'am-stat-item';
-            div.innerHTML = `
-                <span class="am-stat-number">${item.number}</span>
-                <span class="am-stat-label">${item.label}</span>
-            `;
-            statsTarget.appendChild(div);
-        });
-    }
-}
-
-document.addEventListener('DOMContentLoaded', renderAboutSection);
-
-const homeCourses = [
-    { tag: 'Development', title: 'Web Development Fundamentals', mode: 'Online', duration: '8 weeks', color: '#bc2026' },
-    { tag: 'Translation', title: 'Technical Translation Masterclass', mode: 'Hybrid', duration: '6 weeks', color: '#222' },
-    { tag: 'Research', title: 'Academic Writing & Methodology', mode: 'Offline', duration: '10 weeks', color: '#555' }
-];
-
-function renderCourses() {
-    const grid = document.getElementById('lc-courses-grid');
-    if (!grid) return;
-
-    grid.innerHTML = homeCourses.map(course => `
-        <div class="lc-card">
-            <span class="lc-tag" style="background-color: ${course.color || '#222'}">${course.tag}</span>
-            <h3 class="lc-title">${course.title}</h3>
-            <div class="lc-meta">
-                <span>${course.mode}</span>
-                <span>${course.duration}</span>
-            </div>
-        </div>
-    `).join('');
-}
-
-document.addEventListener('DOMContentLoaded', renderCourses);
-
-const experiences = [
-    { 
-        year: '2026 — Present', 
-        role: 'Consultant', 
-        org: 'INDEPENDENT', 
-        desc: 'Advising, teaching, on a much more singular level for all societies, and developing scalable solutions',
-        isHighlighted: false 
-    },
-    { 
-        year: '2021 — 2026', 
-        role: 'Study Coordinator | Back-end developer', 
-        org: 'HEI Madagascar (Haute École d’Informatique), Antananarivo', 
-        desc: 'Responsible of studies, permanent teacher for 5 different topics, as well as some back-end development on the school management app',
-        isHighlighted: false
-    },
-    { 
-        year: '2024', 
-        role: 'PhD in Computer Science', 
-        org: 'UNIVERSITÉ DE FIANARANTSOA', 
-        desc: 'A self-founded PhD on modeling complex systems, between the university of Fianarantsoa, and CIRAD, Montpellier, titled: Accounting for norms in agent-based modeling',
-        isHighlighted: false
-    },
-    { 
-        year: '2017 — 2020', 
-        role: 'Teacher', 
-        org: 'ESMIA (École Supérieure de Management et d’Informatique appliquée), Antananarivo', 
-        desc: 'Taught over 14 different topics from first years to Master degree. Mentoring students from small projects to technical ones',
-        isHighlighted: true 
-    }
-];
-
-function renderExperiences() {
-    const grid = document.getElementById('ex-experience-grid');
-    if (!grid) return;
-
-    grid.innerHTML = experiences.map(exp => `
-        <div class="ex-item ${exp.isHighlighted ? 'highlight' : ''}">
-            <span class="ex-year">${exp.year}</span>
-            <span class="ex-role">${exp.role}</span>
-            <span class="ex-org">${exp.org}</span>
-            <p class="ex-desc">${exp.desc}</p>
-        </div>
-    `).join('');
-}
-
-document.addEventListener('DOMContentLoaded', renderExperiences);
+    if(title) title.textContent = dataFooter.footerTitle;
+    if(desc) desc.textContent = dataFooter.footerSubtitle;
+});
