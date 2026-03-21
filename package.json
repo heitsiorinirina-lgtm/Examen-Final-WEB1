@@ -1,26 +1,11 @@
 {
-  "name": "examen-final-web1",
-  "version": "1.0.0",
-  "description": "",
-  "main": "cart.js",
+  "dependencies": {
+    "bulma": "^1.0.4",
+    "bulma-slider": "^2.0.5",
+    "sass": "^1.72.0"
+  },
   "scripts": {
     "build-bulma": "sass --load-path=node_modules style.scss style.css",
     "start": "npm run build-bulma -- --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/heitsiorinirina-lgtm/Examen-Final-WEB1.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/heitsiorinirina-lgtm/Examen-Final-WEB1/issues"
-  },
-  "homepage": "https://github.com/heitsiorinirina-lgtm/Examen-Final-WEB1#readme",
-  "dependencies": {
-    "bulma": "^1.0.4",
-    "sass": "^1.98.0"
   }
 }

@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Bulma Utilities */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "../../node_modules/bulma-slider/dist/css/bulma-slider.min.css";
 :root {
   --bulma-control-radius: var(--bulma-radius);
   --bulma-control-radius-small: var(--bulma-radius-small);
@@ -84,29 +85,29 @@
   --bulma-white-h: 221deg;
   --bulma-white-s: 14%;
   --bulma-white-l: 100%;
-  --bulma-white-invert-l: 4%;
-  --bulma-white-invert: hsl(221, 14%, 4%);
+  --bulma-white-invert-l: 10.1960784314%;
+  --bulma-white-invert: #1a1a1a;
   --bulma-white-on-scheme-l: 35%;
   --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
   --bulma-black: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
   --bulma-black-base: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
-  --bulma-black-rgb: 8.772, 9.6764, 11.628;
-  --bulma-black-h: 221deg;
-  --bulma-black-s: 14%;
-  --bulma-black-l: 4%;
+  --bulma-black-rgb: 26, 26, 26;
+  --bulma-black-h: 0deg;
+  --bulma-black-s: 0%;
+  --bulma-black-l: 10%;
   --bulma-black-invert-l: 100%;
   --bulma-black-invert: hsl(221, 14%, 100%);
-  --bulma-black-on-scheme-l: 4%;
+  --bulma-black-on-scheme-l: 10.1960784314%;
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
   --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
   --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
-  --bulma-light-rgb: 243.372, 244.2764, 246.228;
-  --bulma-light-h: 221deg;
-  --bulma-light-s: 14%;
+  --bulma-light-rgb: 249, 246, 241;
+  --bulma-light-h: 38deg;
+  --bulma-light-s: 40%;
   --bulma-light-l: 96%;
   --bulma-light-invert-l: 21%;
   --bulma-light-invert: hsl(221, 14%, 21%);
-  --bulma-light-on-scheme-l: 36%;
+  --bulma-light-on-scheme-l: 31.0784313725%;
   --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
   --bulma-dark: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
   --bulma-dark-base: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
@@ -114,8 +115,8 @@
   --bulma-dark-h: 221deg;
   --bulma-dark-s: 14%;
   --bulma-dark-l: 21%;
-  --bulma-dark-invert-l: 96%;
-  --bulma-dark-invert: hsl(221, 14%, 96%);
+  --bulma-dark-invert-l: 96.0784313725%;
+  --bulma-dark-invert: #f9f6f1;
   --bulma-dark-on-scheme-l: 21%;
   --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
   --bulma-text: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-l), 1);
@@ -867,11 +868,11 @@
   --bulma-grey: hsl(221, 14%, 48%);
   --bulma-grey-light: hsl(221, 14%, 71%);
   --bulma-grey-lighter: hsl(221, 14%, 86%);
-  --bulma-white-ter: hsl(221, 14%, 96%);
+  --bulma-white-ter: #f9f6f1;
   --bulma-white-bis: hsl(221, 14%, 98%);
-  --bulma-shadow-h: 221deg;
-  --bulma-shadow-s: 14%;
-  --bulma-shadow-l: 4%;
+  --bulma-shadow-h: 0deg;
+  --bulma-shadow-s: 0%;
+  --bulma-shadow-l: 10%;
   --bulma-size-1: 3rem;
   --bulma-size-2: 2.5rem;
   --bulma-size-3: 2rem;
@@ -985,29 +986,29 @@
     --bulma-white-h: 221deg;
     --bulma-white-s: 14%;
     --bulma-white-l: 100%;
-    --bulma-white-invert-l: 4%;
-    --bulma-white-invert: hsl(221, 14%, 4%);
+    --bulma-white-invert-l: 10.1960784314%;
+    --bulma-white-invert: #1a1a1a;
     --bulma-white-on-scheme-l: 35%;
     --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
     --bulma-black: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
     --bulma-black-base: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
-    --bulma-black-rgb: 8.772, 9.6764, 11.628;
-    --bulma-black-h: 221deg;
-    --bulma-black-s: 14%;
-    --bulma-black-l: 4%;
+    --bulma-black-rgb: 26, 26, 26;
+    --bulma-black-h: 0deg;
+    --bulma-black-s: 0%;
+    --bulma-black-l: 10%;
     --bulma-black-invert-l: 100%;
     --bulma-black-invert: hsl(221, 14%, 100%);
-    --bulma-black-on-scheme-l: 4%;
+    --bulma-black-on-scheme-l: 10.1960784314%;
     --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
     --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
     --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
-    --bulma-light-rgb: 243.372, 244.2764, 246.228;
-    --bulma-light-h: 221deg;
-    --bulma-light-s: 14%;
+    --bulma-light-rgb: 249, 246, 241;
+    --bulma-light-h: 38deg;
+    --bulma-light-s: 40%;
     --bulma-light-l: 96%;
     --bulma-light-invert-l: 21%;
     --bulma-light-invert: hsl(221, 14%, 21%);
-    --bulma-light-on-scheme-l: 36%;
+    --bulma-light-on-scheme-l: 31.0784313725%;
     --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
     --bulma-dark: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
     --bulma-dark-base: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
@@ -1015,8 +1016,8 @@
     --bulma-dark-h: 221deg;
     --bulma-dark-s: 14%;
     --bulma-dark-l: 21%;
-    --bulma-dark-invert-l: 96%;
-    --bulma-dark-invert: hsl(221, 14%, 96%);
+    --bulma-dark-invert-l: 96.0784313725%;
+    --bulma-dark-invert: #f9f6f1;
     --bulma-dark-on-scheme-l: 21%;
     --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
     --bulma-text: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-l), 1);
@@ -1768,11 +1769,11 @@
     --bulma-grey: hsl(221, 14%, 48%);
     --bulma-grey-light: hsl(221, 14%, 71%);
     --bulma-grey-lighter: hsl(221, 14%, 86%);
-    --bulma-white-ter: hsl(221, 14%, 96%);
+    --bulma-white-ter: #f9f6f1;
     --bulma-white-bis: hsl(221, 14%, 98%);
-    --bulma-shadow-h: 221deg;
-    --bulma-shadow-s: 14%;
-    --bulma-shadow-l: 4%;
+    --bulma-shadow-h: 0deg;
+    --bulma-shadow-s: 0%;
+    --bulma-shadow-l: 10%;
     --bulma-size-1: 3rem;
     --bulma-size-2: 2.5rem;
     --bulma-size-3: 2rem;
@@ -1786,9 +1787,9 @@
   :root {
     --bulma-white-on-scheme-l: 100%;
     --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
-    --bulma-black-on-scheme-l: -51%;
+    --bulma-black-on-scheme-l: 55.1960784314%;
     --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
-    --bulma-light-on-scheme-l: 96%;
+    --bulma-light-on-scheme-l: 96.0784313725%;
     --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
     --bulma-dark-on-scheme-l: 56%;
     --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
@@ -1903,29 +1904,29 @@
   --bulma-white-h: 221deg;
   --bulma-white-s: 14%;
   --bulma-white-l: 100%;
-  --bulma-white-invert-l: 4%;
-  --bulma-white-invert: hsl(221, 14%, 4%);
+  --bulma-white-invert-l: 10.1960784314%;
+  --bulma-white-invert: #1a1a1a;
   --bulma-white-on-scheme-l: 35%;
   --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
   --bulma-black: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
   --bulma-black-base: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-l), 1);
-  --bulma-black-rgb: 8.772, 9.6764, 11.628;
-  --bulma-black-h: 221deg;
-  --bulma-black-s: 14%;
-  --bulma-black-l: 4%;
+  --bulma-black-rgb: 26, 26, 26;
+  --bulma-black-h: 0deg;
+  --bulma-black-s: 0%;
+  --bulma-black-l: 10%;
   --bulma-black-invert-l: 100%;
   --bulma-black-invert: hsl(221, 14%, 100%);
-  --bulma-black-on-scheme-l: 4%;
+  --bulma-black-on-scheme-l: 10.1960784314%;
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
   --bulma-light: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
   --bulma-light-base: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-l), 1);
-  --bulma-light-rgb: 243.372, 244.2764, 246.228;
-  --bulma-light-h: 221deg;
-  --bulma-light-s: 14%;
+  --bulma-light-rgb: 249, 246, 241;
+  --bulma-light-h: 38deg;
+  --bulma-light-s: 40%;
   --bulma-light-l: 96%;
   --bulma-light-invert-l: 21%;
   --bulma-light-invert: hsl(221, 14%, 21%);
-  --bulma-light-on-scheme-l: 36%;
+  --bulma-light-on-scheme-l: 31.0784313725%;
   --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
   --bulma-dark: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
   --bulma-dark-base: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-l), 1);
@@ -1933,8 +1934,8 @@
   --bulma-dark-h: 221deg;
   --bulma-dark-s: 14%;
   --bulma-dark-l: 21%;
-  --bulma-dark-invert-l: 96%;
-  --bulma-dark-invert: hsl(221, 14%, 96%);
+  --bulma-dark-invert-l: 96.0784313725%;
+  --bulma-dark-invert: #f9f6f1;
   --bulma-dark-on-scheme-l: 21%;
   --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
   --bulma-text: hsla(var(--bulma-text-h), var(--bulma-text-s), var(--bulma-text-l), 1);
@@ -2686,11 +2687,11 @@
   --bulma-grey: hsl(221, 14%, 48%);
   --bulma-grey-light: hsl(221, 14%, 71%);
   --bulma-grey-lighter: hsl(221, 14%, 86%);
-  --bulma-white-ter: hsl(221, 14%, 96%);
+  --bulma-white-ter: #f9f6f1;
   --bulma-white-bis: hsl(221, 14%, 98%);
-  --bulma-shadow-h: 221deg;
-  --bulma-shadow-s: 14%;
-  --bulma-shadow-l: 4%;
+  --bulma-shadow-h: 0deg;
+  --bulma-shadow-s: 0%;
+  --bulma-shadow-l: 10%;
   --bulma-size-1: 3rem;
   --bulma-size-2: 2.5rem;
   --bulma-size-3: 2rem;
@@ -2737,9 +2738,9 @@
 .theme-dark {
   --bulma-white-on-scheme-l: 100%;
   --bulma-white-on-scheme: hsla(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-on-scheme-l), 1);
-  --bulma-black-on-scheme-l: -51%;
+  --bulma-black-on-scheme-l: 55.1960784314%;
   --bulma-black-on-scheme: hsla(var(--bulma-black-h), var(--bulma-black-s), var(--bulma-black-on-scheme-l), 1);
-  --bulma-light-on-scheme-l: 96%;
+  --bulma-light-on-scheme-l: 96.0784313725%;
   --bulma-light-on-scheme: hsla(var(--bulma-light-h), var(--bulma-light-s), var(--bulma-light-on-scheme-l), 1);
   --bulma-dark-on-scheme-l: 56%;
   --bulma-dark-on-scheme: hsla(var(--bulma-dark-h), var(--bulma-dark-s), var(--bulma-dark-on-scheme-l), 1);
@@ -3303,7 +3304,7 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   --bulma-box-background-color: var(--bulma-scheme-main);
   --bulma-box-color: var(--bulma-text);
   --bulma-box-radius: var(--bulma-radius-large);
-  --bulma-box-shadow: var(--bulma-shadow);
+  --bulma-box-shadow: none;
   --bulma-box-padding: 1.25rem;
   --bulma-box-link-hover-shadow: 0 0.5em 1em -0.125em hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.1), 0 0 0 1px var(--bulma-link);
   --bulma-box-link-active-shadow: inset 0 1px 2px hsla(var(--bulma-scheme-h), var(--bulma-scheme-s), var(--bulma-scheme-invert-l), 0.2), 0 0 0 1px var(--bulma-link);
@@ -13148,7 +13149,7 @@ label.panel-block:hover {
 }
 
 .footer {
-  --bulma-footer-background-color: var(--bulma-scheme-main-bis);
+  --bulma-footer-background-color: #991b1b;
   --bulma-footer-color: false;
   --bulma-footer-padding: 3rem 1.5rem 6rem;
   background-color: var(--bulma-footer-background-color);
@@ -19573,11 +19574,11 @@ has-background-danger.is-hoverable:active {
 }
 
 .has-text-white-ter {
-  color: hsl(221, 14%, 96%) !important;
+  color: #f9f6f1 !important;
 }
 
 .has-background-white-ter {
-  background-color: hsl(221, 14%, 96%) !important;
+  background-color: #f9f6f1 !important;
 }
 
 .has-text-white-bis {
@@ -21562,16 +21563,26 @@ has-background-danger.is-hoverable:active {
   pointer-events: all !important;
 }
 
+.box {
+  border: 1px solid #e5e0d8;
+  transition: box-shadow 0.2s;
+}
+.box:hover {
+  box-shadow: var(--bulma-shadow);
+}
+
+#logo {
+  max-height: 4rem;
+}
+
 #search-bar {
   background-color: transparent;
   border: none;
 }
-
 #search-bar:focus {
   outline: none;
   box-shadow: none;
 }
-
 #search-bar::placeholder {
   color: white;
 }
@@ -21580,16 +21591,30 @@ has-background-danger.is-hoverable:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 
-html,
-body {
+.basic-hero {
   background-color: #f9f6f1;
-  color: #1a1a1a;
+  height: fit-content;
+  padding-block: 6rem;
 }
 
-.blog-hero {
-  background-color: #f9f6f1;
+section#blog-posts {
+  background-color: white;
+}
+section#blog-posts .columns > .column {
+  min-width: 0;
+}
+section#blog-posts .container {
+  max-width: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 1400px) {
+  section#blog-posts {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 .blog-card {
@@ -21598,34 +21623,57 @@ body {
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
-.blog-card__meta {
+.blog-card-meta {
   color: #78716c;
 }
 
-.blog-tag {
-  background-color: #f0ece4;
-  color: #1a1a1a;
+.blog-card-thumbnail {
+  border-radius: 0.5rem;
+  width: 100%;
 }
 
-:root {
-    --main-red: #9e0b0b; /
-    --bg-cream: #fdfaf7;
+#blog-sidebar {
+  min-width: 0;
+}
+#blog-sidebar .box {
+  background-color: whitesmoke;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
-body {
-    background-color: var(--bg-cream);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+.video-container iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.navbar {
-    background-color: var(--main-red);
-    padding: 0.5rem 0;
+.section-label::before, .section-header::before, .section-header::after {
+  content: "";
+  height: 2px;
+  background-color: #b22222;
 }
 
-.navbar-item {
-    color: white;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: #9b9b9b;
+}
+.section-header::before, .section-header::after {
+  flex: 1;
+  max-width: 3rem;
 }
 
 .hero.is-fullheight-with-navbar {
@@ -21652,13 +21700,122 @@ body {
     font-weight: bold;
     display: block;
     margin-bottom: 15px;
-    position: relative;
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9b9b9b;
+}
+.section-label::before {
+  flex-grow: 1;
+  max-width: 3.5rem;
 }
 
-.about-title span::before {
+input[type=range].slider::-webkit-slider-runnable-track,
+input[type=range].slider.is-primary::-webkit-slider-runnable-track,
+input[type=range].slider.is-danger::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #b91c1c var(--fill), #dbdbdb var(--fill)) !important;
+}
+
+input[type=range].slider::-webkit-slider-thumb,
+input[type=range].slider::-moz-range-thumb,
+input[type=range].slider::-ms-thumb {
+  background: #b91c1c !important;
+  border-color: #b91c1c !important;
+}
+
+.dropdown,
+.dropdown-trigger {
+  width: 100%;
+}
+
+.dropdown .button {
+  border: 2px solid transparent;
+}
+
+.dropdown.is-dirty .button {
+  border-color: #b91c1c;
+  border-width: 2px;
+}
+
+.dropdown-menu {
+  width: 100%;
+  top: 0;
+}
+
+.dropdown-item .icon {
+  visibility: hidden;
+}
+
+.dropdown-item.is-active .icon {
+  visibility: visible;
+}
+
+.has-shadow {
+  box-shadow: var(--bulma-shadow);
+}
+
+.tags {
+  left: 20px;
+  top: 10px;
+}
+
+.course-level {
+  right: 0;
+  bottom: 0;
+}
+
+footer.card-footer button.is-white {
+  box-shadow: var(--bulma-shadow);
+}
+
+.has-underline {
+  position: relative;
+}
+.has-underline:not(i)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #b91c1c;
+}
+.has-underline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: min(-0.6vh, -4px);
+  left: 0;
+  background-color: #b91c1c;
+}
+
+.breadcrumb {
+  white-space: normal;
+}
+.breadcrumb ul li:first-of-type {
+  margin-top: 3.5px;
+}
+
+@media screen and (min-width: 1024px) and (hover: hover) {
+  .navbar-item {
+    position: relative;
+  }
+  .navbar-item:hover {
+    background-color: transparent;(())
+  }
+  .navbar-center .navbar-item::after {
     content: "";
-    display: block;
-    width: 30px;
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    transform-origin: center;
+    width: calc(100% - 2rem);
     height: 2px;
     background-color: var(--main-red);
     margin-bottom: 10px;
@@ -22560,47 +22717,34 @@ h1.title {
     background-color: #cc0000; 
     padding: 70px 20px;       
     color: #ffffff;
-    width: 100%;
-}
-
-.footer-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.8rem;        
-    font-weight: 700;
-    margin-bottom: 15px;      
-}
-
-.footer-subtitle {
-    font-size: 1rem;          
-    line-height: 1.5;
-    max-width: 650px;
-    margin: 0 auto 35px;     
-    opacity: 0.9;
-}
-
-.footer-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.footer-buttons .button {
-    height: auto;
-    padding: 14px 35px;       
-    border-radius: 50px;      
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    font-size: 0.8rem;        
-    transition: all 0.3s ease;
-    border: 2px solid #ffffff;
-    background-color: #cc0000;
-    color: #ffffff ;
-}
-
-.footer-buttons .button:hover {
     background-color: #ffffff;
-    color: #cc0000;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    transition: transform 0.25s ease;
+  }
+  .navbar-center .navbar-item:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
 }
+@media screen and (max-width: 1023px) {
+  #search-bar {
+    margin-top: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 9999px;
+    padding: 0.4rem 0.9rem;
+    width: 100%;
+  }
+  .navbar-center {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .navbar-end a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .is-fullwidth-touch {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
