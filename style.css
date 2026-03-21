@@ -21786,7 +21786,7 @@ footer.card-footer button.is-white {
     position: relative;
   }
   .navbar-item:hover {
-    background-color: transparent;
+    background-color: transparent;(())
   }
   .navbar-center .navbar-item::after {
     content: "";
