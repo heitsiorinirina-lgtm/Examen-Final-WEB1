@@ -236,6 +236,10 @@ input[type="range"].slider::-ms-thumb {
   bottom: 0;
 }
 
+.is-height-full {
+  height: 100%;
+}
+
 footer.card-footer button.is-white {
   box-shadow: var(--bulma-shadow);
 }
