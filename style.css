@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* Bulma Utilities */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "../../node_modules/bulma-slider/dist/css/bulma-slider.min.css";
 :root {
   --bulma-control-radius: var(--bulma-radius);
   --bulma-control-radius-small: var(--bulma-radius-small);
@@ -21689,9 +21690,44 @@ section#blog-posts .container {
   max-width: 3.5rem;
 }
 
+input[type=range].slider::-webkit-slider-runnable-track,
+input[type=range].slider.is-primary::-webkit-slider-runnable-track,
+input[type=range].slider.is-danger::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #b91c1c var(--fill), #dbdbdb var(--fill)) !important;
+}
+
+input[type=range].slider::-webkit-slider-thumb,
+input[type=range].slider::-moz-range-thumb,
+input[type=range].slider::-ms-thumb {
+  background: #b91c1c !important;
+  border-color: #b91c1c !important;
+}
+
 .dropdown,
 .dropdown-trigger {
   width: 100%;
+}
+
+.dropdown .button {
+  border: 2px solid transparent;
+}
+
+.dropdown.is-dirty .button {
+  border-color: #b91c1c;
+  border-width: 2px;
+}
+
+.dropdown-menu {
+  width: 100%;
+  top: 0;
+}
+
+.dropdown-item .icon {
+  visibility: hidden;
+}
+
+.dropdown-item.is-active .icon {
+  visibility: visible;
 }
 
 .has-shadow {

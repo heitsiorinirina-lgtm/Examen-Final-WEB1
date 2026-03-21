@@ -11,7 +11,9 @@
     <script src="scripts/navbar.js" defer></script>
     <script src="scripts/courses.js" defer></script>
     <script src="scripts/dropdown.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
     <script src="templates/courses-templates.js"></script>
+    <script defer src="node_modules/bulma-slider/dist/js/bulma-slider.min.js"></script>
 </head>
 
 <body>
@@ -88,31 +90,75 @@
                     TECHNOLOGY
                     <div class="dropdown">
                         <div class="dropdown-trigger">
-                            <button class="button is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <button class="button is-fullwidth is-justify-content-space-between" aria-haspopup="true"
+                                aria-controls="dropdown-menu">
                                 <span>All technologies</span>
                                 <span class="icon is-small">
                                     <i class="fas fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </button>
                         </div>
-                        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-menu pt-0" id="dropdown-menu" role="menu">
                             <div class="dropdown-content">
-                                <a href="#" class="dropdown-item is-active">All technologies</a>
-                                <a href="#" class="dropdown-item">Javascript</a>
-                                <a href="#" class="dropdown-item">Java</a>
-                                <a href="#" class="dropdown-item">Python</a>
-                                <a href="#" class="dropdown-item">PHP</a>
+                                <a href="#" class="dropdown-item is-active"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>All technologies</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>Javascript</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>Java</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>Python</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>PHP</a>
                             </div>
                         </div>
                     </div>
                 </span>
                 <span
-                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">LEVEL</span>
+                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">LEVEL
+                    <div class="dropdown">
+                        <div class="dropdown-trigger is-fullwidth">
+                            <button class="button is-fullwidth" aria-haspopup="true"
+                                aria-controls="dropdown-menu-level">
+                                <span>All levels</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu-level" role="menu">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item is-active">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    All levels
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    Beginner
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    Intermediate
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    Advanced
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <div class="column">
+                    PRICE RANGE
+                    <input type="range" id="price-slider" min="0" max="300000" value="0" step="5000"
+                        class="is-circle slider is-fullwidth">
+                    <input type="range" id="price-slider" min="0" max="300000" value="300000" step="5000"
+                        class="is-circle slider is-fullwidth">
+                </div>
                 <span
-                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">PRICE
-                    RANGE</span>
-                <span
-                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">SEARCH</span>
+                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">SEARCH
+                    <input type="text" class="input is-fullwidth" id="keyword-search" placeholder="Keywords...">
+                </span>
                 <span class="column is-clickable is-flex is-justify-content-center is-align-items-center">CLEAR
                     ALL</span>
             </section>

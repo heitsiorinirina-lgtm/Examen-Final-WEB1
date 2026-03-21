@@ -29,7 +29,6 @@ $color-border-light: #f0ece4;
   $family-primary: "DM Sans",
   $title-family: "Playfair Display"
 );
-
 // ─── Box ───────────────────────────────────────────────────────────────────────
 .box {
   border: 1px solid $color-border;
@@ -177,10 +176,49 @@ section#blog-posts {
   }
 }
 
+// ─── Slider ───────────────────────────────────────────────────────────────────
+input[type="range"].slider::-webkit-slider-runnable-track,
+input[type="range"].slider.is-primary::-webkit-slider-runnable-track,
+input[type="range"].slider.is-danger::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    $color-red var(--fill),
+    #dbdbdb var(--fill)
+  ) !important;
+}
+
+input[type="range"].slider::-webkit-slider-thumb,
+input[type="range"].slider::-moz-range-thumb,
+input[type="range"].slider::-ms-thumb {
+  background: $color-red !important;
+  border-color: $color-red !important;
+}
 // ─── Dropdown ───────────────────────────────────────────────────────────────────
 .dropdown,
 .dropdown-trigger {
   width: 100%;
+}
+
+.dropdown .button {
+  border: 2px solid transparent;
+}
+
+.dropdown.is-dirty .button {
+  border-color: $color-red;
+  border-width: 2px;
+}
+
+.dropdown-menu {
+  width: 100%;
+  top: 0;
+}
+
+.dropdown-item .icon {
+  visibility: hidden;
+}
+
+.dropdown-item.is-active .icon {
+  visibility: visible;
 }
 
 // ─── Utility ───────────────────────────────────────────────────────────────────
@@ -297,3 +335,4 @@ footer.card-footer button.is-white {
   }
 }
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "../../node_modules/bulma-slider/dist/css/bulma-slider.min.css";
