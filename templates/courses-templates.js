@@ -37,7 +37,7 @@ function courseCardTemplate(course) {
         </div>
 
         <div class="card-content">
-          <p class="title is-5 has-text-link mb-1">${course.title}</p>
+          <p class="is-size-4 has-text-link mb-1">${course.title}</p>
           <p class="has-text-weight-bold mb-3">MGA ${formattedPrice}</p>
           <p class="is-size-7 has-text-grey">${shortDesc}</p>
         </div>
