@@ -16692,6 +16692,14 @@ input[type=range].slider::-moz-range-thumb {
   box-shadow: var(--bulma-shadow);
 }
 
+.description {
+  overflow: hidden;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 .shadow-on-hover {
   transition: box-shadow var(--bulma-duration);
 }
