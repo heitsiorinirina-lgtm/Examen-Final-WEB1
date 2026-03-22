@@ -16645,9 +16645,18 @@ input[type=range].slider.is-danger::-webkit-slider-runnable-track {
   background: linear-gradient(to right, #b91c1c var(--fill), #dbdbdb var(--fill)) !important;
 }
 
-input[type=range].slider::-webkit-slider-thumb,
-input[type=range].slider::-moz-range-thumb,
-input[type=range].slider::-ms-thumb {
+input[type=range].slider::-moz-range-track {
+  background: linear-gradient(to right, #b91c1c var(--fill), #dbdbdb var(--fill)) !important;
+}
+
+input[type=range].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #b91c1c !important;
+  border-color: #b91c1c !important;
+}
+
+input[type=range].slider::-moz-range-thumb {
   background: #b91c1c !important;
   border-color: #b91c1c !important;
 }
