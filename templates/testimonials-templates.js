@@ -18,11 +18,11 @@ function studentsTestimonialsTemplate(testimonial) {
     return `<article class="column is-one-third">
                 <div class="card is-height-full has-background-white-bis shadow-on-hover is-shadowless">
                     <div class="card-content is-flex is-flex-direction-column is-flex-grow-1 is-height-full pb-4">
-                        <div class="card-content">
-                            <div class="media is-align-items-center mb-4">
+                        <div class="is-flex is-flex-direction-column is-flex-grow-1 is-height-full pt-4">                            <div class="media is-align-items-center mb-4">
                                 <div class="media-left">
-                                        <img class="is-rounded" src="${testimonial.thumbnail}">                                        <img class="is-rounded" src="${testimonial.thumbnail}">                                    </img>
-                                </div>
+                                <figure class="image is-48x48">
+                                    <img class="is-rounded" src="${testimonial.thumbnail}">                                </figure>
+                            </div>
                                 <div class="media-content">
                                     <p class="has-text-weight-bold">${testimonial.author}</p>
                                     <p class="has-text-grey">${role}</p>
@@ -40,7 +40,6 @@ function studentsTestimonialsTemplate(testimonial) {
                 </div>
             </article>`;
   }
-  return "";
   return "";
 }
 
@@ -115,4 +114,5 @@ function customersTestimonialsTemplate(testimonial) {
                 </div>
             </article>`;
   }
+  return "";
 }
