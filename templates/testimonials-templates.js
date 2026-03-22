@@ -52,7 +52,7 @@ function collaboratorsTestimonialsTemplate(testimonial) {
                                 <div
                                     class="card-content is-flex is-flex-direction-column is-justify-content-space-between is-height-full">
                                     <div class="content title is-5 is-italic">
-                                        ${testimonial.description}
+                                        "${testimonial.description}"
                                     </div>
                                     <div>
                                         <hr>
