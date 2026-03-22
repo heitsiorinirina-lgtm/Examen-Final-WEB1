@@ -51,7 +51,7 @@ function collaboratorsTestimonialsTemplate(testimonial) {
                                 class="card is-height-full is-flex is-flex-direction-column is-shadowless shadow-on-hover">
                                 <div
                                     class="card-content is-flex is-flex-direction-column is-justify-content-space-between is-height-full">
-                                    <div class="content title is-5 is-italic">
+                                    <div class="content title has-text-weight-semibold is-5 is-italic">
                                         "${testimonial.description}"
                                     </div>
                                     <div>
