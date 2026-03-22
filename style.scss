@@ -15,20 +15,72 @@ $color-text-meta: #9b9b9b;
 $color-border: #e5e0d8;
 $color-border-light: #f0ece4;
 
-// ─── Bulma Configuration ───────────────────────────────────────────────────────
-@use "bulma/sass" with (
+// ─── Bulma: Override global variables ─────────────────────────────────────────
+// @use for utilities and form — these accept variable overrides via "with"
+@use "bulma/sass/utilities" with (
   $primary: $color-red-dark,
   $link: $color-red,
   $black: $color-text-dark,
   $white-ter: $color-bg-warm,
-
   $text: $color-text-dark,
-  $footer-background-color: $color-red-dark,
-  $box-shadow: none,
+  $family-primary: "DM Sans"
+);
 
-  $family-primary: "DM Sans",
+@use "bulma/sass/form" with (
+  $input-shadow: none
+);
+
+// ─── Bulma: Selective imports ─────────────────────────────────────────────────
+// @use is correct here — this is a root stylesheet, not a partial.
+// The overrides from utilities and form above propagate because Sass resolves
+// @use "bulma/sass/utilities" with() before any dependent module loads.
+
+// Base
+@use "bulma/sass/base";
+
+// Elements
+@use "bulma/sass/elements/button";
+@use "bulma/sass/elements/title" with (
   $title-family: "Playfair Display"
 );
+@use "bulma/sass/elements/tag";
+@use "bulma/sass/elements/image";
+@use "bulma/sass/elements/icon";
+@use "bulma/sass/elements/box";
+@use "bulma/sass/elements/content";
+
+// Components
+@use "bulma/sass/components/navbar";
+@use "bulma/sass/components/dropdown";
+@use "bulma/sass/components/card";
+@use "bulma/sass/components/pagination";
+@use "bulma/sass/components/breadcrumb";
+
+// Grid
+@use "bulma/sass/grid/columns";
+
+// Layout
+@use "bulma/sass/layout/media";
+@use "bulma/sass/layout/section";
+@use "bulma/sass/layout/container";
+@use "bulma/sass/layout/hero";
+@use "bulma/sass/layout/footer";
+
+// Helpers
+@use "bulma/sass/helpers/spacing";
+@use "bulma/sass/helpers/flexbox";
+@use "bulma/sass/helpers/color";
+@use "bulma/sass/helpers/typography";
+@use "bulma/sass/helpers/visibility";
+@use "bulma/sass/helpers/other";
+
+// Themes — REQUIRED: writes all CSS custom property values into :root
+@use "bulma/sass/themes";
+
+// ─── External Imports ─────────────────────────────────────────────────────────
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import "../../node_modules/bulma-slider/dist/css/bulma-slider.min.css";
+
 // ─── Box ───────────────────────────────────────────────────────────────────────
 .box {
   border: 1px solid $color-border;
@@ -136,11 +188,12 @@ section#blog-posts {
   }
 }
 
-// ─── Testimonials ────────────────────────────────────────────────────
+// ─── Testimonials ─────────────────────────────────────────────────────────────
 #testimonials .card {
   box-shadow: none;
   transition: box-shadow var(--bulma-duration);
 }
+
 // ─── Section Header / Label ────────────────────────────────────────────────────
 %section-line {
   content: "";
@@ -196,7 +249,8 @@ input[type="range"].slider::-ms-thumb {
   background: $color-red !important;
   border-color: $color-red !important;
 }
-// ─── Dropdown ───────────────────────────────────────────────────────────────────
+
+// ─── Dropdown ─────────────────────────────────────────────────────────────────
 .dropdown,
 .dropdown-trigger {
   width: 100%;
@@ -230,16 +284,14 @@ input[type="range"].slider::-ms-thumb {
 }
 
 .shadow-on-hover {
-  & {
-    transition: box-shadow var(--bulma-duration);
-  }
+  transition: box-shadow var(--bulma-duration);
 
   &:hover {
     box-shadow: var(--bulma-shadow) !important;
   }
 }
 
-footer button.is-outlined.is-white:hover {
+footer .button.is-outlined.is-white:hover {
   background-color: $color-bg-white;
   color: $color-red;
 }
@@ -266,7 +318,6 @@ footer.card-footer button.is-white {
 .has-underline {
   position: relative;
 
-  // Excludes <i> tags (icons) from the underline
   &:not(i)::after {
     content: "";
     position: absolute;
@@ -277,7 +328,6 @@ footer.card-footer button.is-white {
     background-color: $color-red;
   }
 
-  // Applies offset underline to all elements including <i>
   &::after {
     content: "";
     position: absolute;
@@ -332,7 +382,6 @@ footer.card-footer button.is-white {
 }
 
 @media screen and (max-width: 1023px) {
-  // Fix: merged two separate #search-bar blocks into one
   #search-bar {
     margin-top: 0.5rem;
     border: 1px solid rgba(255, 255, 255, 0.7);
@@ -356,5 +405,3 @@ footer.card-footer button.is-white {
     width: 100%;
   }
 }
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import "../../node_modules/bulma-slider/dist/css/bulma-slider.min.css";
