@@ -21656,6 +21656,11 @@ section#blog-posts .container {
   height: 100%;
 }
 
+#testimonials .card {
+  box-shadow: none;
+  transition: box-shadow var(--bulma-duration);
+}
+
 .section-label::before, .section-header::before, .section-header::after {
   content: "";
   height: 2px;
@@ -21680,9 +21685,7 @@ section#blog-posts .container {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.75rem;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: #9b9b9b;
 }
 .section-label::before {
@@ -21732,6 +21735,18 @@ input[type=range].slider::-ms-thumb {
 
 .has-shadow {
   box-shadow: var(--bulma-shadow);
+}
+
+.shadow-on-hover {
+  transition: box-shadow var(--bulma-duration);
+}
+.shadow-on-hover:hover {
+  box-shadow: var(--bulma-shadow) !important;
+}
+
+footer button.is-outlined.is-white:hover {
+  background-color: #ffffff;
+  color: #b91c1c;
 }
 
 .tags {
@@ -21786,7 +21801,7 @@ footer.card-footer button.is-white {
     position: relative;
   }
   .navbar-item:hover {
-    background-color: transparent;(())
+    background-color: transparent;
   }
   .navbar-center .navbar-item::after {
     content: "";

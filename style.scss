@@ -136,6 +136,11 @@ section#blog-posts {
   }
 }
 
+// ─── Testimonials ────────────────────────────────────────────────────
+#testimonials .card {
+  box-shadow: none;
+  transition: box-shadow var(--bulma-duration);
+}
 // ─── Section Header / Label ────────────────────────────────────────────────────
 %section-line {
   content: "";
@@ -164,9 +169,7 @@ section#blog-posts {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  font-size: 0.75rem;
   letter-spacing: 0.2em;
-  text-transform: uppercase;
   color: $color-text-meta;
 
   &::before {
@@ -224,6 +227,21 @@ input[type="range"].slider::-ms-thumb {
 // ─── Utility ───────────────────────────────────────────────────────────────────
 .has-shadow {
   box-shadow: var(--bulma-shadow);
+}
+
+.shadow-on-hover {
+  & {
+    transition: box-shadow var(--bulma-duration);
+  }
+
+  &:hover {
+    box-shadow: var(--bulma-shadow) !important;
+  }
+}
+
+footer button.is-outlined.is-white:hover {
+  background-color: $color-bg-white;
+  color: $color-red;
 }
 
 .tags {
