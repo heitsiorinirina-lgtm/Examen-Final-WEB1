@@ -187,9 +187,22 @@ input[type="range"].slider.is-danger::-webkit-slider-runnable-track {
   ) !important;
 }
 
-input[type="range"].slider::-webkit-slider-thumb,
-input[type="range"].slider::-moz-range-thumb,
-input[type="range"].slider::-ms-thumb {
+input[type="range"].slider::-moz-range-track {
+  background: linear-gradient(
+    to right,
+    $color-red var(--fill),
+    #dbdbdb var(--fill)
+  ) !important;
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: $color-red !important;
+  border-color: $color-red !important;
+}
+
+input[type="range"].slider::-moz-range-thumb {
   background: $color-red !important;
   border-color: $color-red !important;
 }
