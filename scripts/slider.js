@@ -7,3 +7,14 @@ document.querySelectorAll(".slider").forEach((slider) => {
   slider.addEventListener("input", updateFill);
   updateFill();
 });
+
+let minPrice = document.getElementById("min-price");
+let maxPrice = document.getElementById("max-price");
+
+document.getElementById("price-slider-min").addEventListener("input", () => {
+  minPrice.textContent = document.getElementById("price-slider-min").value;
+});
+
+document.getElementById("price-slider-max").addEventListener("input", () => {
+  maxPrice.textContent = document.getElementById("price-slider-max").value;
+});
