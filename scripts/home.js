@@ -1,33 +1,23 @@
-/**
- * Logique d'injection dynamique pour le portfolio
- * S'assure que les classes correspondent au fichier SCSS compilé
- */
-
 document.addEventListener("DOMContentLoaded", () => {
-  // --- 1. SECTION ABOUT : TEXTE ET STATISTIQUES ---
   const aboutContent = document.getElementById("about-content");
   const statsContainer = document.getElementById("stats-container");
 
-  if (aboutContent && data.aboutMe_part1 && data.aboutMe_part2) {
-    aboutContent.innerHTML = `
+  aboutContent.innerHTML = `
             <p>${data.aboutMe_part1}</p>
             <p>${data.aboutMe_part2}</p>
         `;
-  }
 
-  if (statsContainer && data.overview) {
-    data.overview.forEach((item) => {
-      const statCol = document.createElement("div");
-      statCol.className = "column is-4";
-      statCol.innerHTML = `
-                <div class="stat-item">
-                    <span class="stat-number-red">${item.number}</span>
+  data.overview.forEach((item) => {
+    const statCol = document.createElement("div");
+    statCol.className = "column is-4";
+    statCol.innerHTML = `
+                <div class="is-flex is-flex-direction-column">
+                    <span class="has-text-link title is-1 has-text-weight-bold">${item.number}</class=>
                     <span class="stat-label">${item.label}</span>
                 </div>
             `;
-      statsContainer.appendChild(statCol);
-    });
-  }
+    statsContainer.appendChild(statCol);
+  });
 
   // --- 2. SECTION COURSES : CARTES ARRONDIES ---
   const coursesContainer = document.getElementById("courses-container");
