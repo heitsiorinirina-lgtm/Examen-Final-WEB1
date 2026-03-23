@@ -71,6 +71,7 @@ $color-border-light: #f0ece4;
 @use "bulma/sass/helpers/color";
 @use "bulma/sass/helpers/typography";
 @use "bulma/sass/helpers/visibility";
+@use "bulma/sass/helpers/border";
 @use "bulma/sass/helpers/gap";
 @use "bulma/sass/helpers/other";
 
@@ -516,21 +517,6 @@ $bg-creme: #f9f7f5;
   }
 }
 
-.stats-row-border {
-  margin-top: 3rem;
-  border-top: 1px solid #eeeeee;
-  padding-top: 2.5rem;
-}
-
-.stat-number-red {
-  font-family: "Playfair Display";
-  font-size: 3.5rem;
-  color: $accent-red;
-  font-weight: 700;
-  line-height: 1;
-  display: block;
-}
-
 .stat-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -825,12 +811,6 @@ $bg-creme: #f9f7f5;
   margin-top: 4rem;
   border-top: 1px solid #eeeeee; /* Ligne grise fine */
   padding-top: 2.5rem;
-}
-
-/* Style des éléments de stat individuels */
-.stat-item {
-  display: flex;
-  flex-direction: column;
 }
 
 /* Le chiffre rouge */

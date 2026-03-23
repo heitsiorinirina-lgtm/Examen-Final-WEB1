@@ -13610,6 +13610,22 @@ has-background-danger.is-hoverable:active {
     visibility: hidden !important;
   }
 }
+.has-radius-small {
+  border-radius: var(--bulma-radius-small);
+}
+
+.has-radius-normal {
+  border-radius: var(--bulma-radius);
+}
+
+.has-radius-large {
+  border-radius: var(--bulma-radius-large);
+}
+
+.has-radius-rounded {
+  border-radius: var(--bulma-radius-rounded);
+}
+
 .is-gapless {
   gap: 0 !important;
 }
@@ -17002,21 +17018,6 @@ footer.card-footer button.is-white {
   margin-bottom: 2rem;
 }
 
-.stats-row-border {
-  margin-top: 3rem;
-  border-top: 1px solid #eeeeee;
-  padding-top: 2.5rem;
-}
-
-.stat-number-red {
-  font-family: "Playfair Display";
-  font-size: 3.5rem;
-  color: #be1e2d;
-  font-weight: 700;
-  line-height: 1;
-  display: block;
-}
-
 .stat-label {
   font-size: 0.75rem;
   text-transform: uppercase;
@@ -17289,12 +17290,6 @@ footer.card-footer button.is-white {
   margin-top: 4rem;
   border-top: 1px solid #eeeeee; /* Ligne grise fine */
   padding-top: 2.5rem;
-}
-
-/* Style des éléments de stat individuels */
-.stat-item {
-  display: flex;
-  flex-direction: column;
 }
 
 /* Le chiffre rouge */
