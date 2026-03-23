@@ -6,14 +6,14 @@ function courseCardTemplate(course) {
     intermediate: "is-warning",
     advanced: "is-danger",
   };
-  const levelColor = levelColorMap[course.level] ?? "is-info";
+  const levelColor = levelColorMap[course.level];
 
   const techTag =
     course.technologies.length != 0
       ? `<span class="tag is-pulled-right is-rounded is-dark">${course.technologies}</span>`
       : "";
 
-  const tags = `<span class="tags has-position-absolute">
+  const tags = `<span class="tags is-position-absolute">
   <span class="tag is-pulled-right is-rounded is-uppercase">${course.language}</span>
   ${techTag}
 </span>`;
@@ -25,7 +25,7 @@ function courseCardTemplate(course) {
           <figure class="image is-4by3 is-relative">
             <img src="${course.thumbnail}" alt="${course.title}" />
             ${tags}
-            <span class="tag ${levelColor} is-medium is-pulled-right has-position-absolute course-level is-radiusless">
+            <span class="tag ${levelColor} is-medium is-pulled-right is-position-absolute course-level is-radiusless">
             ${course.level}
             </span>
           </figure>
