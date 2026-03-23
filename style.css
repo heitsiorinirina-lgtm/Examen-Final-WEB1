@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Bulma Utilities */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 @import "./bulma-slider.min.css";
@@ -17386,44 +17387,6 @@ footer.card-footer button.is-white {
   color: var(--text-light);
   text-transform: uppercase;
   font-weight: 600;
-}
-
-/* --- 6. FOOTER (READY TO COLLABORATE) --- */
-.cta-section {
-  background-color: var(--accent-red) !important;
-  padding: 120px 20px !important;
-}
-
-.cta-title {
-  font-family: var(--font-serif);
-  color: #ffffff !important;
-  font-size: 3.5rem;
-  font-weight: 700;
-}
-
-.cta-text {
-  color: #ffffff !important;
-  opacity: 0.9;
-  max-width: 650px;
-  margin: 20px auto 50px auto !important;
-}
-
-.cta-button {
-  background-color: #ffffff !important;
-  color: var(--accent-red) !important;
-  font-family: var(--font-sans);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  padding: 18px 50px !important; /* Pour la forme pilule */
-  height: auto !important;
-  border: none !important;
-  text-transform: uppercase;
-}
-
-.cta-button:hover {
-  background-color: #f8f8f8 !important;
-  transform: scale(1.03);
 }
 
 /*# sourceMappingURL=style.css.map */
