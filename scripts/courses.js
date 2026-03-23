@@ -1,7 +1,7 @@
 // ─── State ────────────────────────────────────────────────────────────────────
 
 const filters = {
-  languages: [],      // [] means "all"
+  languages: [], // [] means "all"
   technology: "all",
   level: "all",
   minPrice: 0,
@@ -37,8 +37,7 @@ function renderCourses() {
     // Keyword filter (title + description, case-insensitive)
     if (filters.keyword.trim() !== "") {
       const kw = filters.keyword.trim().toLowerCase();
-      const haystack =
-        (course.title + " " + course.description).toLowerCase();
+      const haystack = (course.title + " " + course.description).toLowerCase();
       if (!haystack.includes(kw)) return false;
     }
 
@@ -85,9 +84,9 @@ function bindDropdown(menuId, filterKey, labelEl) {
       e.preventDefault();
 
       // Update active state visually
-      menu.querySelectorAll(".dropdown-item").forEach((i) =>
-        i.classList.remove("is-active")
-      );
+      menu
+        .querySelectorAll(".dropdown-item")
+        .forEach((i) => i.classList.remove("is-active"));
       item.classList.add("is-active");
 
       // Derive the filter value from the item text (strip the icon span)
@@ -112,7 +111,10 @@ function bindDropdown(menuId, filterKey, labelEl) {
       const btn = menu
         .closest(".dropdown")
         .querySelector(".dropdown-trigger button span:first-child");
-      if (btn) btn.textContent = item.textContent.trim().replace(/^[\s\S]*?(\w)/, "$1");
+      if (btn)
+        btn.textContent = item.textContent
+          .trim()
+          .replace(/^[\s\S]*?(\w)/, "$1");
 
       renderCourses();
     });
@@ -184,19 +186,21 @@ document.querySelectorAll(".column.is-clickable").forEach((btn) => {
       labelMax.textContent = "300,000";
       keywordInput.value = "";
 
-      document.querySelectorAll(".image.is-clickable").forEach((f) =>
-        f.classList.remove("is-selected-flag")
-      );
+      document
+        .querySelectorAll(".image.is-clickable")
+        .forEach((f) => f.classList.remove("is-selected-flag"));
 
       document
         .querySelectorAll(".dropdown-item")
         .forEach((item) => item.classList.remove("is-active"));
-      document.querySelectorAll(".dropdown-item:first-child").forEach((item) =>
-        item.classList.add("is-active")
-      );
-      document.querySelectorAll(".dropdown-trigger button span:first-child").forEach((btn, i) => {
-        btn.textContent = i === 0 ? "All technologies" : "All levels";
-      });
+      document
+        .querySelectorAll(".dropdown-item:first-child")
+        .forEach((item) => item.classList.add("is-active"));
+      document
+        .querySelectorAll(".dropdown-trigger button span:first-child")
+        .forEach((btn, i) => {
+          btn.textContent = i === 0 ? "All technologies" : "All levels";
+        });
 
       renderCourses();
     });
