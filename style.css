@@ -1,7 +1,6 @@
-@charset "UTF-8";
 /* Bulma Utilities */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import "../../node_modules/bulma-slider/dist/css/bulma-slider.min.css";
+@import "./bulma-slider.min.css";
 :root {
   --bulma-control-radius: var(--bulma-radius);
   --bulma-control-radius-small: var(--bulma-radius-small);
@@ -33,7 +32,7 @@
   width: 0.625em;
 }
 
-.media:not(:last-child), .breadcrumb:not(:last-child), .pagination:not(:last-child), .card:not(:last-child), .content:not(:last-child), .box:not(:last-child), .tags:not(:last-child), .title:not(:last-child),
+.media:not(:last-child), .pagination:not(:last-child), .card:not(:last-child), .content:not(:last-child), .box:not(:last-child), .tags:not(:last-child), .title:not(:last-child),
 .subtitle:not(:last-child), .buttons:not(:last-child), .field:not(:last-child), .file:not(:last-child) {
   margin-bottom: var(--bulma-block-spacing);
 }
@@ -135,7 +134,7 @@ fieldset[disabled] .file-name, fieldset[disabled] .select select, .select fields
   padding: 0;
 }
 
-.is-unselectable, .breadcrumb, .pagination-previous,
+.is-unselectable, .pagination-previous,
 .pagination-next,
 .pagination-link,
 .pagination-ellipsis, .button, .file {
@@ -4119,88 +4118,6 @@ button.dropdown-item.is-selected {
     order: 3;
   }
 }
-.breadcrumb {
-  --bulma-breadcrumb-item-color: var(--bulma-link-text);
-  --bulma-breadcrumb-item-hover-color: var(--bulma-link-text-hover);
-  --bulma-breadcrumb-item-active-color: var(--bulma-link-text-active);
-  --bulma-breadcrumb-item-padding-vertical: 0;
-  --bulma-breadcrumb-item-padding-horizontal: 0.75em;
-  --bulma-breadcrumb-item-separator-color: var(--bulma-border);
-}
-
-.breadcrumb {
-  font-size: var(--bulma-size-normal);
-  white-space: nowrap;
-}
-.breadcrumb a {
-  align-items: center;
-  color: var(--bulma-breadcrumb-item-color);
-  display: flex;
-  justify-content: center;
-  padding: var(--bulma-breadcrumb-item-padding-vertical) var(--bulma-breadcrumb-item-padding-horizontal);
-}
-.breadcrumb a:hover {
-  color: var(--bulma-breadcrumb-item-hover-color);
-}
-.breadcrumb li {
-  align-items: center;
-  display: flex;
-}
-.breadcrumb li:first-child a {
-  padding-inline-start: 0;
-}
-.breadcrumb li.is-active a {
-  color: var(--bulma-breadcrumb-item-active-color);
-  cursor: default;
-  pointer-events: none;
-}
-.breadcrumb li + li::before {
-  color: var(--bulma-breadcrumb-item-separator-color);
-  content: "/";
-}
-.breadcrumb ul,
-.breadcrumb ol {
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-.breadcrumb .icon:first-child {
-  margin-inline-end: 0.5em;
-}
-.breadcrumb .icon:last-child {
-  margin-inline-start: 0.5em;
-}
-.breadcrumb.is-centered ol,
-.breadcrumb.is-centered ul {
-  justify-content: center;
-}
-.breadcrumb.is-right ol,
-.breadcrumb.is-right ul {
-  justify-content: flex-end;
-}
-.breadcrumb.is-small {
-  font-size: var(--bulma-size-small);
-}
-.breadcrumb.is-medium {
-  font-size: var(--bulma-size-medium);
-}
-.breadcrumb.is-large {
-  font-size: var(--bulma-size-large);
-}
-.breadcrumb.has-arrow-separator li + li::before {
-  content: "→";
-}
-.breadcrumb.has-bullet-separator li + li::before {
-  content: "•";
-}
-.breadcrumb.has-dot-separator li + li::before {
-  content: "·";
-}
-.breadcrumb.has-succeeds-separator li + li::before {
-  content: "≻";
-}
-
 :root {
   --bulma-column-gap: 0.75rem;
 }
@@ -16696,6 +16613,7 @@ input[type=range].slider::-moz-range-thumb {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 

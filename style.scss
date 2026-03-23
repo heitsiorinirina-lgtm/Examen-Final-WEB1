@@ -54,7 +54,6 @@ $color-border-light: #f0ece4;
 @use "bulma/sass/components/dropdown";
 @use "bulma/sass/components/card";
 @use "bulma/sass/components/pagination";
-@use "bulma/sass/components/breadcrumb";
 
 // Grid
 @use "bulma/sass/grid/columns";
@@ -79,7 +78,7 @@ $color-border-light: #f0ece4;
 
 // ─── External Imports ─────────────────────────────────────────────────────────
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import "../../node_modules/bulma-slider/dist/css/bulma-slider.min.css";
+@import "./bulma-slider.min.css";
 
 // ─── Box ───────────────────────────────────────────────────────────────────────
 .box {
@@ -300,6 +299,7 @@ input[type="range"].slider::-moz-range-thumb {
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 .shadow-on-hover {
