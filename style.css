@@ -1,7 +1,6 @@
 @charset "UTF-8";
 /* Bulma Utilities */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
-@import "./bulma-slider.min.css";
 :root {
   --bulma-control-radius: var(--bulma-radius);
   --bulma-control-radius-small: var(--bulma-radius-small);
@@ -13611,6 +13610,214 @@ has-background-danger.is-hoverable:active {
     visibility: hidden !important;
   }
 }
+.is-gapless {
+  gap: 0 !important;
+}
+
+.is-gap-0 {
+  gap: 0rem !important;
+}
+
+.is-gap-0\.5 {
+  gap: 0.25rem !important;
+}
+
+.is-gap-1 {
+  gap: 0.5rem !important;
+}
+
+.is-gap-1\.5 {
+  gap: 0.75rem !important;
+}
+
+.is-gap-2 {
+  gap: 1rem !important;
+}
+
+.is-gap-2\.5 {
+  gap: 1.25rem !important;
+}
+
+.is-gap-3 {
+  gap: 1.5rem !important;
+}
+
+.is-gap-3\.5 {
+  gap: 1.75rem !important;
+}
+
+.is-gap-4 {
+  gap: 2rem !important;
+}
+
+.is-gap-4\.5 {
+  gap: 2.25rem !important;
+}
+
+.is-gap-5 {
+  gap: 2.5rem !important;
+}
+
+.is-gap-5\.5 {
+  gap: 2.75rem !important;
+}
+
+.is-gap-6 {
+  gap: 3rem !important;
+}
+
+.is-gap-6\.5 {
+  gap: 3.25rem !important;
+}
+
+.is-gap-7 {
+  gap: 3.5rem !important;
+}
+
+.is-gap-7\.5 {
+  gap: 3.75rem !important;
+}
+
+.is-gap-8 {
+  gap: 4rem !important;
+}
+
+.is-column-gap-0 {
+  column-gap: 0rem !important;
+}
+
+.is-column-gap-0\.5 {
+  column-gap: 0.25rem !important;
+}
+
+.is-column-gap-1 {
+  column-gap: 0.5rem !important;
+}
+
+.is-column-gap-1\.5 {
+  column-gap: 0.75rem !important;
+}
+
+.is-column-gap-2 {
+  column-gap: 1rem !important;
+}
+
+.is-column-gap-2\.5 {
+  column-gap: 1.25rem !important;
+}
+
+.is-column-gap-3 {
+  column-gap: 1.5rem !important;
+}
+
+.is-column-gap-3\.5 {
+  column-gap: 1.75rem !important;
+}
+
+.is-column-gap-4 {
+  column-gap: 2rem !important;
+}
+
+.is-column-gap-4\.5 {
+  column-gap: 2.25rem !important;
+}
+
+.is-column-gap-5 {
+  column-gap: 2.5rem !important;
+}
+
+.is-column-gap-5\.5 {
+  column-gap: 2.75rem !important;
+}
+
+.is-column-gap-6 {
+  column-gap: 3rem !important;
+}
+
+.is-column-gap-6\.5 {
+  column-gap: 3.25rem !important;
+}
+
+.is-column-gap-7 {
+  column-gap: 3.5rem !important;
+}
+
+.is-column-gap-7\.5 {
+  column-gap: 3.75rem !important;
+}
+
+.is-column-gap-8 {
+  column-gap: 4rem !important;
+}
+
+.is-row-gap-0 {
+  row-gap: 0rem !important;
+}
+
+.is-row-gap-0\.5 {
+  row-gap: 0.25rem !important;
+}
+
+.is-row-gap-1 {
+  row-gap: 0.5rem !important;
+}
+
+.is-row-gap-1\.5 {
+  row-gap: 0.75rem !important;
+}
+
+.is-row-gap-2 {
+  row-gap: 1rem !important;
+}
+
+.is-row-gap-2\.5 {
+  row-gap: 1.25rem !important;
+}
+
+.is-row-gap-3 {
+  row-gap: 1.5rem !important;
+}
+
+.is-row-gap-3\.5 {
+  row-gap: 1.75rem !important;
+}
+
+.is-row-gap-4 {
+  row-gap: 2rem !important;
+}
+
+.is-row-gap-4\.5 {
+  row-gap: 2.25rem !important;
+}
+
+.is-row-gap-5 {
+  row-gap: 2.5rem !important;
+}
+
+.is-row-gap-5\.5 {
+  row-gap: 2.75rem !important;
+}
+
+.is-row-gap-6 {
+  row-gap: 3rem !important;
+}
+
+.is-row-gap-6\.5 {
+  row-gap: 3.25rem !important;
+}
+
+.is-row-gap-7 {
+  row-gap: 3.5rem !important;
+}
+
+.is-row-gap-7\.5 {
+  row-gap: 3.75rem !important;
+}
+
+.is-row-gap-8 {
+  row-gap: 4rem !important;
+}
+
 .is-radiusless {
   border-radius: 0 !important;
 }
@@ -16557,26 +16764,63 @@ section#blog-posts .container {
   max-width: 3.5rem;
 }
 
-input[type=range].slider::-webkit-slider-runnable-track,
-input[type=range].slider.is-primary::-webkit-slider-runnable-track,
-input[type=range].slider.is-danger::-webkit-slider-runnable-track {
-  background: linear-gradient(to right, #b91c1c var(--fill), #dbdbdb var(--fill)) !important;
-}
-
-input[type=range].slider::-moz-range-track {
-  background: linear-gradient(to right, #b91c1c var(--fill), #dbdbdb var(--fill)) !important;
-}
-
-input[type=range].slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
+.slider {
+  width: 100%;
+  height: 1rem;
+  padding: 0;
   appearance: none;
-  background: #b91c1c !important;
-  border-color: #b91c1c !important;
+  background-color: transparent;
+  cursor: pointer;
 }
-
-input[type=range].slider::-moz-range-thumb {
-  background: #b91c1c !important;
-  border-color: #b91c1c !important;
+.slider:focus {
+  outline: 0;
+}
+.slider::-moz-focus-outer {
+  border: 0;
+}
+.slider::-webkit-slider-thumb {
+  width: 1rem;
+  height: 1rem;
+  margin-top: calc((4px - 1rem) / 2);
+  appearance: none;
+  background-color: #b91c1c;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+.slider::-webkit-slider-thumb:active {
+  background-color: #991b1b;
+}
+.slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(to right, #b91c1c var(--fill), #dbdbdb var(--fill));
+  border-radius: 2px;
+}
+.slider::-moz-range-thumb {
+  width: 1rem;
+  height: 1rem;
+  appearance: none;
+  background-color: #b91c1c;
+  border: none;
+  border-radius: 50%;
+  transition: background-color 0.15s ease;
+}
+.slider::-moz-range-thumb:active {
+  background-color: #991b1b;
+}
+.slider::-moz-range-track {
+  height: 4px;
+  background-color: #dbdbdb;
+  border-radius: 2px;
+}
+.slider:disabled {
+  pointer-events: none;
+}
+.slider:disabled::-webkit-slider-thumb {
+  background-color: #dbdbdb;
+}
+.slider:disabled::-moz-range-thumb {
+  background-color: #dbdbdb;
 }
 
 .dropdown,
@@ -16656,9 +16900,9 @@ footer.card-footer button.is-white {
   position: absolute;
   width: 100%;
   height: 2px;
-  bottom: 0;
+  bottom: -2px;
   left: 0;
-  background-color: #b91c1c;
+  background-color: currentColor;
 }
 .has-underline::after {
   content: "";
@@ -16830,12 +17074,6 @@ footer.card-footer button.is-white {
 .courses-section .course-card .tag-category.bg-res {
   background-color: #555555;
 }
-.courses-section .view-all-link {
-  color: #be1e2d;
-  font-weight: 700;
-  border-bottom: 1px solid #be1e2d;
-  text-decoration: none;
-}
 
 .border-center > .column:nth-child(even) {
   border-left: 1px solid #eeeeee;
@@ -16917,10 +17155,6 @@ footer.card-footer button.is-white {
   font-size: 4.5rem;
   color: var(--primary-red);
   line-height: 1;
-}
-
-.custom-red-text {
-  color: var(--primary-red) !important;
 }
 
 .letter-spacing-2 {
@@ -17390,3 +17624,123 @@ footer.card-footer button.is-white {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* contact_page */
+.header-contact {
+    background-color: var(--bg-light);
+    background-size: cover;
+}
+
+.btn-main {
+    background-color: var(--accent-red) !important;
+    border: none;
+    font-weight: bold;
+    height: 3.5em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: var(--accent-red) !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.custom-hero-bg {
+    background-color: #FDFBF8 !important;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid #F0ECE4;
+}
+
+.contact-label {
+    color: #4a5a6a; 
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+}
+
+.contact-label .line {
+    display: inline-block;
+    height: 1px;
+    width: 20px;
+    background-color: #b03030; 
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #333333;
+    margin-bottom: 0;
+}
+
+.title-first-part {
+    margin-right: -0.1em;
+}
+
+.title-accent-part {
+    font-style: italic;
+    font-weight: 700;
+    color: #b03030;
+    letter-spacing: -0.01em;
+}
+
+/* section 2 page contact */
+/* --- STYLE DU CONTENU DE CONTACT --- */
+
+/* Titre "Get In Touch" (Typographie Playfair Display pour le style 'consultant') */
+.custom-section-title {
+    font-family: 'Playfair Display', serif;
+    color: #333333;
+    font-weight: 700;
+}
+
+/* Cartes d'informations (Fonds crème et bordures douces) */
+.info-card {
+    background-color: #FDFBF8; /* Même crème que le Hero */
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #f0ece4;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+/* --- ICÔNES ET BOUTONS EN BORDEAUX (#b03030) --- */
+.icon-bordeaux {
+    color: #b03030; /* Couleur bordeaux demandée */
+}
+
+.btn-bordeaux {
+    background-color: #b03030 !important;
+    border: none;
+    font-weight: bold;
+    height: 3.5rem;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.btn-bordeaux:hover {
+    opacity: 0.9;
+}
+
+/* Style des champs du formulaire minimaliste */
+.custom-input {
+    box-shadow: none;
+    border-color: #e6e6e6;
+    padding: 1.5rem 1rem;
+}
+
+.custom-input:focus {
+    border-color: #b03030;
+    box-shadow: 0 0 0 0.125em rgba(176, 48, 48, 0.1);
+}
+
+.label {
+    font-weight: 600;
+    color: #4a5a6a;
+    margin-bottom: 0.8rem;
+}S

@@ -7,9 +7,8 @@
     <title>Toky Ramarozaka | Consultant - Teacher - Dev</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/18e6813d54.js" crossorigin="anonymous"></script>
-    <script src="scripts/data/tokimahery.data.js"></script>
-    <script src="scripts/navbar.js" defer></script>
     <script src="scripts/home.js" defer></script>
+    <script src="scripts/data/tokimahery.data.js"></script>
 
 </head>
 
@@ -19,8 +18,8 @@
             <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center">
                 <img src="assets/logo.png" alt="Toky Ramarozaka" id="logo">
                 <span class="is-flex is-justify-content-end">
-                    <a href="#" class="navbar-item is-display-none-desktop"><i
-                            class="fa-solid fa-basket-shopping is-size-4"></i></a> <a role="button"
+                    <span class="navbar-item is-display-none-desktop"><i
+                            class="fa-solid fa-basket-shopping is-size-4"></i></span> <a role="button"
                         class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
                         <span aria-hidden="true" class="has-background-white"></span>
                         <span aria-hidden="true" class="has-background-white"></span>
@@ -46,15 +45,15 @@
                     <div class="navbar-item">
                         <input type="text" id="search-bar" class="has-text-white is-size-5-fullhd"
                             placeholder="Search anything...">
-                        <a href="#" class="navbar-item is-display-none-touch"><i
+                        <span class="navbar-item is-display-none-touch"><i
                                 class="fa-solid fa-basket-shopping is-size-4"></i>
-                        </a>
+                        </span>
                     </div>
                 </div>
         </nav>
     </header>
     <main>
-        <section class="hero is-fullheight">
+        <section class="hero is-fullheight" id="hero">
             <div class="hero-body">
                 <div class="container">
                     <div class="columns is-vcentered">
@@ -77,21 +76,22 @@
                                 </p>
 
                                 <div class="buttons mt-6">
-                                    <a class="button btn-red">Book a course</a>
-                                    <a class="button btn-glass">About me</a>
+                                    <a href="courses.html" class="button btn-red">Book a course</a>
+                                    <a href="#about-me" class="button btn-glass">About me</a>
                                 </div>
 
-                                <div class="collaboration-link mt-4">
-                                    <a href="#" class="is-uppercase is-size-7 has-text-weight-bold custom-red-text">
+                                <div class="mt-4">
+                                    <a href="contact.html"
+                                        class="is-uppercase is-size-7 has-text-weight-semibold has-underline has-text-link">
                                         Ask for a collaboration <i class="fas fa-arrow-right is-size-7"></i>
                                     </a>
                                 </div>
 
                                 <div class="social-icons mt-6">
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-youtube"></i></a>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="section">
+        <section class="section" id="about-me">
             <div class="container">
                 <div class="columns is-variable is-8">
                     <div class="column is-4">
@@ -147,7 +147,10 @@
                 </div>
 
                 <div class="mt-6">
-                    <a href="#" class="view-all-link is-uppercase is-size-7">View all courses &rarr;</a>
+                    <a href="courses.html"
+                        class="has-text-link has-underline has-text-font-weight-semibold is-uppercase is-size-7">View
+                        all courses
+                        &rarr;</a>
                 </div>
             </div>
         </section>
@@ -173,7 +176,7 @@
             <p class="has-text-white mt-5 mb-6 is-4">
                 Whether you're looking for a course, a consultation, or a translation — let's talk.
             </p>
-            <a href="#" class="button is-outlined is-white is-rounded is-fullwidth-touch">GET IN TOUCH</a>
+            <a href="contact.html" class="button is-outlined is-white is-rounded is-fullwidth-touch">GET IN TOUCH</a>
         </div>
     </footer>
 </body>
