@@ -7,10 +7,13 @@
     <title>Toky Ramarozaka | Consultant - Teacher - Dev</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/18e6813d54.js" crossorigin="anonymous"></script>
-    <script src="data/tokimahery.data.js"></script>
+    <script src="scripts/data/tokimahery.data.js"></script>
     <script src="scripts/navbar.js" defer></script>
     <script src="scripts/courses.js" defer></script>
-    <script src="templates/courses-templates.js"></script>
+    <script src="scripts/dropdown.js" defer></script>
+    <script src="scripts/slider.js" defer></script>
+    <script src="scripts/templates/courses-templates.js"></script>
+    <script defer src="node_modules/bulma-slider/dist/js/bulma-slider.min.js"></script>
 </head>
 
 <body>
@@ -19,7 +22,7 @@
             <div class="navbar-brand is-flex is-justify-content-space-between is-align-items-center">
                 <img src="assets/logo.png" alt="Toky Ramarozaka" id="logo">
                 <span class="is-flex is-justify-content-end">
-                    <a href="#" class="navbar-item is-invisible-desktop"><i
+                    <a href="#" class="navbar-item is-display-none-desktop"><i
                             class="fa-solid fa-basket-shopping is-size-4"></i></a> <a role="button"
                         class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="main-navbar">
                         <span aria-hidden="true" class="has-background-white"></span>
@@ -46,7 +49,7 @@
                     <div class="navbar-item">
                         <input type="text" id="search-bar" class="has-text-white is-size-5-fullhd"
                             placeholder="Search anything...">
-                        <a href="#" class="navbar-item is-invisible-touch"><i
+                        <a href="#" class="navbar-item is-display-none-touch"><i
                                 class="fa-solid fa-basket-shopping is-size-4"></i>
                         </a>
                     </div>
@@ -54,9 +57,121 @@
         </nav>
     </header>
     <main>
-        <div class="columns is-multiline is-centered is-4 p-6" id="courses-list">
+        <section class="section is-flex is-align-items-center" id="hero">
+            <div class="container has-text-centered">
+                <p
+                    class="is-uppercase has-text-weight-semibold has-text-grey section-header is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-6-widescreen is-size-5-fullhd">
+                    Learning
+                </p>
+                <h1 class="title is-size-1-desktop is-size-1-fullhd is-size-1-widescreen is-size-2-touch p-5">
+                    All <i class="has-text-primary">courses</i>
+                </h1>
+                <p class="subtitle has-text-grey is-5-mobile is-4-tablet is-3-desktop">
+                    Online and offline courses across development, translation, and <br> research. Find the one that
+                    fits
+                    your level and goals.
+                </p>
+            </div>
+        </section>
+        <section class="section has-background-white">
+            <section class="columns is-multiline has-background-white-ter has-radius-large">
+                <span
+                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">LANGUAGE
+                    <span class="is-flex is-gap-1">
+                        <span class="image is-24x24 is-clickable"><img src="assets/flag-madagascar_1f1f2-1f1ec.png"
+                                alt="MG"></span>
+                        <span class="image is-24x24 is-clickable"><img src="assets/flag-france_1f1eb-1f1f7.png"
+                                alt="FR"></span>
+                        <span class="image is-24x24 is-clickable"><img src="assets/flag-united-states_1f1fa-1f1f8.png"
+                                alt="ENG"></span>
+                    </span>
+                </span>
+                <span class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+                    TECHNOLOGY
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                            <button class="button is-fullwidth is-justify-content-space-between" aria-haspopup="true"
+                                aria-controls="dropdown-menu">
+                                <span>All technologies</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu pt-0" id="dropdown-menu" role="menu">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item is-active"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>All technologies</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>Javascript</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>Java</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>Python</a>
+                                <a href="#" class="dropdown-item"><span class="icon is-small"><i
+                                            class="fas fa-check"></i></span>PHP</a>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <span
+                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">LEVEL
+                    <div class="dropdown">
+                        <div class="dropdown-trigger is-fullwidth">
+                            <button class="button is-fullwidth" aria-haspopup="true"
+                                aria-controls="dropdown-menu-level">
+                                <span>All levels</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu-level" role="menu">
+                            <div class="dropdown-content">
+                                <a href="#" class="dropdown-item is-active">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    All levels
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    Beginner
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    Intermediate
+                                </a>
+                                <a href="#" class="dropdown-item">
+                                    <span class="icon is-small"><i class="fas fa-check"></i></span>
+                                    Advanced
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </span>
+                <div class="column">
+                    <div class="is-flex is-flex-wrap-wrap is-gap-2">
+                        <div>PRICE RANGE</div>
+                        <div>
+                            <span id="min-price">0</span> Ar - <span id="max-price">300000</span> Ar
+                        </div>
+                    </div>
+                    <input type="range" id="price-slider-min" min="0" max="300000" value="0" step="5000"
+                        class="is-circle slider is-fullwidth">
+                    <input type="range" id="price-slider-max" min="0" max="300000" value="300000" step="5000"
+                        class="is-circle slider is-fullwidth">
+                </div>
+                <span
+                    class="column is-flex is-flex-direction-column is-justify-content-center is-align-items-center">SEARCH
+                    <input type="text" class="input is-fullwidth" id="keyword-search" placeholder="Keywords...">
+                </span>
+                <span class="column is-clickable is-flex is-justify-content-center is-align-items-center">CLEAR
+                    ALL</span>
+            </section>
+        </section>
+        <hr>
+        <section class="columns is-multiline is-4 p-6" id="courses-list">
 
-        </div>
+        </section>
     </main>
 </body>
 

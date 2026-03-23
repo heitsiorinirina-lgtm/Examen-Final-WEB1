@@ -10,11 +10,11 @@ function researchArticlesTemplate(paper) {
             <p class="has-text-grey">${formatDate(paper.publishedDate)}</p>
           </span>
           <div class="content">
-            <h2 class="title is-size-2-desktop is-size-1-widescreen is-size-1-fullhd is-size-4-touch">
+            <h2 class="title is-size-2-desktop is-size-1-widescreen is-size-2-fullhd is-size-4-touch">
               ${paper.title}
             </h2>
-            <p class="has-text-grey">${paper.authors.join(", ")}<span class="px-2">•</span>${paper.journal}</p>
-            <p class="has-text-grey is-size-5-desktop is-size-6-touch is-size-5-widescreen is-size-5-fullhd">
+            <p class="has-text-grey is-size-7">${paper.authors.join(", ")}<span class="px-2">•</span>${paper.journal}</p>
+            <p class="has-text-grey is-size-6-desktop is-size-6-touch is-size-6-widescreen is-size-6-fullhd">
             ${paper.abstract}
             </p>
             </div>

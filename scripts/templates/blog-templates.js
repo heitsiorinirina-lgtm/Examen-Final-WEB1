@@ -10,14 +10,14 @@ function postCardTemplate(post) {
                 </div>
                 <div class="column is-flex is-flex-direction-column is-justify-content-space-between">
                     <div>
-                        <h2 class="has-text-primary is-size-5-mobile is-size-4-tablet is-size-4-desktop is-size-3-fullhd">
+                        <h2 class="has-text-primary is-size-5-mobile is-size-4-tablet is-size-4-desktop is-size-4-fullhd">
                             ${post.title}
                         </h2>
                         <p
                             class="blog-card-meta has-text-dark has-text-weight-semibold is-size-6-mobile is-size-6-tablet is-size-6-desktop">
                             ${formatDate(post.creationDate)}
                         </p>
-                        <p class="blog-card-meta pb-5 mb-3 is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-5-fullhd">
+                        <p class="blog-card-meta pb-5 mb-3 is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">
                             ${post.description}
                         </p>
                     </div>
@@ -32,14 +32,14 @@ function postCardTemplate(post) {
 }
 function archivesTemplate(archives) {
   return `
-    <div class="box is-column mb-5">
+    <div class="box is-shadowless is-column mb-5">
       <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-2 is-size-6-mobile is-size-6-tablet is-size-6-desktop">Archives</p>
       <ul>
         ${archives
           .map(
             (archive) => `
               <li>
-                <a href="#" data-archive="${archive.slug}" class="is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-5-fullhd">${archive.label} (${archive.count})</a>
+                <a href="#" data-archive="${archive.slug}" class="is-size-6-mobile is-size-6-tablet is-size-6-desktop is-size-6-fullhd">${archive.label} (${archive.count})</a>
               </li>
             `,
           )
@@ -51,7 +51,7 @@ function archivesTemplate(archives) {
 
 function youtubeTemplate(videos) {
   return `
-    <div class="box">
+    <div class="box is-shadowless">
       <p class="has-text-weight-semibold is-uppercase section-label has-text-grey mb-3 is-size-6-mobile is-size-6-tablet is-size-6-desktop">On YouTube</p>
       ${videos
         .map(
@@ -73,41 +73,6 @@ function youtubeTemplate(videos) {
         .join("")}
       <span><a href="https://www.youtube.com/@tokimaheryramarozaka2116/videos" target="_blank" class="has-text-primary has-text-weight-bold has-underline mt-4">VIEW ALL VIDEOS →</a></span>
     </div>
-  `;
-}
-function createPaginationTemplate(current, total) {
-  if (total <= 1) return "";
-
-  const pages = Array.from({ length: total }, (_v, i) => i + 1);
-
-  return `
-    <nav class="pagination is-large-desktop is-centered" role="navigation" aria-label="pagination">
-      <ul class="pagination-list">
-        <li>
-          <a class="pagination-link" data-page="${current - 1}" ${
-            current === 1 ? "disabled" : ""
-          }>← Prev</a>
-        </li>
-        ${pages
-          .map(
-            (page) => `
-              <li>
-                <a class="pagination-link ${
-                  page === current ? "is-current" : ""
-                }" data-page="${page}">
-                  ${page}
-                </a>
-              </li>
-            `,
-          )
-          .join("")}
-        <li>
-          <a class="pagination-link" data-page="${current + 1}" ${
-            current === total ? "disabled" : ""
-          }>Next →</a>
-        </li>
-      </ul>
-    </nav>
   `;
 }
 
