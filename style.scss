@@ -67,6 +67,7 @@ $color-border-light: #f0ece4;
 
 // Helpers
 @use "bulma/sass/helpers/spacing";
+@use "bulma/sass/helpers/position";
 @use "bulma/sass/helpers/flexbox";
 @use "bulma/sass/helpers/color";
 @use "bulma/sass/helpers/typography";
@@ -337,6 +338,14 @@ $range-track-height: 4px;
 // ─── Utility ───────────────────────────────────────────────────────────────────
 .has-shadow {
   box-shadow: var(--bulma-shadow);
+}
+
+.image.is-clickable {
+  opacity: 0.35;
+  transition: opacity 0.2s;
+}
+.image.is-clickable.is-selected-flag {
+  opacity: 1;
 }
 
 .description {
@@ -1130,8 +1139,4 @@ $bg-creme: #f9f7f5;
   color: var(--text-light);
   text-transform: uppercase;
   font-weight: 600;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 2f572bea4c1f9c94902b6b6fa862cdb2b921bc62
