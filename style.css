@@ -17619,3 +17619,123 @@ footer.card-footer button.is-white {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* contact_page */
+.header-contact {
+    background-color: var(--bg-light);
+    background-size: cover;
+}
+
+.btn-main {
+    background-color: var(--accent-red) !important;
+    border: none;
+    font-weight: bold;
+    height: 3.5em;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: var(--accent-red) !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.custom-hero-bg {
+    background-color: #FDFBF8 !important;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    border-bottom: 1px solid #F0ECE4;
+}
+
+.contact-label {
+    color: #4a5a6a; 
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.8rem;
+}
+
+.contact-label .line {
+    display: inline-block;
+    height: 1px;
+    width: 20px;
+    background-color: #b03030; 
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: #333333;
+    margin-bottom: 0;
+}
+
+.title-first-part {
+    margin-right: -0.1em;
+}
+
+.title-accent-part {
+    font-style: italic;
+    font-weight: 700;
+    color: #b03030;
+    letter-spacing: -0.01em;
+}
+
+/* section 2 page contact */
+/* --- STYLE DU CONTENU DE CONTACT --- */
+
+/* Titre "Get In Touch" (Typographie Playfair Display pour le style 'consultant') */
+.custom-section-title {
+    font-family: 'Playfair Display', serif;
+    color: #333333;
+    font-weight: 700;
+}
+
+/* Cartes d'informations (Fonds crème et bordures douces) */
+.info-card {
+    background-color: #FDFBF8; /* Même crème que le Hero */
+    padding: 3rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    border: 1px solid #f0ece4;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+/* --- ICÔNES ET BOUTONS EN BORDEAUX (#b03030) --- */
+.icon-bordeaux {
+    color: #b03030; /* Couleur bordeaux demandée */
+}
+
+.btn-bordeaux {
+    background-color: #b03030 !important;
+    border: none;
+    font-weight: bold;
+    height: 3.5rem;
+    font-size: 1.1rem;
+    transition: opacity 0.3s;
+}
+
+.btn-bordeaux:hover {
+    opacity: 0.9;
+}
+
+/* Style des champs du formulaire minimaliste */
+.custom-input {
+    box-shadow: none;
+    border-color: #e6e6e6;
+    padding: 1.5rem 1rem;
+}
+
+.custom-input:focus {
+    border-color: #b03030;
+    box-shadow: 0 0 0 0.125em rgba(176, 48, 48, 0.1);
+}
+
+.label {
+    font-weight: 600;
+    color: #4a5a6a;
+    margin-bottom: 0.8rem;
+}S
