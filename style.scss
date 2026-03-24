@@ -1,4 +1,3 @@
-// ─── Color Variables ───────────────────────────────────────────────────────────
 $color-red: #b91c1c;
 $color-red-dark: #991b1b;
 $color-red-hover: #7f1d1d;
@@ -15,8 +14,6 @@ $color-text-meta: #9b9b9b;
 $color-border: #e5e0d8;
 $color-border-light: #f0ece4;
 
-// ─── Bulma: Override global variables ─────────────────────────────────────────
-// @use for utilities and form — these accept variable overrides via "with"
 @use "bulma/sass/utilities" with (
   $primary: $color-red-dark,
   $link: $color-red,
@@ -30,15 +27,8 @@ $color-border-light: #f0ece4;
   $input-shadow: none
 );
 
-// ─── Bulma: Selective imports ─────────────────────────────────────────────────
-// @use is correct here — this is a root stylesheet, not a partial.
-// The overrides from utilities and form above propagate because Sass resolves
-// @use "bulma/sass/utilities" with() before any dependent module loads.
-
-// Base
 @use "bulma/sass/base";
 
-// Elements
 @use "bulma/sass/elements/button";
 @use "bulma/sass/elements/title" with (
   $title-family: "Playfair Display"
@@ -49,23 +39,19 @@ $color-border-light: #f0ece4;
 @use "bulma/sass/elements/box";
 @use "bulma/sass/elements/content";
 
-// Components
 @use "bulma/sass/components/navbar";
 @use "bulma/sass/components/dropdown";
 @use "bulma/sass/components/card";
 @use "bulma/sass/components/pagination";
 
-// Grid
 @use "bulma/sass/grid/columns";
 
-// Layout
 @use "bulma/sass/layout/media";
 @use "bulma/sass/layout/section";
 @use "bulma/sass/layout/container";
 @use "bulma/sass/layout/hero";
 @use "bulma/sass/layout/footer";
 
-// Helpers
 @use "bulma/sass/helpers/spacing";
 @use "bulma/sass/helpers/position";
 @use "bulma/sass/helpers/flexbox";
@@ -76,13 +62,10 @@ $color-border-light: #f0ece4;
 @use "bulma/sass/helpers/gap";
 @use "bulma/sass/helpers/other";
 
-// Themes — REQUIRED: writes all CSS custom property values into :root
 @use "bulma/sass/themes";
 
-// ─── External Imports ─────────────────────────────────────────────────────────
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-// ─── Box ───────────────────────────────────────────────────────────────────────
 .box {
   border: 1px solid $color-border;
   transition: box-shadow 0.2s;
@@ -92,12 +75,10 @@ $color-border-light: #f0ece4;
   }
 }
 
-// ─── Logo ──────────────────────────────────────────────────────────────────────
 #logo {
   max-height: 4rem;
 }
 
-// ─── Search Bar ────────────────────────────────────────────────────────────────
 #search-bar {
   background-color: transparent;
   border: none;
@@ -112,7 +93,6 @@ $color-border-light: #f0ece4;
   }
 }
 
-// ─── Navbar ────────────────────────────────────────────────────────────────────
 .navbar-center {
   display: flex;
   justify-content: center;
@@ -120,14 +100,12 @@ $color-border-light: #f0ece4;
   flex-grow: 1;
 }
 
-// ─── Hero ──────────────────────────────────────────────────────────────────────
 .basic-hero {
   background-color: $color-bg-warm;
   height: fit-content;
   padding-block: 6rem;
 }
 
-// ─── Blog ──────────────────────────────────────────────────────────────────────
 section#blog-posts {
   background-color: white;
 
@@ -161,7 +139,6 @@ section#blog-posts {
   width: 100%;
 }
 
-// ─── Blog Sidebar ──────────────────────────────────────────────────────────────
 #blog-sidebar {
   min-width: 0;
 
@@ -173,7 +150,6 @@ section#blog-posts {
   }
 }
 
-// ─── Video ─────────────────────────────────────────────────────────────────────
 .video-container {
   position: relative;
   width: 100%;
@@ -189,13 +165,11 @@ section#blog-posts {
   }
 }
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
 #testimonials .card {
   box-shadow: none;
   transition: box-shadow var(--bulma-duration);
 }
 
-// ─── Section Header / Label ────────────────────────────────────────────────────
 %section-line {
   content: "";
   height: 2px;
@@ -233,7 +207,6 @@ section#blog-posts {
   }
 }
 
-// ─── Range Slider ──────────────────────────────────────────────────────────────
 $range-thumb-size: 1rem;
 $range-track-height: 4px;
 
@@ -307,7 +280,7 @@ $range-track-height: 4px;
     }
   }
 }
-// ─── Dropdown ─────────────────────────────────────────────────────────────────
+
 .dropdown,
 .dropdown-trigger {
   width: 100%;
@@ -335,7 +308,6 @@ $range-track-height: 4px;
   visibility: visible;
 }
 
-// ─── Utility ───────────────────────────────────────────────────────────────────
 .has-shadow {
   box-shadow: var(--bulma-shadow);
 }
@@ -386,7 +358,6 @@ footer.card-footer button.is-white {
   box-shadow: var(--bulma-shadow);
 }
 
-// ─── Underline ─────────────────────────────────────────────────────────────────
 .has-underline {
   position: relative;
 
@@ -411,10 +382,6 @@ footer.card-footer button.is-white {
   }
 }
 
-// ─── Breadcrumb ────────────────────────────────────────────────────────────────
-// Unused .breadcrumb removed
-
-// ─── Responsive ────────────────────────────────────────────────────────────────
 @media screen and (min-width: 1024px) and (hover: hover) {
   .navbar-item {
     position: relative;
@@ -472,8 +439,6 @@ footer.card-footer button.is-white {
   }
 }
 
-// ─── Cart Badge ────────────────────────────────────────────────────────────────
-
 .cart-badge {
   display: inline-block;
   position: absolute;
@@ -496,7 +461,6 @@ footer.card-footer button.is-white {
   }
 }
 
-// ─── Cart Dropdown ─────────────────────────────────────────────────────────────
 .cart-dropdown {
   .dropdown-menu {
     right: 0;
@@ -525,8 +489,6 @@ footer.card-footer button.is-white {
   letter-spacing: 0.1em;
   font-size: 0.78rem;
 }
-
-// ─── Cart Items ────────────────────────────────────────────────────────────────
 
 .cart-item {
   border-bottom: 1px solid var(--bulma-border-light);
@@ -563,8 +525,6 @@ footer.card-footer button.is-white {
   background-color: $color-red-hover;
 }
 
-// ─── Home Page ────────────────────────────────────────────────────────────────
-
 #about-me-button {
   border: 1px solid transparent;
   transition: border-color 0.2s;
@@ -593,24 +553,23 @@ footer.card-footer button.is-white {
 }
 
 .profile-pic img {
-  border: 8px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 8px solid transparent;
   width: 100% !important;
   max-width: 350px;
   height: auto !important;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1;
   object-fit: cover;
 }
 
 .circle-background {
   position: absolute;
-  top: -50px;
-  right: -50px;
-  width: 450px;
-  height: 450px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  aspect-ratio: 1;
+  width: 100%;
+  border: 1px solid $color-red;
   border-radius: 50%;
-  z-index: -1;
+  z-index: 2;
+  top: 0%;
+  left: 0%;
 
   @media screen and (max-width: 1023px) {
     display: none;
@@ -635,14 +594,6 @@ footer.card-footer button.is-white {
 
   @media screen and (max-width: 1023px) {
     font-size: 3rem;
-  }
-}
-
-.border-center {
-  @media screen and (min-width: 769px) {
-    > .column:nth-child(even) {
-      border-left: 1px solid #eeeeee;
-    }
   }
 }
 

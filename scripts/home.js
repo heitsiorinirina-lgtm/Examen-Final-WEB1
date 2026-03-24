@@ -10,7 +10,6 @@ data.overview.forEach((item) => {
   statsContainer.innerHTML += statsTemplate(item);
 });
 
-// --- 2. SECTION COURSES : CARTES ARRONDIES ---
 const coursesContainer = document.getElementById("courses-container");
 coursesContainer.innerHTML = "";
 coursesContainer.classList.add("is-multiline", "is-centered");
@@ -32,13 +31,12 @@ data.homeCourses.forEach((course) => {
   coursesContainer.appendChild(column);
 });
 
-// --- 3. SECTION EXPERIENCE : GRILLE AVEC BORDURE CENTRALE ---
 const expGrid = document.getElementById("experience-grid");
 expGrid.innerHTML = "";
 
 data.experiences.forEach((exp) => {
   const expCol = document.createElement("div");
-  expCol.className = "column has-border-left is-6-desktop is-12-tablet"; // Two columns on desktop, full width on tablet
+  expCol.className = "column has-border-left is-6-desktop is-12-tablet";
 
   expCol.innerHTML = experienceTemplate(exp);
   expGrid.appendChild(expCol);

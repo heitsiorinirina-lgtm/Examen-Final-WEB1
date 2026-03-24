@@ -1,12 +1,8 @@
-// ─── State ────────────────────────────────────────────────────────────────────
-
 let cart = JSON.parse(localStorage.getItem("shoppingCart")) || [];
 
 function saveCart() {
   localStorage.setItem("shoppingCart", JSON.stringify(cart));
 }
-
-// ─── Cart operations ──────────────────────────────────────────────────────────
 
 function addToCart(courseId) {
   if (!cart.includes(courseId)) {
@@ -36,8 +32,6 @@ function getCartCourses() {
     .filter(Boolean);
 }
 
-// ─── Badge ────────────────────────────────────────────────────────────────────
-
 function updateCartBadge() {
   document.querySelectorAll(".cart-badge").forEach((badge) => {
     badge.textContent = cart.length;
@@ -45,10 +39,7 @@ function updateCartBadge() {
   });
 }
 
-// ─── Inject cart into navbar ──────────────────────────────────────────────────
-
 function injectCartDropdown() {
-  // Create one fixed menu appended to body — no Bulma dropdown magic needed
   const menu = document.createElement("div");
   menu.className = "cart-dropdown-menu dropdown-content p-0";
   menu.style.cssText =
@@ -69,7 +60,6 @@ function injectCartDropdown() {
         `;
   document.body.appendChild(menu);
 
-  // Replace each basket icon wrapper with a simple trigger
   document.querySelectorAll(".fa-basket-shopping").forEach((icon) => {
     const wrapper = icon.closest("span.navbar-item, span");
     if (!wrapper) return;
@@ -102,7 +92,6 @@ function injectCartDropdown() {
     menu.style.display = "none";
   });
 
-  // Prevent clicks inside the menu from bubbling up to the document close handler
   menu.addEventListener("click", (e) => e.stopPropagation());
 
   document.addEventListener("click", () => {
@@ -115,24 +104,19 @@ function attachConfirmButtonListener() {
   if (!confirmBtn) return;
 
   confirmBtn.addEventListener("click", () => {
-    // Clear the cart
     cart = [];
     saveCart();
     updateCartBadge();
     renderDropdownItems();
 
-    // Close the dropdown
     const menu = document.querySelector(".cart-dropdown-menu");
     if (menu) menu.style.display = "none";
 
-    // Show the nice toast notification
     showOrderConfirmationToast();
 
-    // Optional: refresh courses list so "In cart" buttons go back to "Add to cart"
     if (typeof renderCourses === "function") renderCourses();
   });
 }
-// ─── Render items ─────────────────────────────────────────────────────────────
 
 function renderDropdownItems() {
   const menu = document.querySelector(".cart-dropdown-menu");
@@ -179,8 +163,6 @@ function renderDropdownItems() {
   if (totalEl) totalEl.textContent = total.toLocaleString("en-US") + " Ar";
 }
 
-// ─── Init ─────────────────────────────────────────────────────────────────────
-
 document.addEventListener("DOMContentLoaded", () => {
   injectCartDropdown();
   updateCartBadge();
@@ -188,10 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
   attachConfirmButtonListener();
 });
 
-// ─── Notification Toast ───────────────────────────────────────────────────────
-
 function showOrderConfirmationToast() {
-  // Remove existing toast if any
   document.querySelectorAll(".order-toast").forEach((t) => t.remove());
 
   const toast = document.createElement("div");
@@ -216,7 +195,6 @@ function showOrderConfirmationToast() {
 
   document.body.appendChild(toast);
 
-  // Close functionality
   const closeBtn = toast.querySelector(".delete");
   closeBtn.addEventListener("click", () => {
     toast.style.transition = "opacity 0.4s ease, transform 0.4s ease";
@@ -225,7 +203,6 @@ function showOrderConfirmationToast() {
     setTimeout(() => toast.remove(), 400);
   });
 
-  // Auto-hide after 5 seconds
   setTimeout(() => {
     if (toast.isConnected) {
       toast.style.transition = "opacity 0.4s ease, transform 0.4s ease";

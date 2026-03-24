@@ -16,7 +16,6 @@ function formatDate(date) {
 function getPageCount() {
   const total = data.posts.length;
   if (total <= POSTS_PER_PAGE) return total > 0 ? 1 : 0;
-  // Merge any remaining posts into the last full page
   return Math.ceil(total / POSTS_PER_PAGE);
 }
 
