@@ -16966,7 +16966,98 @@ footer.card-footer button.is-white {
     width: 100%;
   }
 }
+.cart-badge {
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #b91c1c;
+  border-radius: 9999px;
+}
+.cart-badge:empty {
+  display: none;
+}
+
+.cart-dropdown .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+@media screen and (max-width: 1023px) {
+  .cart-dropdown .dropdown-menu {
+    right: auto;
+    left: 0;
+  }
+}
+
+.cart-basket-trigger {
+  position: relative;
+}
+
+.cart-dropdown-menu {
+  min-width: 320px;
+}
+
+.cart-dropdown-header {
+  border-bottom: 1px solid var(--bulma-border);
+}
+
+.cart-dropdown-footer {
+  border-top: 1px solid var(--bulma-border);
+}
+
+.cart-total-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #78716c;
+}
+
+.cart-confirm {
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+
+.cart-item {
+  border-bottom: 1px solid var(--bulma-border-light);
+}
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-item-right {
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.cart-empty {
+  padding: 1.5rem 0;
+}
+
 /*section page home */
+.has-text-link:hover {
+  color: #f9f6f1;
+}
+
+.button.is-link:hover {
+  background-color: #7f1d1d;
+}
+
 .ls-widest {
   letter-spacing: 0.2rem;
 }
@@ -16988,12 +17079,12 @@ footer.card-footer button.is-white {
   vertical-align: middle;
 }
 
-.main-title-serif {
-  font-family: "Playfair Display";
-  font-size: 4.5rem;
-  line-height: 0.9;
-  font-weight: 700;
-  margin-top: 1.5rem !important;
+#about-me-button {
+  border: 1px solid transparent;
+}
+
+#about-me-button:hover {
+  border: 1px solid #1a1a1a;
 }
 
 .description-text p {
@@ -17200,8 +17291,10 @@ footer.card-footer button.is-white {
 .profile-pic img {
   border: 8px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  width: 350px !important;
-  height: 350px !important;
+  width: 100% !important;
+  max-width: 350px;
+  height: auto !important;
+  aspect-ratio: 1/1;
   object-fit: cover;
 }
 
@@ -17214,6 +17307,11 @@ footer.card-footer button.is-white {
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 50%;
   z-index: -1;
+}
+@media screen and (max-width: 1023px) {
+  .circle-background {
+    display: none;
+  }
 }
 
 /* Réseaux Sociaux */
@@ -17273,7 +17371,6 @@ footer.card-footer button.is-white {
   font-weight: 400; /* Plus fin que le "About" */
 }
 
-/* --- SECTION DROITE : TEXTE & STATS --- */
 /* Paragraphes de description */
 .description-text p {
   font-family: var(--primary-sans);
@@ -17535,20 +17632,6 @@ footer.card-footer button.is-white {
   margin-bottom: 2rem;
 }
 
-.stats-row-border {
-  margin-top: 3rem;
-  border-top: 1px solid #eeeeee;
-  padding-top: 2rem;
-}
-
-.stat-number-red {
-  font-family: var(--font-serif);
-  font-size: 3.2rem;
-  color: var(--accent-red);
-  font-weight: 700;
-  line-height: 1;
-}
-
 /* --- 4. SECTION COURSES (CARTES) --- */
 .courses-section {
   background-color: var(--bg-light);
@@ -17621,6 +17704,10 @@ footer.card-footer button.is-white {
   color: var(--text-light);
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.has-fullwidth {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

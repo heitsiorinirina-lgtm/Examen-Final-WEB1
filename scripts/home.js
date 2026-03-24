@@ -1,77 +1,45 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const aboutContent = document.getElementById("about-content");
-  const statsContainer = document.getElementById("stats-container");
+const aboutContent = document.getElementById("about-content");
+const statsContainer = document.getElementById("stats-container");
 
-  aboutContent.innerHTML = `
-            <p>${data.aboutMe_part1}</p>
-            <p>${data.aboutMe_part2}</p>
+aboutContent.innerHTML = `
+            <p class="has-text-grey-dark">${data.aboutMe_part1}</p>
+            <p class="has-text-grey-dark">${data.aboutMe_part2}</p>
         `;
 
-  data.overview.forEach((item) => {
-    const statCol = document.createElement("div");
-    statCol.className = "column is-4";
-    statCol.innerHTML = `
-                <div class="is-flex is-flex-direction-column">
-                    <span class="has-text-link title is-1 has-text-weight-bold">${item.number}</class=>
-                    <span class="stat-label">${item.label}</span>
-                </div>
-            `;
-    statsContainer.appendChild(statCol);
-  });
+data.overview.forEach((item) => {
+  statsContainer.innerHTML += statsTemplate(item);
+});
 
-  // --- 2. SECTION COURSES : CARTES ARRONDIES ---
-  const coursesContainer = document.getElementById("courses-container");
+// --- 2. SECTION COURSES : CARTES ARRONDIES ---
+const coursesContainer = document.getElementById("courses-container");
+coursesContainer.innerHTML = "";
+coursesContainer.classList.add("is-multiline");
 
-  if (coursesContainer && data.homeCourses) {
-    // Liste des classes de couleurs pour alterner les badges comme sur l'image
-    const bgClasses = ["bg-dev", "bg-trans", "bg-res"];
+const bgMap = {
+  Development: "is-link",
+  Translation: "is-black",
+  Research: "is-dark",
+};
 
-    data.homeCourses.forEach((course, index) => {
-      const courseCol = document.createElement("div");
-      courseCol.className = "column is-4";
+data.homeCourses.forEach((course) => {
+  const bgClass = bgMap[course.tag] || "is-light";
 
-      // On utilise l'index pour alterner les couleurs de badges (0, 1, 2)
-      const currentBg = bgClasses[index % bgClasses.length];
+  const column = document.createElement("div");
+  column.className = "column is-4 is-flex";
 
-      courseCol.innerHTML = `
-                <div class="course-card">
-                    <div>
-                        <div class="tag-category ${currentBg}">${course.tag}</div>
-                        <h3 class="title is-4" style="font-family: 'Playfair Display', serif; font-weight: 700;">
-                            ${course.title}
-                        </h3>
-                    </div>
-                    <div class="level is-mobile mt-5 has-text-grey is-size-7">
-                        <div class="level-left">
-                            <span class="level-item">${course.mode}</span>
-                        </div>
-                        <div class="level-right">
-                            <span class="level-item">${course.duration}</span>
-                        </div>
-                    </div>
-                </div>
-            `;
-      coursesContainer.appendChild(courseCol);
-    });
-  }
+  column.innerHTML = courseCardTemplate(course, bgClass);
 
-  // --- 3. SECTION EXPERIENCE : GRILLE AVEC BORDURE CENTRALE ---
-  const expGrid = document.getElementById("experience-grid");
+  coursesContainer.appendChild(column);
+});
 
-  if (expGrid && data.experiences) {
-    data.experiences.forEach((exp) => {
-      const expCol = document.createElement("div");
-      expCol.className = "column is-6"; // Deux colonnes par ligne sur desktop
+// --- 3. SECTION EXPERIENCE : GRILLE AVEC BORDURE CENTRALE ---
+const expGrid = document.getElementById("experience-grid");
+expGrid.innerHTML = "";
 
-      expCol.innerHTML = `
-                <div class="exp-item">
-                    <span class="exp-year">${exp.year}</span>
-                    <h3 class="exp-role">${exp.role}</h3>
-                    <span class="exp-org">${exp.org}</span>
-                    <p class="has-text-grey">${exp.desc}</p>
-                </div>
-            `;
-      expGrid.appendChild(expCol);
-    });
-  }
+data.experiences.forEach((exp) => {
+  const expCol = document.createElement("div");
+  expCol.className = "column is-6-desktop is-12-tablet"; // Two columns on desktop, full width on tablet
+
+  expCol.innerHTML = experienceTemplate(exp);
+  expGrid.appendChild(expCol);
 });

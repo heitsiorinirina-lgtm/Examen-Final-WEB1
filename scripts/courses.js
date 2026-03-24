@@ -46,11 +46,24 @@ function renderCourses() {
 
   const list = document.getElementById("courses-list");
   if (results.length === 0) {
-    list.innerHTML =
-      '<p class="has-text-grey has-text-centered p-6 column is-full">No courses match your filters.</p>';
+    list.innerHTML = `
+      <div class="column is-full has-text-centered py-6">
+        <p class="title has-text-grey-light mb-4">No courses match your filters.</p><div class="is-flex is-justify-content-center"><p class="has-text-primary is-clickable has-underline" id="inline-clear-filters">CLEAR FILTERS</p></div>
+      </div>
+    `;
+    list
+      .querySelector("#inline-clear-filters")
+      .addEventListener("click", clearFilters);
   } else {
     list.innerHTML = results.map(courseCardTemplate).join("");
   }
+
+  list.querySelectorAll(".js-add-to-cart").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      addToCart(parseInt(btn.dataset.id));
+    });
+  });
 }
 
 // ─── Language flags ────────────────────────────────────────────────────────────
@@ -167,7 +180,8 @@ keywordInput.addEventListener("input", () => {
 });
 
 // ─── Clear all ────────────────────────────────────────────────────────────────
-document.getElementById("clear-filters").addEventListener("click", () => {
+
+function clearFilters() {
   // Reset filter state
   filters.languages = [];
   filters.technology = "all";
@@ -176,31 +190,54 @@ document.getElementById("clear-filters").addEventListener("click", () => {
   filters.maxPrice = 300000;
   filters.keyword = "";
 
-  // Reset UI
+  // Reset sliders
   sliderMin.value = 0;
   sliderMax.value = 300000;
   labelMin.textContent = "0";
   labelMax.textContent = "300,000";
+  sliderMin.style.setProperty("--fill", "0%");
+  sliderMax.style.setProperty("--fill", "100%");
+
+  // Reset keyword
   keywordInput.value = "";
 
+  // Reset language flags
   document
     .querySelectorAll(".image.is-clickable")
     .forEach((f) => f.classList.remove("is-selected-flag"));
 
-  document
+  // Reset technology dropdown
+  const techMenu = document.getElementById("dropdown-menu");
+  techMenu
     .querySelectorAll(".dropdown-item")
-    .forEach((item) => item.classList.remove("is-active"));
-  document
-    .querySelectorAll(".dropdown-item:first-child")
-    .forEach((item) => item.classList.add("is-active"));
-  document
-    .querySelectorAll(".dropdown-trigger button span:first-child")
-    .forEach((btn, i) => {
-      btn.textContent = i === 0 ? "All technologies" : "All levels";
-    });
+    .forEach((i) => i.classList.remove("is-active"));
+  techMenu
+    .querySelector(".dropdown-item:first-child")
+    .classList.add("is-active");
+  techMenu
+    .closest(".dropdown")
+    .querySelector(".dropdown-trigger button span:first-child").textContent =
+    "All technologies";
+
+  // Reset level dropdown
+  const levelMenu = document.getElementById("dropdown-menu-level");
+  levelMenu
+    .querySelectorAll(".dropdown-item")
+    .forEach((i) => i.classList.remove("is-active"));
+  levelMenu
+    .querySelector(".dropdown-item:first-child")
+    .classList.add("is-active");
+  levelMenu
+    .closest(".dropdown")
+    .querySelector(".dropdown-trigger button span:first-child").textContent =
+    "All levels";
 
   renderCourses();
-});
+}
+
+document
+  .getElementById("clear-filters")
+  .addEventListener("click", clearFilters);
 
 // ─── Initial render ───────────────────────────────────────────────────────────
 

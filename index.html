@@ -7,6 +7,7 @@
     <title>Toky Ramarozaka | Consultant - Teacher - Dev</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/18e6813d54.js" crossorigin="anonymous"></script>
+    <script src="scripts/templates/home-templates.js"></script>
     <script src="scripts/home.js" defer></script>
     <script src="scripts/navbar.js"></script>
     <script src="scripts/data/tokimahery.data.js"></script>
@@ -54,18 +55,21 @@
         </nav>
     </header>
     <main>
-        <section class="hero is-fullheight-with-navbar" id="hero">
+        <section class="hero is-fullheight-with-navbar has-background-white-ter" id="hero">
             <div class="hero-body">
                 <div class="container">
                     <div class="columns is-vcentered">
 
-                        <div class="column is-5-desktop is-offset-1-desktop">
-                            <div class="content-wrapper">
-                                <p class="subtitle is-uppercase has-text-weight-semibold custom-red-text mb-2">
-                                    <span class="line"></span> Portfolio & Services
+                        <div class="column is-half">
+                            <div class="content">
+                                <p
+                                    class="is-uppercase is-size-7 has-text-weight-semibold has-text-link section-label mb-2">
+                                    Portfolio
+                                    & Services
                                 </p>
-                                <h1 class="title main-name mb-0">Tokimahery</h1>
-                                <h1 class="title main-surname italic-red">Ramarozaka</h1>
+                                <h1 class="title has-text-weight-medium is-1 m-0">Tokimahery</h1>
+                                <h1 class="title has-text-weight-medium is-1 has-text-link is-italic m-0">Ramarozaka
+                                </h1>
 
                                 <p class="is-uppercase is-size-7 has-text-grey letter-spacing-2 mt-4">
                                     Consultant • Teacher • Developer • Translator • PhD
@@ -77,8 +81,10 @@
                                 </p>
 
                                 <div class="buttons mt-6">
-                                    <a href="courses.html" class="button btn-red">Book a course</a>
-                                    <a href="#about-me" class="button btn-glass">About me</a>
+                                    <a href="courses.html"
+                                        class="button is-link has-shadow py-4 px-6 is-fullwidth-touch">Book a course</a>
+                                    <a href="#about-me" class="button is-white has-shadow py-4 px-6 is-fullwidth-touch"
+                                        id="about-me-button">About me</a>
                                 </div>
 
                                 <div class="mt-4">
@@ -88,7 +94,7 @@
                                     </a>
                                 </div>
 
-                                <div class="social-icons mt-6">
+                                <div class="social-icons mt-5">
                                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                                     <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -111,58 +117,48 @@
             </div>
         </section>
         <section class="section" id="about-me">
-            <div class="container">
-                <div class="columns is-variable is-8">
-                    <div class="column is-4">
-                        <div class="who-i-am">
-                            <span class="red-line"></span>
-                            <span class="is-uppercase is-size-7 has-text-grey ls-widest">Who I am</span>
-                        </div>
-                        <h1 class="title is-1 custom-serif-title"> About <br><span class="is-italic">me</span></h1>
+            <div class="columns">
+                <div class="column has-text-centered is-half is-full-touch">
+                    <p class="section-label is-justify-content-center mb-4 has-text-grey is-uppercase">Who i am</p>
+                    <h1 class="title is-1">About <br> <span class="is-italic">me</span></h1>
+                </div>
+                <div class="column is-half is-full-touch">
+                    <div class="content" id="about-content">
+
                     </div>
-                    <div class="columns is-multiline">
-                        <div id="about-content" class="content description-text">
-                        </div>
-                        <hr>
-                        <div id="stats-container" class="columns is-multiline">
-                        </div>
+                    <div class="columns is-centered" id="stats-container">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section courses-section">
-            <div class="container has-text-centered">
+        <section class="section has-background-white-ter">
+            <div class="my-6 has-text-centered">
                 <div class="mb-6">
-                    <div class="learning-badge">
-                        <span class="red-line-short"></span>
-                        <span class="is-uppercase is-size-7 ls-widest has-text-grey">Learning</span>
-                        <span class="red-line-short"></span>
-                    </div>
-                    <h2 class="title section-title-serif">Courses <span class="italic-serif">online</span> <br> and
-                        offline</h2>
+                    <span
+                        class="is-uppercase has-text-weight-bold is-size-6 section-header has-text-grey">Learning</span>
                 </div>
+                <h2 class="title is-1">Courses <span class="is-italic">online</span> <br> and
+                    offline</h2>
+            </div>
 
-                <div id="courses-container" class="columns is-variable is-4">
-                </div>
+            <div id="courses-container" class="columns is-multiline is-variable is-2">
 
-                <div class="mt-6">
-                    <a href="courses.html"
-                        class="has-text-link has-underline has-text-font-weight-semibold is-uppercase is-size-7">View
-                        all courses
-                        &rarr;</a>
-                </div>
+            </div>
+
+            <div class="my-6 has-text-centered">
+                <a href="courses.html" class="has-text-link has-underline has-text-weight-bold is-uppercase">View
+                    all courses
+                    &rarr;</a>
+            </div>
             </div>
         </section>
 
         <section class="section">
             <div class="container">
                 <div class="mb-6">
-                    <div class="who-i-am">
-                        <span class="red-line"></span>
-                        <span class="is-uppercase is-size-7 has-text-grey ls-widest">Background</span>
-                    </div>
-                    <h2 class="title main-title-serif">Experience</h2>
+                    <p class="section-label is-uppercase">Background</p>
+                    <h1 class="title is-1">Experience</h1>
                 </div>
 
                 <div id="experience-grid" class="columns is-variable is-8 is-multiline border-center">

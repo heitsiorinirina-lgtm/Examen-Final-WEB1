@@ -478,7 +478,110 @@ footer.card-footer button.is-white {
   }
 }
 
+// ─── Cart Badge ────────────────────────────────────────────────────────────────
+
+.cart-badge {
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $color-red;
+  border-radius: 9999px;
+
+  &:empty {
+    display: none;
+  }
+}
+
+// ─── Cart Dropdown ─────────────────────────────────────────────────────────────
+.cart-dropdown {
+  .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .dropdown-menu {
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+.cart-basket-trigger {
+  position: relative;
+}
+
+.cart-dropdown-menu {
+  min-width: 320px;
+}
+
+.cart-dropdown-header {
+  border-bottom: 1px solid var(--bulma-border);
+}
+
+.cart-dropdown-footer {
+  border-top: 1px solid var(--bulma-border);
+}
+
+.cart-total-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: $color-text-muted;
+}
+
+.cart-confirm {
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+
+// ─── Cart Items ────────────────────────────────────────────────────────────────
+
+.cart-item {
+  border-bottom: 1px solid var(--bulma-border-light);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.cart-item-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-item-right {
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.cart-empty {
+  padding: 1.5rem 0;
+}
+
 /*section page home */
+.has-text-link:hover {
+  & {
+    color: $color-bg-warm;
+  }
+}
+
+.button.is-link:hover {
+  background-color: $color-red-hover;
+}
+
 // --- 1. VARIABLES & POLICES ---
 
 $accent-red: #be1e2d;
@@ -509,13 +612,13 @@ $bg-creme: #f9f7f5;
   vertical-align: middle;
 }
 
-// --- 3. SECTION ABOUT ME ---
-.main-title-serif {
-  font-family: "Playfair Display";
-  font-size: 4.5rem;
-  line-height: 0.9;
-  font-weight: 700;
-  margin-top: 1.5rem !important;
+// --- 3. SECTION ABOUT ME ---\
+#about-me-button {
+  border: 1px solid transparent;
+}
+
+#about-me-button:hover {
+  border: 1px solid $color-text-dark;
 }
 
 .description-text {
@@ -524,14 +627,6 @@ $bg-creme: #f9f7f5;
     color: $text-grey;
     margin-bottom: 2rem;
   }
-}
-
-.stat-label {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  color: $text-light;
-  letter-spacing: 1px;
-  font-weight: 600;
 }
 
 // --- 4. SECTION COURSES ---
@@ -728,8 +823,10 @@ $bg-creme: #f9f7f5;
 .profile-pic img {
   border: 8px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  width: 350px !important;
-  height: 350px !important;
+  width: 100% !important;
+  max-width: 350px;
+  height: auto !important;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
@@ -742,6 +839,10 @@ $bg-creme: #f9f7f5;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 50%;
   z-index: -1;
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
 }
 
 /* Réseaux Sociaux */
@@ -803,8 +904,6 @@ $bg-creme: #f9f7f5;
   font-weight: 400; /* Plus fin que le "About" */
 }
 
-/* --- SECTION DROITE : TEXTE & STATS --- */
-
 /* Paragraphes de description */
 .description-text p {
   font-family: var(--primary-sans);
@@ -815,32 +914,6 @@ $bg-creme: #f9f7f5;
   margin-bottom: 2rem;
 }
 
-/* La ligne horizontale et la section des stats */
-.stats-row {
-  margin-top: 4rem;
-  border-top: 1px solid #eeeeee; /* Ligne grise fine */
-  padding-top: 2.5rem;
-}
-
-/* Le chiffre rouge */
-.stat-number {
-  font-family: var(--primary-serif);
-  font-size: 3.5rem; /* Grand chiffre rouge */
-  font-weight: 700;
-  color: var(--accent-red);
-  line-height: 1;
-}
-
-/* Le label gris sous le chiffre */
-.stat-label {
-  font-family: var(--primary-sans);
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: var(--light-grey);
-  letter-spacing: 1px;
-  margin-top: 5px;
-}
 
 /*section 3 home_page */
 :root {
@@ -1058,21 +1131,6 @@ $bg-creme: #f9f7f5;
   margin-bottom: 2rem;
 }
 
-.stats-row-border {
-  margin-top: 3rem;
-  border-top: 1px solid #eeeeee;
-  padding-top: 2rem;
-}
-
-.stat-number-red {
-  font-family: var(--font-serif);
-  font-size: 3.2rem;
-  color: var(--accent-red);
-  font-weight: 700;
-  line-height: 1;
-}
-
-
 /* --- 4. SECTION COURSES (CARTES) --- */
 .courses-section {
   background-color: var(--bg-light);
@@ -1140,4 +1198,8 @@ $bg-creme: #f9f7f5;
   color: var(--text-light);
   text-transform: uppercase;
   font-weight: 600;
+}
+
+.has-fullwidth {
+  width: 100%;
 }
