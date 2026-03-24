@@ -13,7 +13,7 @@ data.overview.forEach((item) => {
 // --- 2. SECTION COURSES : CARTES ARRONDIES ---
 const coursesContainer = document.getElementById("courses-container");
 coursesContainer.innerHTML = "";
-coursesContainer.classList.add("is-multiline");
+coursesContainer.classList.add("is-multiline", "is-centered");
 
 const bgMap = {
   Development: "is-link",
@@ -25,7 +25,8 @@ data.homeCourses.forEach((course) => {
   const bgClass = bgMap[course.tag] || "is-light";
 
   const column = document.createElement("div");
-  column.className = "column is-4 is-flex";
+  column.className = "column is-30-percent is-flex";
+
 
   column.innerHTML = courseCardTemplate(course, bgClass);
 
