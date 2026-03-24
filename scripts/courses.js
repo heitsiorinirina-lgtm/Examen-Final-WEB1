@@ -60,6 +60,7 @@ function renderCourses() {
 
   list.querySelectorAll(".js-add-to-cart").forEach((btn) => {
     btn.addEventListener("click", (e) => {
+      if (btn.disabled) return;
       e.stopPropagation();
       addToCart(parseInt(btn.dataset.id));
     });

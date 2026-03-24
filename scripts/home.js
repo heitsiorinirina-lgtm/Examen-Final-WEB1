@@ -27,7 +27,6 @@ data.homeCourses.forEach((course) => {
   const column = document.createElement("div");
   column.className = "column is-30-percent is-flex";
 
-
   column.innerHTML = courseCardTemplate(course, bgClass);
 
   coursesContainer.appendChild(column);
@@ -39,7 +38,7 @@ expGrid.innerHTML = "";
 
 data.experiences.forEach((exp) => {
   const expCol = document.createElement("div");
-  expCol.className = "column is-6-desktop is-12-tablet"; // Two columns on desktop, full width on tablet
+  expCol.className = "column has-border-left is-6-desktop is-12-tablet"; // Two columns on desktop, full width on tablet
 
   expCol.innerHTML = experienceTemplate(exp);
   expGrid.appendChild(expCol);

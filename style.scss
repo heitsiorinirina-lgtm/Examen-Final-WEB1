@@ -511,14 +511,7 @@ footer.card-footer button.is-white {
 
 .cart-dropdown-menu {
   min-width: 320px;
-}
-
-.cart-dropdown-header {
-  border-bottom: 1px solid var(--bulma-border);
-}
-
-.cart-dropdown-footer {
-  border-top: 1px solid var(--bulma-border);
+  background-color: var(--bulma-scheme-main, #fff);
 }
 
 .cart-total-label {
@@ -653,6 +646,14 @@ footer.card-footer button.is-white {
   }
 }
 
+.has-border-left {
+  border-left: 2px solid $color-border;
+  transition: border-left var(--bulma-duration);
+  &:hover {
+    border-left: 2px solid $color-red;
+  }
+}
+
 .exp-item {
   margin-bottom: 3.5rem;
   text-align: left;
@@ -684,6 +685,16 @@ footer.card-footer button.is-white {
 
 .has-fullwidth {
   width: 100%;
+}
+
+.notification {
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 440px;
+  z-index: 10000;
+  border-radius: 8px;
+  background-color: #48c78e;
 }
 
 .is-30-percent {
