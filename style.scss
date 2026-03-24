@@ -324,7 +324,7 @@ $range-track-height: 4px;
 
 .dropdown-menu {
   width: 100%;
-  top: 0;
+  top: 100%;
 }
 
 .dropdown-item .icon {
@@ -501,13 +501,7 @@ footer.card-footer button.is-white {
   .dropdown-menu {
     right: 0;
     left: auto;
-  }
-
-  @media screen and (max-width: 1023px) {
-    .dropdown-menu {
-      right: auto;
-      left: 0;
-    }
+    top: 100%;
   }
 }
 

@@ -16838,7 +16838,7 @@ section#blog-posts .container {
 
 .dropdown-menu {
   width: 100%;
-  top: 0;
+  top: 100%;
 }
 
 .dropdown-item .icon {
@@ -16982,12 +16982,7 @@ footer.card-footer button.is-white {
 .cart-dropdown .dropdown-menu {
   right: 0;
   left: auto;
-}
-@media screen and (max-width: 1023px) {
-  .cart-dropdown .dropdown-menu {
-    right: auto;
-    left: 0;
-  }
+  top: 100%;
 }
 
 .cart-basket-trigger {

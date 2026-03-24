@@ -52,9 +52,8 @@ function injectCartDropdown() {
     if (!wrapper) return;
 
     const dropdown = document.createElement("div");
-    const isTouch = window.innerWidth < 1024;
     dropdown.className =
-      `dropdown ${isTouch ? "" : "is-right"} cart-dropdown ` +
+      `dropdown is-right cart-dropdown ` +
       wrapper.className;
     dropdown.innerHTML = `
       <div class="dropdown-trigger cart-basket-trigger is-clickable">
